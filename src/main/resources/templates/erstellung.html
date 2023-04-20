@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html>
+   	<head>
+      	<meta charset = "ISO-8859-1" />
+      	
+      	<link rel="stylesheet" th:href="@{/webjars/bootstrap/5.2.3/css/bootstrap.min.css}"/>
+      	<script th:src="@{/webjars/jquery/3.6.4/jquery.min.js}"></script>
+      	<script th:inline="javascript" type = "text/javascript" language = "javascript">
+		/*<![CDATA[*/
+			function ajaxCallback(targetId, data, status) {
+				if(!Array.isArray(data)){
+					dhtml(targetId, data);
+				} else {
+					$.each(data, function(index, element) {
+						if(element.type == 'singleValue'){
+							setValue(element);
+						} else if(element.type == 'singleText'){
+							setText(element);
+						}
+					});
+				}
+			}
+			function setValue(element) {
+				var id = element.id;
+				$('#' + id).val(element.value);
+			}
+			function setText(element) {
+				var id = element.id;
+				$('#' + id).text(element.value);
+			}
+			function dhtml(targetId, element) {
+				//var context = $('#' + targetId);
+				var html = $.parseHTML(element, true);
+				$('#' + targetId).empty();
+				$('#' + targetId).append(html);
+			}
+			function fertigkeitgewaehlt() {
+				var selected = $('#fertigkeitenSelect').val();
+				var url = /*[[@{/changedhtml}]]*/ 
+				$.post(url, JSON.stringify({
+					id : 'fertigkeitenSelect',
+				    value: selected
+				  }), function(data, status){
+						var html = $.parseHTML(data, true);	
+						$('#fertigkeiten').before(html);
+						$('#modalClose').click();
+				});
+			}
+		/*]]>*/
+		</script>
+      	<title>Shadowrun Tool</title>
+      	<style>
+			  .navbar{
+			  	background-color: #323232;
+			  }
+			  .box {
+				border-color: black;
+				border-width: 2px;
+				border-style: solid;
+			  }
+			  .box-head {
+			  	background-color: black;
+			  	text-decoration-color: white;
+			  	text-align: center;
+			  	color: white;
+			  }
+		  </style>
+   	</head>
+   	<body>
+		<header class="navbar navbar-expand-lg bd-navbar sticky-top">
+  			<nav class="container-xxl bd-gutter flex-wrap flex-lg-nowrap" aria-label="Main navigation">
+      			<div class="d-lg-none" style="width: 1.5rem;"></div>
+    			<a class="navbar-brand p-0 me-0 me-lg-2" href="/" aria-label="Shadowrun">
+      				Home
+    			</a>
+  			</nav>
+		</header>
+      	<h4>Welcome to Shadowrun Tool</h4>
+      	<main class="bd-content order-1 py-5" id="content">
+    		<div class="container-xxl bd-gutter gx-5">
+				<div class="row">
+					<div class="col box" th:fragment="attribute-anzeige">
+						<div class="box-head" style="margin-left: -14px; margin-right: -14px;">Attribute</div>
+						<div class="row">
+							<div class="col"></div>
+							<div class="col-2 float-end text-end">Wert</div>
+							<div class="col-2 float-end text-end">Aug.</div>
+						</div>
+						<div class="row">
+							<div class="col">Konstitution</div>
+							<div class="col-2 float-end text-end"><input th:id="${T(de.rpg.view.AttributIds).KON_INPUT}" type="number" class="form-control" min="1" max="6" value="1"/></div>
+							<div class="col-2 float-end text-end" th:id="${T(de.rpg.view.AttributIds).KON_DISPLAY}">0</div>
+						</div>
+						<div class="row">
+							<div class="col">Schnelligkeit</div>
+							<div class="col-2 float-end text-end"><input th:id="${T(de.rpg.view.AttributIds).SCH_INPUT}" type="number" class="form-control" min="1" max="6" value="1"/></div>
+							<div class="col-2 float-end text-end" th:id="${T(de.rpg.view.AttributIds).SCH_DISPLAY}">0</div>
+						</div>
+						<div class="row">
+							<div class="col">Stärke</div>
+							<div class="col-2 float-end text-end"><input th:id="${T(de.rpg.view.AttributIds).ST_INPUT}" type="number" class="form-control" min="1" max="6" value="1"/></div>
+							<div class="col-2 float-end text-end" th:id="${T(de.rpg.view.AttributIds).ST_DISPLAY}">0</div>
+						</div>
+						<div class="row">
+							<div class="col">Charisma</div>
+							<div class="col-2 float-end text-end"><input th:id="${T(de.rpg.view.AttributIds).CHA_INPUT}" type="number" class="form-control" min="1" max="6" value="1"/></div>
+							<div class="col-2 float-end text-end" th:id="${T(de.rpg.view.AttributIds).CHA_DISPLAY}">0</div>
+						</div>
+						<div class="row">
+							<div class="col">Intelligenz</div>
+							<div class="col-2 float-end text-end"><input th:id="${T(de.rpg.view.AttributIds).INT_INPUT}" type="number" class="form-control" min="1" max="6" value="1"/></div>
+							<div class="col-2 float-end text-end" th:id="${T(de.rpg.view.AttributIds).INT_DISPLAY}">0</div>
+						</div>
+						<div class="row">
+							<div class="col">Willenskraft</div>
+							<div class="col-2 float-end text-end"><input th:id="${T(de.rpg.view.AttributIds).WIL_INPUT}" type="number" class="form-control" min="1" max="6" value="1"/></div>
+							<div class="col-2 float-end text-end" th:id="${T(de.rpg.view.AttributIds).WIL_DISPLAY}">0</div>
+						</div>
+						<div class="row">
+							<div class="col">Essenz</div>
+							<div class="col-2 float-end text-end">0</div>
+							<div class="col-2 float-end text-end">0</div>
+						</div>
+						<div class="row">
+							<div class="col">Magie</div>
+							<div class="col-2 float-end text-end">0</div>
+							<div class="col-2 float-end text-end">0</div>
+						</div>
+						<div class="row">
+							<div class="col">Reaktion</div>
+							<div class="col-2 float-end text-end">0</div>
+							<div class="col-2 float-end text-end">0</div>
+						</div>
+					</div>
+					<div class="col" style="max-width:10px; width:10px;"></div>
+					<div class="col-6 box">
+						<div class="box-head" style="margin-left: -14px; margin-right: -14px;">Prioritätsauswahl</div>
+						<div class="row">
+							<div class="col-4">Rasse</div>
+							<div class="col-3"><span th:id="${T(de.rpg.view.CreationIds).RASSE_PRIO_DISPLAY}">Mensch</span></div>
+						</div>
+						<div class="row">
+							<div class="col-4">Magie</div>
+							<div class="col-3" th:id="${T(de.rpg.view.CreationIds).MAGIE_PRIO_DISPLAY}"></div>
+						</div>
+						<div class="row">
+							<div class="col-4">Attributspunkte</div>
+							<div class="col-3" th:id="${T(de.rpg.view.CreationIds).ATTRIBUTS_PRIO_DISPLAY}">0</div>
+						</div>
+						<div class="row">
+							<div class="col-4">Fertigkeitsspunkte</div>
+							<div class="col-3" th:id="${T(de.rpg.view.CreationIds).FERTIGKEITEN_PRIO_DISPLAY}">0</div>
+						</div>
+						<div class="row">
+							<div class="col-4">Ressourcen</div>	
+							<div class="col-3" th:id="${T(de.rpg.view.CreationIds).RESSOURCEN_PRIO_DISPLAY}">0</div>
+						</div>
+						<div class="row">
+							<select class="form-control custom-select" th:id="${T(de.rpg.view.CreationIds).RASSE_PRIO_SELECT}" 
+									th:with="targetVar=${T(de.rpg.view.CreationIds).RASSE_PRIO_DISPLAY}" 
+									th:value="${character.rassPrio}" th:attr="targetId=${targetVar}">
+    							<option value="0">Priorität für Rasse</option>
+    							<option th:each="option : ${rassPrios}" th:value="${option.value}" th:text="${option.text}"></option>
+							</select>
+						</div>
+						<div class="row">
+							<select class="form-control custom-select" th:id="${T(de.rpg.view.CreationIds).MAGIE_PRIO_SELECT}" 
+									th:with="targetVar=${T(de.rpg.view.CreationIds).MAGIE_PRIO_DISPLAY}"
+									th:value="${character.magPrio}" th:attr="targetId=${targetVar}">
+    							<option value="0">Priorität für Magie</option>
+    							<option th:each="option : ${magPrios}" th:value="${option.value}" th:text="${option.text}"></option>
+							</select>
+						</div>
+						<div class="row">
+							<select class="form-control custom-select" th:id="${T(de.rpg.view.CreationIds).ATTRIBUTS_PRIO_SELECT}" th:value="${character.attrPrio}">
+    							<option value="0">Priorität für Attribute</option>
+    							<option th:each="option : ${attrPrios}" th:value="${option.value}" th:text="${option.text}"></option>
+							</select>
+						</div>
+						<div class="row">
+							<select class="form-control custom-select" th:id="${T(de.rpg.view.CreationIds).FERTIGKEITEN_PRIO_SELECT}" th:value="${character.fertPrio}">
+    							<option value="0">Priorität für Fertigkeiten</option>
+    							<option th:each="option : ${fertPrios}" th:value="${option.value}" th:text="${option.text}"></option>
+							</select>
+						</div>
+						<div class="row">
+							<select class="form-control custom-select" th:id="${T(de.rpg.view.CreationIds).RESSOURCEN_PRIO_SELECT}" th:value="${character.resPrio}">
+    							<option value="0">Priorität für Ressourcen</option>
+    							<option th:each="option : ${resPrios}" th:value="${option.value}" th:text="${option.text}"></option>
+							</select>
+						</div>
+					</div>
+				</div>
+				<div class="col" style="max-height:10px; height:10px;"></div>
+				<div class="row">
+					<div class="col box">
+						<div class="box-head" style="margin-left: -14px; margin-right: -14px;">Fertigkeiten</div>
+						<div class="row">
+							<div class="col"></div>
+							<div class="col-2 float-end text-end">Wert</div>
+							<div class="col-2 float-end text-end">Aug.</div>
+						</div>
+						<div class="row" id="fertigkeiten">
+							<div class="col">
+								<span class="float-end">
+									<svg role="button" id="addFertigkeit" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-plus-circle" viewBox="0 0 24 24">
+									  	<path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+									  	<path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+									</svg>
+								</span>
+							</div>
+						</div>
+					</div>
+					<div class="col" style="max-width:10px; width:10px;"></div>
+					<div class="col box">
+						<div class="box-head" style="margin-left: -14px; margin-right: -14px;">Cyberware</div>
+						<div class="row">
+							<div class="col"></div>
+							<div class="col-2 float-end text-end">Essenz</div>
+						</div>
+						<div class="row" id="cyberware">
+							<div class="col">
+								<span class="float-end">
+									<svg role="button" id="addCyberware" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-plus-circle" viewBox="0 0 24 24">
+									  	<path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+									  	<path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+									</svg>
+								</span>
+							</div>
+						</div>
+					</div>
+				</div>
+    		</div>
+    		<div class="modal" tabindex="-1" role="dialog" id="fertigkeitAuswahl">
+				<div class="modal-dialog" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h5 class="modal-title">Fertigkeit ausw&auml;hlen</h5>
+		        			<button id="modalClose" type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+		          				<span aria-hidden="true">&times;</span>
+		        			</button>
+		      			</div>
+      					<div class="modal-body">
+							<p>
+								Anzeige nach Kategorie:<br/>
+								<div>
+									<div class="form-check form-check-inline" th:each="kategorie : ${fertKategorien}">
+	  									<input class="form-check-input" type="checkbox" th:id="${kategorie.name} + '-Id-check'" th:value="${kategorie.name}">
+	  									<label class="form-check-label" for="inlineCheckbox1" th:text="${kategorie.label}"></label>
+									</div>
+								</div>
+							</p>  
+        					<p>
+								<select class="form-control custom-select" id="fertigkeitenSelect">
+									<option value="0">Kategorie auswählen</option>
+									<!--<option th:each="option : ${alleFertigkeiten}" th:value="${option.value}" th:text="${option.text}"></option>-->
+								</select>
+							</p>
+      					</div>
+      					<div class="modal-footer">
+        					<button id="fertigkeitHinzufuegen"  onclick="fertigkeitgewaehlt()" type="button" class="btn btn-primary">Fertigkeit hinzufügen</button>
+        					<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      					</div>
+		    		</div>
+  				</div>
+			</div>
+      	</main>
+  
+      	
+      	
+		<script th:src="@{/webjars/bootstrap/5.2.3/js/bootstrap.bundle.min.js}"></script>
+		<script th:inline="javascript" type = "text/javascript" language = "javascript">
+		/*<![CDATA[*/
+			$.ajaxSetup({
+			  contentType: "application/json; charset=utf-8"
+			});
+			$(document).ready(function() {
+	            $('[id$=-input]').each(function(index, element){
+					$(element).change(function(event) {
+						var targetId = $(element).attr('targetId');
+						var sourceId = $(element).attr('id');
+						var url = /*[[@{/change}]]*/ 
+						$.post(url, JSON.stringify({
+						    id: sourceId,
+						    value: $(element).val() == null ? "test" : $(element).val()
+						  }), function(data, status){
+							  	ajaxCallback(targetId, data, status);
+						});
+					});
+				});
+	         });
+			$(document).ready(function() {
+	            $('[id$=-input-dhtml]').each(function(index, element){
+					$(element).change(function(event) {
+						var targetId = $(element).attr('targetId');
+						var sourceId = $(element).attr('id');
+						var url = /*[[@{/changedhtml}]]*/ 
+						$.post(url, JSON.stringify({
+						    id: sourceId,
+						    value: $(element).val() == null ? "test" : $(element).val()
+						  }), function(data, status){
+							  	ajaxCallback(targetId, data, status);
+						});
+					});
+				});
+	         });
+	         $(document).ready(function() {
+				 $('#addFertigkeit').click(function(event) {
+				 	$('#fertigkeitAuswahl').modal('show');
+				 });
+				 $('[id$=-check]').each(function(index, element){
+					 var url = /*[[@{/alleFertigkeiten}]]*/
+					 $(element).change(function(event){
+						$.post(url, JSON.stringify({
+						    id: element.id,
+						    value: $(this).is(':checked')
+						  }), function(data, status){
+							  $('#fertigkeitenSelect').replaceWith(data);
+						});
+					 });
+				 });
+			 });
+			 $(document).ready(function() {
+				 $('#addCyberware').click(function(event) {
+				 	$('#fertigkeitAuswahl').modal('show');
+				 });
+			 });
+		/*]]>*/
+		</script>
+   	</body>
+
+</html>

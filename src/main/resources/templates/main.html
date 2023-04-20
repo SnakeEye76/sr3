@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+   	<head>
+      	<meta charset = "ISO-8859-1" />
+      	
+      	<link rel="stylesheet" th:href="@{/webjars/bootstrap/5.2.3/css/bootstrap.min.css}"/>
+      	<title>Shadowrun Tool</title>
+      	<style>
+			  .navbar{
+			  	background-color: #323232;
+			  }
+			  .box {
+				border-color: black;
+				border-width: 2px;
+				border-style: solid;
+			  }
+			  .box-head {
+			  	background-color: black;
+			  	text-decoration-color: white;
+			  	text-align: center;
+			  	color: white;
+			  }
+		  </style>
+   	</head>
+   	<body>
+		<header class="navbar navbar-expand-lg bd-navbar sticky-top">
+  			<nav class="container-xxl bd-gutter flex-wrap flex-lg-nowrap" aria-label="Main navigation">
+      			<div class="d-lg-none" style="width: 1.5rem;"></div>
+    			<a class="navbar-brand p-0 me-0 me-lg-2" href="/" aria-label="Shadowrun">
+      				Home
+    			</a>
+  			</nav>
+		</header>
+      	<h4>Welcome to Shadowrun Tool</h4>
+      	<main class="bd-content order-1 py-5" id="content">
+    		<div class="container-xxl bd-gutter gx-5">
+				<a th:href="@{/erstellung}" class="btn btn-primary">Erstelle neuen Charakter</a>
+    		</div>
+      	</main>
+  
+      	
+      	
+		<script th:src="@{/webjars/bootstrap/5.2.3/js/bootstrap.bundle.min.js}"></script>
+   	</body>
+
+</html>

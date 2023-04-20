@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+   	<head>
+      	<meta charset = "ISO-8859-1" />
+      	
+      	<link rel="stylesheet" th:href="@{/webjars/bootstrap/5.2.3/css/bootstrap.min.css}"/>
+      	<script th:src="@{/webjars/jquery/3.6.4/jquery.min.js}"></script>
+      	<title>Shadowrun Tool</title>
+      	<style>
+			  .navbar{
+			  	background-color: #323232;
+			  }
+			  .box {
+				border-color: black;
+				border-width: 2px;
+				border-style: solid;
+			  }
+			  .box-head {
+			  	background-color: black;
+			  	text-decoration-color: white;
+			  	text-align: center;
+			  	color: white;
+			  }
+		  </style>
+   	</head>
+   	<body>
+		<header class="navbar navbar-expand-lg bd-navbar sticky-top">
+  			<nav class="container-xxl bd-gutter flex-wrap flex-lg-nowrap" aria-label="Main navigation">
+      			<div class="d-lg-none" style="width: 1.5rem;"></div>
+    			<a class="navbar-brand p-0 me-0 me-lg-2" href="/" aria-label="Shadowrun">
+      				Home
+    			</a>
+  			</nav>
+		</header>
+      	<h4>Welcome to Shadowrun Tool</h4>
+      	<main class="bd-content order-1 py-5" id="content">
+    		<div class="container-xxl bd-gutter gx-5">
+				<div class="row">
+					<div class="col box"th:fragment="fertigkeiten-editieren">
+						<div class="box-head" style="margin-left: -14px; margin-right: -14px;">Fertigkeiten</div>
+						<div class="row">
+							<div class="col"></div>
+							<div class="col-2 float-end text-end">Wert</div>
+							<div class="col-2 float-end text-end">Aug.</div>
+						</div>
+						<div class="row" th:fragment="fertigkeit-editieren">
+							<div class="col" th:text="${fertigkeit}"></div>
+							<div class="col-2 float-end text-end"><input th:id="${fertigkeitenId} + '-fert-input'" type="number" class="form-control" min="1" value="1"/></div>
+							<div class="col-2 float-end text-end" th:id="${fertigkeitenId} + '-display-aug'">1</div>
+							<script th:inline="javascript" type = "text/javascript" language = "javascript">
+							/*<![CDATA[*/
+								$(document).ready(function() {
+									var id = /*[[${fertigkeitenId} + '-fert-input']]*/ 
+						            $('#' + id).each(function(index, element){
+										$(element).change(function(event) {
+											var url = /*[[@{/change}]]*/
+											$.post(url, JSON.stringify({
+											    id: $(element).attr('id'),
+											    value: $(element).val() == null ? "test" : $(element).val()
+											  }), function(data, status){
+												  	$.each(data, function(index, element) {
+														var targetId = element.id;
+														$('#' + targetId).text(element.value);
+													});
+											});
+										});
+									});
+						         });
+							/*]]>*/
+							</script>
+						</div>
+					</div>
+				</div>
+    		</div>
+      	</main>
+  
+      	
+      	
+		<script th:src="@{/webjars/bootstrap/5.2.3/js/bootstrap.bundle.min.js}"></script>
+   	</body>
+
+</html>

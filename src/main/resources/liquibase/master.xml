@@ -1,0 +1,592 @@
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+	<includeAll path="/schema/"/>
+	<includeAll path="/fertigkeiten/"/>
+	<includeAll path="/cyberware/"/>
+    <changeSet id="1" author="KB">
+		
+		
+		
+		
+		<createTable tableName="Ausruestung">
+			<column name="id" type="BigInt" autoIncrement="true"> </column>
+			<column name="kosten" type="BigInt"></column>
+		</createTable>
+		
+		<createTable tableName="FERTIGKEIT_SPEZIFIKATION">
+			<column name="id" type="BigInt" autoIncrement="true"> </column>
+			<column name="name" type="VARCHAR2"></column>
+			<column name="BAUEN_REPARIEREN_VON_ID" type="BigInt"></column>
+			<column name="attribut" type="VARCHAR2"></column>
+			<column name="typ" type="VARCHAR2"></column>
+			<column name="kategorie" type="VARCHAR2"></column>
+			<column name="beschreibung" type="VARCHAR2"></column>
+		</createTable>
+		
+		<createTable tableName="FERTIGKEIT">
+			<column name="id" type="BigInt" autoIncrement="true"> </column>
+			<column name="wert" type="BigInt"></column>
+			<column name="SPEZIFIKATION_ID" type="BigInt"></column>
+		</createTable>
+		
+		<insert tableName="fertigkeit_spezifikation">
+			<column name="id">1</column>
+			<column name="name">Strumgewehre</column>
+			<column name="attribut">SCH</column>
+			<column name="typ">AKTIONSFERTIGKEIT</column>
+			<column name="kategorie">KAMPF</column>
+			<column name="beschreibung">Strumgewehre umfaßt die Benutzung aller automatischen Gewehre.</column>
+		</insert>
+		<insert tableName="fertigkeit_spezifikation">
+			<column name="id">2</column>
+			<column name="name">Knüppel</column>
+			<column name="attribut">ST</column>
+			<column name="typ">AKTIONSFERTIGKEIT</column>
+			<column name="kategorie">KAMPF</column>
+			<column name="beschreibung">Knüppel umfaßt die Benutzung von Nahkampf-Handwaffen, die keine Klinge haben und weniger als einen Meter lang sind. Mit dieser Fertigkeit kann ein Charakter jeden kurzen, schweren Gegenstand als Waffe verwenden, von Baseballschlägern über Wagenheber bis zu Stuhlbeinen.</column>
+		</insert>
+		<insert tableName="fertigkeit_spezifikation">
+			<column name="id">3</column>
+			<column name="name">Cyberimplantatwaffen</column>
+			<column name="attribut">ST</column>
+			<column name="typ">AKTIONSFERTIGKEIT</column>
+			<column name="kategorie">KAMPF</column>
+			<column name="beschreibung">Diese neue Kampfdisziplin hat sich seit dem Aufkommen von kampforientierter Cyberware entwickelt. Als Kombination der schnellen Schläge von Klingenwaffen mit dem Mitten-ins-Gesicht-Stil des Waffenlosen-Kampfes erlaubt diese Fertigkeit denjenigen, die die richtige Cyberware haben, diese auch optimal einzusetzen.</column>
+		</insert>
+		<insert tableName="fertigkeit_spezifikation">
+			<column name="id">4</column>
+			<column name="name">Klingenwaffen</column>
+			<column name="attribut">ST</column>
+			<column name="typ">AKTIONSFERTIGKEIT</column>
+			<column name="kategorie">KAMPF</column>
+			<column name="beschreibung">Klingenwaffen umfassen alle Nahkampf-Handwaffen mit einer Klinge oder Spitze. Diese Fertigkeit erlaubt einem Charakter, effektiv unterschiedliche Messer, Schwerter und Äxte zu verwenden solange sie kürzer sind als einen Meter.</column>
+		</insert>
+		<insert tableName="fertigkeit_spezifikation">
+			<column name="id">5</column>
+			<column name="name">Geschütze</column>
+			<column name="attribut">INT</column>
+			<column name="typ">AKTIONSFERTIGKEIT</column>
+			<column name="kategorie">KAMPF</column>
+			<column name="beschreibung">Unter diese Fertigkeit fallen alle fahrzeugmontierten Waffen auf Stativen, Lafetten oder Türmen. Sie umfaßt manuelle und sensorunterstütze Geschützbedienung.</column>
+		</insert>
+		<insert tableName="fertigkeit_spezifikation">
+			<column name="id">6</column>
+			<column name="name">Schwere Waffen</column>
+			<column name="attribut">ST</column>
+			<column name="typ">AKTIONSFERTIGKEIT</column>
+			<column name="kategorie">KAMPF</column>
+			<column name="beschreibung">Diese Fertigkeit gibt dem Charakter das Know-how für die Handhabung aller Feuerwaffen, die größer sind als Sturmgewehre, also auch große Waffen, die auf Dreibeinen, Stativen, Gyrostabilisatoren oder festen Installationen angebracht sind (aber nicht in oder auf Fahrzeugen).</column>
+		</insert>
+		<insert tableName="fertigkeit_spezifikation">
+			<column name="id">7</column>
+			<column name="name">Laserwaffen</column>
+			<column name="attribut">SCH</column>
+			<column name="typ">AKTIONSFERTIGKEIT</column>
+			<column name="kategorie">KAMPF</column>
+			<column name="beschreibung">Diese Fertigkeit gestattet dem Charakter, Laserwaffen zu handhaben und abzufeuern.</column>
+		</insert>
+		<insert tableName="fertigkeit_spezifikation">
+			<column name="id">8</column>
+			<column name="name">Raketenwaffen</column>
+			<column name="attribut">INT</column>
+			<column name="typ">AKTIONSFERTIGKEIT</column>
+			<column name="kategorie">KAMPF</column>
+			<column name="beschreibung">Diese Fertigkeit erlaubt die Benutzung jeder Waffe, die eine Lenkwaffe, eine Rakete oder ein anderes Explosivprojektil (wie zum Beispiel Granaten) verschießt. Inklusive Mörser (jedoch nicht in oder auf Fahrzeugen). Die Fertigkeit umfasst manuelles und sensorunterstütztes Feuern sowie spezielle Granatwerfer und unterlaufmodelle. Die Späher-spezialisierung kann für Zielproben verwendet werden.</column>
+		</insert>
+		<insert tableName="fertigkeit_spezifikation">
+			<column name="id">9</column>
+			<column name="name">Pistolen</column>
+			<column name="attribut">SCH</column>
+			<column name="typ">AKTIONSFERTIGKEIT</column>
+			<column name="kategorie">KAMPF</column>
+			<column name="beschreibung">Diese Fertigkeit umfasst die Benutzung aller Arten von Handfeuerwaffen wie Hold-out-Pistolen, Leichte, Schwere Pitolen und Taser.</column>
+		</insert>
+		<insert tableName="fertigkeit_spezifikation">
+			<column name="id">10</column>
+			<column name="name">Stangenwaffen / Stäbe</column>
+			<column name="attribut">ST</column>
+			<column name="typ">AKTIONSFERTIGKEIT</column>
+			<column name="kategorie">KAMPF</column>
+			<column name="beschreibung">Mit dieser Fertigkeit können Nahkampf-Handwaffen, die länger als einen Meter sind, benutzt werden.</column>
+		</insert>
+		<insert tableName="fertigkeit_spezifikation">
+			<column name="id">11</column>
+			<column name="name">Projektilwaffen</column>
+			<column name="attribut">ST</column>
+			<column name="typ">AKTIONSFERTIGKEIT</column>
+			<column name="kategorie">KAMPF</column>
+			<column name="beschreibung">Diese Fertigkeit erlaubt den Einsatz muskelbetriebener Projektilwaffen.</column>
+		</insert>
+		<insert tableName="fertigkeit_spezifikation">
+			<column name="id">12</column>
+			<column name="name">Gewehr</column>
+			<column name="attribut">SCH</column>
+			<column name="typ">AKTIONSFERTIGKEIT</column>
+			<column name="kategorie">KAMPF</column>
+			<column name="beschreibung">Diese Fertigkeit umfaßt die Verwendung aller Sport- und Scharfschützengewehre.</column>
+		</insert>
+		<insert tableName="fertigkeit_spezifikation">
+			<column name="id">13</column>
+			<column name="name">Schrotflinte</column>
+			<column name="attribut">SCH</column>
+			<column name="typ">AKTIONSFERTIGKEIT</column>
+			<column name="kategorie">KAMPF</column>
+			<column name="beschreibung">Genau das.</column>
+		</insert>
+		<insert tableName="fertigkeit_spezifikation">
+			<column name="id">14</column>
+			<column name="name">Maschinenpistolen</column>
+			<column name="attribut">SCH</column>
+			<column name="typ">AKTIONSFERTIGKEIT</column>
+			<column name="kategorie">KAMPF</column>
+			<column name="beschreibung">Diese Fertigkeit umfaßt den Einsatz von halbautomatischen und automatischen Waffen die von Schulter oder Hüfte aus abgefeuert werden.</column>
+		</insert>
+		<insert tableName="fertigkeit_spezifikation">
+			<column name="id">15</column>
+			<column name="name">Wurfwaffen</column>
+			<column name="attribut">ST</column>
+			<column name="typ">AKTIONSFERTIGKEIT</column>
+			<column name="kategorie">KAMPF</column>
+			<column name="beschreibung">Diese Fertigkeit umfasst den Einsatz jedes Gegenstandes, der von einem Charakter geworfen wird.</column>
+		</insert>
+		<insert tableName="fertigkeit_spezifikation">
+			<column name="id">16</column>
+			<column name="name">Waffenloser Kampf</column>
+			<column name="attribut">ST</column>
+			<column name="typ">AKTIONSFERTIGKEIT</column>
+			<column name="kategorie">KAMPF</column>
+			<column name="beschreibung">Unter diese Fertigkeit fallen alle Kampftechniken, die einzig auf den EInsatz des eigenen Körpers des Charakters beruhen. Neben Boxen umfaßt das auch solche Kampfstile wie asiatische Kampfsportarten oder die brasillianische Capoeira.</column>
+		</insert>
+		<insert tableName="fertigkeit_spezifikation">
+			<column name="id">17</column>
+			<column name="name">Unterwasserkampf</column>
+			<column name="attribut">ST</column>
+			<column name="typ">AKTIONSFERTIGKEIT</column>
+			<column name="kategorie">KAMPF</column>
+			<column name="beschreibung">Unterwasserkampf ist äußerst schwierig. Diese Fertigkeit umfaßt die Techniken, die benötigt werden, um in Nahkampfsituationen unter Wasser zu manövrieren und einen Gegner zu schlagen.</column>
+		</insert>
+		<insert tableName="fertigkeit_spezifikation">
+			<column name="id">18</column>
+			<column name="name">Peitschen</column>
+			<column name="attribut">SCH</column>
+			<column name="typ">AKTIONSFERTIGKEIT</column>
+			<column name="kategorie">KAMPF</column>
+			<column name="beschreibung">Diese Fertigkeit umßat den Einsatz von Peitschen und peitschenähnlichen Waffen.</column>
+		</insert>
+		<insert tableName="fertigkeit_spezifikation">
+			<column name="id">19</column>
+			<column name="name">Auren lesen</column>
+			<column name="attribut">INT</column>
+			<column name="typ">AKTIONSFERTIGKEIT</column>
+			<column name="kategorie">MAGIE</column>
+			<column name="beschreibung">Auren lesen ist die Kunst der Psychometrie, die Fertigkeit, Informationen aus Aura, astraler Form und Signatur anderer abzulesen. Auren lesen kann als ergänzende Fertigkeit für Askennen-Proben verwendet werden.</column>
+		</insert>
+		<insert tableName="fertigkeit_spezifikation">
+			<column name="id">20</column>
+			<column name="name">Hexerei</column>
+			<column name="attribut">WILL</column>
+			<column name="typ">AKTIONSFERTIGKEIT</column>
+			<column name="kategorie">MAGIE</column>
+			<column name="beschreibung">Die Hexereifertigkeit beinhaltet die Kontrolle magischer Energie, normalerweise in der Form von Zaubersprüchen. Nur Charaktere mit einem Magieattribut von mindestens 1 können diese Fertigkeit besitzen.</column>
+		</insert>
+		<insert tableName="fertigkeit_spezifikation">
+			<column name="id">21</column>
+			<column name="name">Beschwören</column>
+			<column name="attribut">WILL</column>
+			<column name="typ">AKTIONSFERTIGKEIT</column>
+			<column name="kategorie">MAGIE</column>
+			<column name="beschreibung">Diese Fertigkeit umfaßt das Herbeirufen un das Bannen von Geistern. Nur Charaktere mit einem Magieattribut von mindestens 1 können diese Fertigkeit besitzen. Magier können Elementargeister beschwören; Schamanen können Naturgeister herbeirufen.</column>
+		</insert>
+		<insert tableName="fertigkeit_spezifikation">
+			<column name="id">22</column>
+			<column name="name">Athletik</column>
+			<column name="attribut">KON</column>
+			<column name="typ">AKTIONSFERTIGKEIT</column>
+			<column name="kategorie">KOERPERLICH</column>
+			<column name="beschreibung">Die Athletikfertigkeit reflektiert das Training und die Ausbildung des Körpers, die notwendig sind, um extreme körperliche AKtivitäten auszuüben. Kann zur Erhöhung der Laufdistanz eingesetzt werden.</column>
+		</insert>
+		<insert tableName="fertigkeit_spezifikation">
+			<column name="id">23</column>
+			<column name="name">Tauchen</column>
+			<column name="attribut">KON</column>
+			<column name="typ">AKTIONSFERTIGKEIT</column>
+			<column name="kategorie">KOERPERLICH</column>
+			<column name="beschreibung">Diese  Fertigkeit umfaßt Unterwasser-Schwimmtechniken sowie die Verwendung von Atemgeräten und sonstiger Unterwasser-Ausrüstung</column>
+		</insert>
+		<insert tableName="fertigkeit_spezifikation">
+			<column name="id">24</column>
+			<column name="name">Heimlichkeit</column>
+			<column name="attribut">SCH</column>
+			<column name="typ">AKTIONSFERTIGKEIT</column>
+			<column name="kategorie">KOERPERLICH</column>
+			<column name="beschreibung">Diese Fertigkeit umfaßt Herumschleichen, Fingerfertigkeit und Abschütteln von Verfolgern. Auch Tarnung und Verkleidung gehören dazu. In den meisten Fällen erfordert Heimlichkeit eine offene Probe</column>
+		</insert>
+		<insert tableName="fertigkeit_spezifikation">
+			<column name="id">25</column>
+			<column name="name">Gebräuche</column>
+			<column name="attribut">CHA</column>
+			<column name="typ">AKTIONSFERTIGKEIT</column>
+			<column name="kategorie">SOZIAL</column>
+			<column name="beschreibung">Die Gebräuchefertigkeit gestattet einem Charakter, sich in einer bestimmten Subkultur frei zu bewegen, ohne deplaziert zu wirken. Sie ermöglicht ihm zudem, prominente Angehörige dieser Subkultur zu erkennen und einige allgemeine Vorstellungen über deren Stärken, Schwächen, Vorlieben und Abneigungen zu haben. Gebräuche ist eine breitgefächerte Fertigkeit. Ein Charakter kann sich auf praktisch jede Subkultur spezialisieren, die er sich vorstellen kann, mit Einverständnis des Spielleiters, versteht sich. Gebräuche spezialisierungen gelten im allgemeinen für das lokale Umfeld des Charakters. Gebräuche(Gangs) würde sich zum Beispiel auf lokale Stadtgangs beziehen und nicht auf Gangs in der ganzen Welt.</column>
+		</insert>
+		<insert tableName="fertigkeit_spezifikation">
+			<column name="id">26</column>
+			<column name="name">Unterrichten</column>
+			<column name="attribut">CHA</column>
+			<column name="typ">AKTIONSFERTIGKEIT</column>
+			<column name="kategorie">SOZIAL</column>
+			<column name="beschreibung">Die Unterrichtenfertigkeit erlaubt einem Charakter, einem anderen Charakter einen Lernstoff effektiver beizubringen.</column>
+		</insert>
+		<insert tableName="fertigkeit_spezifikation">
+			<column name="id">27</column>
+			<column name="name">Verhör</column>
+			<column name="attribut">CHA</column>
+			<column name="typ">AKTIONSFERTIGKEIT</column>
+			<column name="kategorie">SOZIAL</column>
+			<column name="beschreibung">Die Verhörfertigkeit ermöglicht die Extraktion von Informationen aus einem nichtkooperativen Subjekt. Eine offene Probe auf diese Fertigkeit führt zu einem Mindestwurf, den das Opfer bei einer Willenskraftprobe erreichen oder übertreffen muß, um dem Verhör zu widerstehen. Ein Charakter, der verhört wird und ebenfalls diese Fertigkeit besitzt, kann sie als ergänzende fertigkeit für seine Willenskraftprobe gegen das Verhör verwenden.</column>
+		</insert>
+		<insert tableName="fertigkeit_spezifikation">
+			<column name="id">28</column>
+			<column name="name">Einschüchterung</column>
+			<column name="attribut">CHA</column>
+			<column name="typ">AKTIONSFERTIGKEIT</column>
+			<column name="kategorie">SOZIAL</column>
+			<column name="beschreibung">Je nach Sichtweise ist die Einschüchterungsfertigkeit entweder eine schwächere Version der Verhörfertigkeit oder eine stärkere Version der Fertigkeit Verhandlung. Mit dieser Fertigkeit kann ein Charakter Leute dazu bringen, Dinge zu tun, die sie normalerweise nicht tun würden, einfach indem er Ihnen durch seine Erscheinung oder sein Verhalten Angst einjagt. Eine offene Probe auf diese Fertigkeit erzeugt einen Mindestwurf, den das Opfer erreichen oder übertreffen muß um gegen die EInschüchterung Widerstand zu leisten. Ein Charakter, der diese Fertigkeit besitzt, kann sie als ergänzende Fertigkeit für die Willenskraftprobe einsetzen, wenn er eingeschüchtert oder verhört wird.</column>
+		</insert>
+		<insert tableName="fertigkeit_spezifikation">
+			<column name="id">29</column>
+			<column name="name">Führung</column>
+			<column name="attribut">CHA</column>
+			<column name="typ">AKTIONSFERTIGKEIT</column>
+			<column name="kategorie">SOZIAL</column>
+			<column name="beschreibung">Diese Fertigkeit beschreibt die Fähigkeit eines Charakters, mittels gutem Beispiel und Autorität andere dazu zu bringen, seinen Anweisungen zu folgen. Sie umfaßt den Aspekt der Problemlösungskompetenz, kann jedoch nicht klares Denken und gutes Planen seitens des Spielers ersetzen. Die Führungsfertigkeit verwendet die Intelligenz der Zielperson als Mindestwurf.</column>
+		</insert>
+		<insert tableName="fertigkeit_spezifikation">
+			<column name="id">30</column>
+			<column name="name">Verhandlung</column>
+			<column name="attribut">CHA</column>
+			<column name="typ">AKTIONSFERTIGKEIT</column>
+			<column name="kategorie">SOZIAL</column>
+			<column name="beschreibung">Die Verhandlungsfertigkeit deckt alle Interaktionen ab, bei denen jede Seite einen Vorteil errigen möchte, entweder durch sorgfältiges und besonnenes Feilschen oder durch Überredung. Das Intelligenzattribut des Verhandlungsgegners wird dabei als Mindestwurf verwendet. In manchen Fällen kann der Spielleiter eine offene Probe auf diese Fertigkeit verlangen, um einen Mindestwurf zu erhalten, mit dem durch eine entsprechende Probe festgestellt werden kann, ob jemand eine Lüge oder Halbwahrheit erkennt.</column>
+		</insert>
+		<insert tableName="fertigkeit_spezifikation">
+			<column name="id">31</column>
+			<column name="name">Biotech</column>
+			<column name="attribut">INT</column>
+			<column name="typ">AKTIONSFERTIGKEIT</column>
+			<column name="kategorie">TECHNISCH</column>
+			<column name="beschreibung">Biotech umfaßt grundlegende medizinische Eingriffe und Erste  Hilfe. Ein Charakter mit dieser Fertigkeit beherrscht die Medizin in einem eher handwerklichen Sinne, mehr wie ein Sanitäter als wie ein Arzt. Auch wenn der Charakter mit den Techniken und Materialien von Cyberware grundlegend vertraut ist, so braucht er doch die Zusammenarbeit mit einem Computerexperten, um sich an Interface-Systeme heranwagen zu können.</column>
+		</insert>
+		<insert tableName="fertigkeit_spezifikation">
+			<column name="id">32</column>
+			<column name="name">Computer</column>
+			<column name="attribut">INT</column>
+			<column name="typ">AKTIONSFERTIGKEIT</column>
+			<column name="kategorie">TECHNISCH</column>
+			<column name="beschreibung">Die Computerfertigkeit umfaßt den EInsatz und das Verständnis von Computertechnologie und Programmierung. Diese Fertigkeit ist existenziell wür jeden Charakter, der sich in den Cyberspace einstöpseln und durch die Matrix laufen will.</column>
+		</insert>
+		<insert tableName="fertigkeit_spezifikation">
+			<column name="id">33</column>
+			<column name="name">Sprengstoffe</column>
+			<column name="attribut">INT</column>
+			<column name="typ">AKTIONSFERTIGKEIT</column>
+			<column name="kategorie">TECHNISCH</column>
+			<column name="beschreibung">Diese Fertigkeit umfaßt Herstellung, Einsatz und Benutzung von chemischen Sprengstoffen.</column>
+		</insert>
+		<insert tableName="fertigkeit_spezifikation">
+			<column name="id">34</column>
+			<column name="name">Elektronik</column>
+			<column name="attribut">INT</column>
+			<column name="typ">AKTIONSFERTIGKEIT</column>
+			<column name="kategorie">TECHNISCH</column>
+			<column name="beschreibung">Diese Fertigkeit beinhaltet Verwendung und Verständnis von elektronischen Geräten, was in den 2060ern so ziemlich alles umfaßt, was in einer Stadt zum EInsatz kommt.</column>
+		</insert>
+		<insert tableName="fertigkeit_spezifikation">
+			<column name="id">35</column>
+			<column name="name">Motorrad</column>
+			<column name="attribut">REA</column>
+			<column name="typ">AKTIONSFERTIGKEIT</column>
+			<column name="kategorie">FAHRZEUG</column>
+			<column name="beschreibung">Hierunter fällt das Fahren aller Motorräder, Trikes und Motorräder mit Seitenwagen.</column>
+		</insert>
+		<insert tableName="fertigkeit_spezifikation">
+			<column name="id">36</column>
+			<column name="name">Auto</column>
+			<column name="attribut">REA</column>
+			<column name="typ">AKTIONSFERTIGKEIT</column>
+			<column name="kategorie">FAHRZEUG</column>
+			<column name="beschreibung">Umfaßt alle Motorfahrzeuge mit vier oder mehr Rädern.</column>
+		</insert>
+		<insert tableName="fertigkeit_spezifikation">
+			<column name="id">37</column>
+			<column name="name">Flugzeug</column>
+			<column name="attribut">REA</column>
+			<column name="typ">AKTIONSFERTIGKEIT</column>
+			<column name="kategorie">FAHRZEUG</column>
+			<column name="beschreibung">Die Flugzeugfertigkeit beinhaltet die Kontrolle über Flugzeuge mit festen oder Schwenkflügeln(Jets, Propeller- oder Turbopropmaschinen) sowie alle antriebslosen Flugzeuge.</column>
+		</insert>
+		<insert tableName="fertigkeit_spezifikation">
+			<column name="id">38</column>
+			<column name="name">Hovercraft</column>
+			<column name="attribut">REA</column>
+			<column name="typ">AKTIONSFERTIGKEIT</column>
+			<column name="kategorie">FAHRZEUG</column>
+			<column name="beschreibung">Diese Fertigkeit umfaßt alle Luftkissenfahrzeuge, unabhängig von ihrem Verwendungszweck.</column>
+		</insert>
+		<insert tableName="fertigkeit_spezifikation">
+			<column name="id">39</column>
+			<column name="name">Luftschiff</column>
+			<column name="attribut">REA</column>
+			<column name="typ">AKTIONSFERTIGKEIT</column>
+			<column name="kategorie">FAHRZEUG</column>
+			<column name="beschreibung">Diese Fertigkeit umfaßt den EInsatz aller Luftfahrzeuge, die mittels Gas(meist Helium oder Heißluft) in der Luft bleiben können. Darunter fallen Zeppeline und Ballone.</column>
+		</insert>
+		<insert tableName="fertigkeit_spezifikation">
+			<column name="id">40</column>
+			<column name="name">Motorschiff</column>
+			<column name="attribut">REA</column>
+			<column name="typ">AKTIONSFERTIGKEIT</column>
+			<column name="kategorie">FAHRZEUG</column>
+			<column name="beschreibung">Unter diese Fertigkeit fällt die Bedienung jedes motorgetriebenen Wasserfahrzeugs.</column>
+		</insert>
+		<insert tableName="fertigkeit_spezifikation">
+			<column name="id">41</column>
+			<column name="name">Segelschiff</column>
+			<column name="attribut">REA</column>
+			<column name="typ">AKTIONSFERTIGKEIT</column>
+			<column name="kategorie">FAHRZEUG</column>
+			<column name="beschreibung">Bezieht sich auf alle durch Segel angetriebenen Wasserfahrzeuge.</column>
+		</insert>
+		<insert tableName="fertigkeit_spezifikation">
+			<column name="id">42</column>
+			<column name="name">Schiff</column>
+			<column name="attribut">REA</column>
+			<column name="typ">AKTIONSFERTIGKEIT</column>
+			<column name="kategorie">FAHRZEUG</column>
+			<column name="beschreibung">Diese Fertigkeit umfaßt Führung, Navigation und Handling großer Überwasser-Schiffe.</column>
+		</insert>
+		<insert tableName="fertigkeit_spezifikation">
+			<column name="id">43</column>
+			<column name="name">Unterseeboot</column>
+			<column name="attribut">REA</column>
+			<column name="typ">AKTIONSFERTIGKEIT</column>
+			<column name="kategorie">FAHRZEUG</column>
+			<column name="beschreibung">Diese Fertigkeit bezieht sich auf die Bedienung aller Wasserfahrzeuge, die in der Lage sind, unter Wasser zu operieren.</column>
+		</insert>
+		<insert tableName="fertigkeit_spezifikation">
+			<column name="id">44</column>
+			<column name="name">Vektorschubmaschinen</column>
+			<column name="attribut">REA</column>
+			<column name="typ">AKTIONSFERTIGKEIT</column>
+			<column name="kategorie">FAHRZEUG</column>
+			<column name="beschreibung">Diese Fertigkeit umfaßt Luftfahrzeuge, die beim Aufsteigen und bei der Vorwärtsbewegung Vektorschub einsetzen. Das umfaßt Schweber(umgangssprachlich als Thunderbirds bezeichnet) sowie Militärflugzeuge, die auf diese ANtriebsart zurückgreifen, aber wegen ihrer Schweren Zuladung, ohrer Panzerung und Bewaffnung in der Regel nicht in großer Höhe operieren.</column>
+		</insert>
+		
+		<insert tableName="fertigkeit_spezifikation">
+			<column name="id">45</column>
+			<column name="attribut">INT</column>
+			<column name="typ">AKTIONSFERTIGKEIT</column>
+			<column name="kategorie">BAUEN_REPARIEEN</column>
+			<column name="BAUEN_REPARIEREN_VON_ID">1</column>
+		</insert>
+		<insert tableName="fertigkeit_spezifikation">
+			<column name="BAUEN_REPARIEREN_VON_ID">2</column>
+			<column name="id">46</column>
+			<column name="attribut">INT</column>
+			<column name="typ">AKTIONSFERTIGKEIT</column>
+			<column name="kategorie">BAUEN_REPARIEEN</column>
+		</insert>
+		<insert tableName="fertigkeit_spezifikation">
+			<column name="BAUEN_REPARIEREN_VON_ID">3</column>
+			<column name="id">47</column>
+			<column name="attribut">INT</column>
+			<column name="typ">AKTIONSFERTIGKEIT</column>
+			<column name="kategorie">BAUEN_REPARIEEN</column>
+		</insert>
+		<insert tableName="fertigkeit_spezifikation">
+			<column name="BAUEN_REPARIEREN_VON_ID">4</column>
+			<column name="id">48</column>
+			<column name="attribut">INT</column>
+			<column name="typ">AKTIONSFERTIGKEIT</column>
+			<column name="kategorie">BAUEN_REPARIEEN</column>
+		</insert>
+		<insert tableName="fertigkeit_spezifikation">
+			<column name="BAUEN_REPARIEREN_VON_ID">5</column>
+			<column name="id">49</column>
+			<column name="attribut">INT</column>
+			<column name="typ">AKTIONSFERTIGKEIT</column>
+			<column name="kategorie">BAUEN_REPARIEEN</column>
+		</insert>
+		<insert tableName="fertigkeit_spezifikation">
+			<column name="BAUEN_REPARIEREN_VON_ID">6</column>
+			<column name="id">50</column>
+			<column name="attribut">INT</column>
+			<column name="typ">AKTIONSFERTIGKEIT</column>
+			<column name="kategorie">BAUEN_REPARIEEN</column>
+		</insert>
+		<insert tableName="fertigkeit_spezifikation">
+			<column name="BAUEN_REPARIEREN_VON_ID">7</column>
+			<column name="id">51</column>
+			<column name="attribut">INT</column>
+			<column name="typ">AKTIONSFERTIGKEIT</column>
+			<column name="kategorie">BAUEN_REPARIEEN</column>
+		</insert>
+		<insert tableName="fertigkeit_spezifikation">
+			<column name="BAUEN_REPARIEREN_VON_ID">8</column>
+			<column name="id">52</column>
+			<column name="attribut">INT</column>
+			<column name="typ">AKTIONSFERTIGKEIT</column>
+			<column name="kategorie">BAUEN_REPARIEEN</column>
+		</insert>
+		<insert tableName="fertigkeit_spezifikation">
+			<column name="BAUEN_REPARIEREN_VON_ID">9</column>
+			<column name="id">53</column>
+			<column name="attribut">INT</column>
+			<column name="typ">AKTIONSFERTIGKEIT</column>
+			<column name="kategorie">BAUEN_REPARIEEN</column>
+		</insert>
+		<insert tableName="fertigkeit_spezifikation">
+			<column name="BAUEN_REPARIEREN_VON_ID">10</column>
+			<column name="id">54</column>
+			<column name="attribut">INT</column>
+			<column name="typ">AKTIONSFERTIGKEIT</column>
+			<column name="kategorie">BAUEN_REPARIEEN</column>
+		</insert>
+		<insert tableName="fertigkeit_spezifikation">
+			<column name="BAUEN_REPARIEREN_VON_ID">11</column>
+			<column name="id">55</column>
+			<column name="attribut">INT</column>
+			<column name="typ">AKTIONSFERTIGKEIT</column>
+			<column name="kategorie">BAUEN_REPARIEEN</column>
+		</insert>
+		<insert tableName="fertigkeit_spezifikation">
+			<column name="BAUEN_REPARIEREN_VON_ID">12</column>
+			<column name="id">56</column>
+			<column name="attribut">INT</column>
+			<column name="typ">AKTIONSFERTIGKEIT</column>
+			<column name="kategorie">BAUEN_REPARIEEN</column>
+		</insert>
+		<insert tableName="fertigkeit_spezifikation">
+			<column name="BAUEN_REPARIEREN_VON_ID">13</column>
+			<column name="id">57</column>
+			<column name="attribut">INT</column>
+			<column name="typ">AKTIONSFERTIGKEIT</column>
+			<column name="kategorie">BAUEN_REPARIEEN</column>
+		</insert>
+		<insert tableName="fertigkeit_spezifikation">
+			<column name="BAUEN_REPARIEREN_VON_ID">14</column>
+			<column name="id">58</column>
+			<column name="attribut">INT</column>
+			<column name="typ">AKTIONSFERTIGKEIT</column>
+			<column name="kategorie">BAUEN_REPARIEEN</column>
+		</insert>
+		<insert tableName="fertigkeit_spezifikation">
+			<column name="BAUEN_REPARIEREN_VON_ID">15</column>
+			<column name="id">59</column>
+			<column name="attribut">INT</column>
+			<column name="typ">AKTIONSFERTIGKEIT</column>
+			<column name="kategorie">BAUEN_REPARIEEN</column>
+		</insert>
+		<insert tableName="fertigkeit_spezifikation">
+			<column name="BAUEN_REPARIEREN_VON_ID">18</column>
+			<column name="id">60</column>
+			<column name="name">Peitschen</column>
+			<column name="attribut">INT</column>
+			<column name="typ">AKTIONSFERTIGKEIT</column>
+			<column name="kategorie">BAUEN_REPARIEEN</column>
+		</insert>
+		<insert tableName="fertigkeit_spezifikation">
+			<column name="BAUEN_REPARIEREN_VON_ID">23</column>
+			<column name="id">61</column>
+			<column name="name">Tauchen</column>
+			<column name="attribut">INT</column>
+			<column name="typ">AKTIONSFERTIGKEIT</column>
+			<column name="kategorie">BAUEN_REPARIEEN</column>
+		</insert>
+		<insert tableName="fertigkeit_spezifikation">
+			<column name="BAUEN_REPARIEREN_VON_ID">32</column>
+			<column name="id">62</column>
+			<column name="name">Computer</column>
+			<column name="attribut">INT</column>
+			<column name="typ">AKTIONSFERTIGKEIT</column>
+			<column name="kategorie">BAUEN_REPARIEEN</column>
+		</insert>
+		<insert tableName="fertigkeit_spezifikation">
+			<column name="BAUEN_REPARIEREN_VON_ID">34</column>
+			<column name="id">63</column>
+			<column name="attribut">INT</column>
+			<column name="typ">AKTIONSFERTIGKEIT</column>
+			<column name="kategorie">BAUEN_REPARIEEN</column>
+		</insert>
+		<insert tableName="fertigkeit_spezifikation">
+			<column name="BAUEN_REPARIEREN_VON_ID">35</column>
+			<column name="id">64</column>
+			<column name="attribut">INT</column>
+			<column name="typ">AKTIONSFERTIGKEIT</column>
+			<column name="kategorie">BAUEN_REPARIEEN</column>
+		</insert>
+		<insert tableName="fertigkeit_spezifikation">
+			<column name="BAUEN_REPARIEREN_VON_ID">36</column>
+			<column name="id">65</column>
+			<column name="attribut">INT</column>
+			<column name="typ">AKTIONSFERTIGKEIT</column>
+			<column name="kategorie">BAUEN_REPARIEEN</column>
+		</insert>
+		<insert tableName="fertigkeit_spezifikation">
+			<column name="BAUEN_REPARIEREN_VON_ID">37</column>
+			<column name="id">66</column>
+			<column name="attribut">INT</column>
+			<column name="typ">AKTIONSFERTIGKEIT</column>
+			<column name="kategorie">BAUEN_REPARIEEN</column>
+		</insert>
+		<insert tableName="fertigkeit_spezifikation">
+			<column name="BAUEN_REPARIEREN_VON_ID">38</column>
+			<column name="id">67</column>
+			<column name="attribut">INT</column>
+			<column name="typ">AKTIONSFERTIGKEIT</column>
+			<column name="kategorie">BAUEN_REPARIEEN</column>
+		</insert>
+		<insert tableName="fertigkeit_spezifikation">
+			<column name="BAUEN_REPARIEREN_VON_ID">39</column>
+			<column name="id">68</column>
+			<column name="attribut">INT</column>
+			<column name="typ">AKTIONSFERTIGKEIT</column>
+			<column name="kategorie">BAUEN_REPARIEEN</column>
+		</insert>
+		<insert tableName="fertigkeit_spezifikation">
+			<column name="BAUEN_REPARIEREN_VON_ID">40</column>
+			<column name="id">69</column>
+			<column name="attribut">INT</column>
+			<column name="typ">AKTIONSFERTIGKEIT</column>
+			<column name="kategorie">BAUEN_REPARIEEN</column>
+		</insert>
+		<insert tableName="fertigkeit_spezifikation">
+			<column name="BAUEN_REPARIEREN_VON_ID">41</column>
+			<column name="id">70</column>
+			<column name="attribut">INT</column>
+			<column name="typ">AKTIONSFERTIGKEIT</column>
+			<column name="kategorie">BAUEN_REPARIEEN</column>
+		</insert>
+		<insert tableName="fertigkeit_spezifikation">
+			<column name="BAUEN_REPARIEREN_VON_ID">42</column>
+			<column name="id">71</column>
+			<column name="attribut">INT</column>
+			<column name="typ">AKTIONSFERTIGKEIT</column>
+			<column name="kategorie">BAUEN_REPARIEEN</column>
+		</insert>
+		<insert tableName="fertigkeit_spezifikation">
+			<column name="BAUEN_REPARIEREN_VON_ID">43</column>
+			<column name="id">72</column>
+			<column name="attribut">INT</column>
+			<column name="typ">AKTIONSFERTIGKEIT</column>
+			<column name="kategorie">BAUEN_REPARIEEN</column>
+		</insert>
+		<insert tableName="fertigkeit_spezifikation">
+			<column name="BAUEN_REPARIEREN_VON_ID">44</column>
+			<column name="id">73</column>
+			<column name="attribut">INT</column>
+			<column name="typ">AKTIONSFERTIGKEIT</column>
+			<column name="kategorie">BAUEN_REPARIEEN</column>
+		</insert>
+	</changeSet>
+
+</databaseChangeLog>

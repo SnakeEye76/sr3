@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+   	<head>
+      	<meta charset = "ISO-8859-1" />
+      	
+      	<link rel="stylesheet" th:href="@{/webjars/bootstrap/5.2.3/css/bootstrap.min.css}"/>
+      	<title>Shadowrun Tool</title>
+      	<style>
+			  .navbar{
+			  	background-color: #323232;
+			  }
+			  .box {
+				border-color: black;
+				border-width: 2px;
+				border-style: solid;
+			  }
+			  .box-head {
+			  	background-color: black;
+			  	text-decoration-color: white;
+			  	text-align: center;
+			  	color: white;
+			  }
+		  </style>
+   	</head>
+   	<body>
+		<header class="navbar navbar-expand-lg bd-navbar sticky-top">
+  			<nav class="container-xxl bd-gutter flex-wrap flex-lg-nowrap" aria-label="Main navigation">
+      			<div class="d-lg-none" style="width: 1.5rem;"></div>
+    			<a class="navbar-brand p-0 me-0 me-lg-2" href="/" aria-label="Shadowrun">
+      				Home
+    			</a>
+  			</nav>
+		</header>
+      	<h4>Welcome to Shadowrun Tool</h4>
+      	<main class="bd-content order-1 py-5" id="content">
+    		<div class="container-xxl bd-gutter gx-5">
+				<div class="row">
+					<div class="col box" th:fragment="attribute-anzeige">
+						<div class="box-head" style="margin-left: -14px; margin-right: -14px;">Attribute</div>
+						<div class="row">
+							<div class="col"></div>
+							<div class="col-2 float-end text-end">Nat.</div>
+							<div class="col-2 float-end text-end">Aug.</div>
+						</div>
+						<div class="row">
+							<div class="col">Konstitution</div>
+							<div class="col-2 float-end text-end">0</div>
+							<div class="col-2 float-end text-end">0</div>
+						</div>
+						<div class="row">
+							<div class="col">Schnelligkeit</div>
+							<div class="col-2 float-end text-end">0</div>
+							<div class="col-2 float-end text-end">0</div>
+						</div>
+						<div class="row">
+							<div class="col">Stärke</div>
+							<div class="col-2 float-end text-end">0</div>
+							<div class="col-2 float-end text-end">0</div>
+						</div>
+						<div class="row">
+							<div class="col">Charisma</div>
+							<div class="col-2 float-end text-end">0</div>
+							<div class="col-2 float-end text-end">0</div>
+						</div>
+						<div class="row">
+							<div class="col">Intelligenz</div>
+							<div class="col-2 float-end text-end">0</div>
+							<div class="col-2 float-end text-end">0</div>
+						</div>
+						<div class="row">
+							<div class="col">Willenskraft</div>
+							<div class="col-2 float-end text-end">0</div>
+							<div class="col-2 float-end text-end">0</div>
+						</div>
+						<div class="row">
+							<div class="col">Essenz</div>
+							<div class="col-2 float-end text-end">0</div>
+							<div class="col-2 float-end text-end">0</div>
+						</div>
+						<div class="row">
+							<div class="col">Magie</div>
+							<div class="col-2 float-end text-end">0</div>
+							<div class="col-2 float-end text-end">0</div>
+						</div>
+						<div class="row">
+							<div class="col">Reaktion</div>
+							<div class="col-2 float-end text-end">0</div>
+							<div class="col-2 float-end text-end">0</div>
+						</div>
+					</div>
+					<div class="col" style="max-width:10px; width:10px;"></div>
+					<div class="col-6 box">
+						<div class="box-head" style="margin-left: -14px; margin-right: -14px;">Zustandsmonitor</div>
+					</div>
+					<div class="col" style="max-width:10px; width:10px;"></div>
+					<div class="col-2 box">
+						<div class="box-head" style="margin-left: -14px; margin-right: -14px;">Würfelpools</div>
+					</div>
+				</div>
+    		</div>
+      	</main>
+  
+      	
+      	
+		<script th:src="@{/webjars/bootstrap/5.2.3/js/bootstrap.bundle.min.js}"></script>
+   	</body>
+
+</html>

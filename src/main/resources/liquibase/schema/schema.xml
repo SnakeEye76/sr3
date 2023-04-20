@@ -1,0 +1,38 @@
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+    <changeSet id="1" author="KB">
+		<createTable tableName="Ausruestung">
+			<column name="id" type="BigInt" autoIncrement="true"> </column>
+			<column name="kosten" type="BigInt"></column>
+		</createTable>
+		
+		<createTable tableName="FERTIGKEIT_SPEZIFIKATION">
+			<column name="id" type="BigInt" autoIncrement="true"> </column>
+			<column name="name" type="VARCHAR2"></column>
+			<column name="BAUEN_REPARIEREN_VON_ID" type="BigInt"></column>
+			<column name="attribut" type="VARCHAR2"></column>
+			<column name="typ" type="VARCHAR2"></column>
+			<column name="kategorie" type="VARCHAR2"></column>
+			<column name="beschreibung" type="VARCHAR2"></column>
+		</createTable>
+		
+		<createTable tableName="FERTIGKEIT">
+			<column name="id" type="BigInt" autoIncrement="true"> </column>
+			<column name="wert" type="BigInt"></column>
+			<column name="SPEZIFIKATION_ID" type="BigInt"></column>
+		</createTable>
+		
+		<createTable tableName="CYBERWARE_SPEZIFIKATION">
+			<column name="id" type="BigInt" autoIncrement="true"> </column>
+			<column name="kategorie" type="VARCHAR2"></column>
+			<column name="name" type="VARCHAR2"></column>
+			<column name="essenz" type="NUMBER(4,2)"></column>
+			<column name="preis" type="INT"></column>
+			<column name="preisMultiplikator" type="VARCHAR2"></column>
+			<column name="maximalStufe" type="INT"></column>
+			<column name="verfuegbarkeit" type="VARCHAR2"></column>
+			<column name="starssenIndex" type="NUMBER(4,2)"></column>
+			<column name="legalitaet" type="VARCHAR2"></column>
+		</createTable>
+	</changeSet>
+
+</databaseChangeLog>
