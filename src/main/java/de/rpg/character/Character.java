@@ -7,6 +7,8 @@ import java.util.EnumMap;
 import java.util.List;
 import java.util.Map;
 
+import de.rpg.character.ausruestung.Ausruestung;
+import de.rpg.character.ausruestung.spezifikation.CyberwareSpezifikation;
 import de.rpg.erschaffung.AttributTyp;
 import de.rpg.erschaffung.Magie;
 import de.rpg.erschaffung.RassenModifikatoren;

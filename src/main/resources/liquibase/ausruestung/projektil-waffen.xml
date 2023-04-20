@@ -1,0 +1,101 @@
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+    <changeSet id="1" author="KB">
+		<insert tableName="Ausruestung_Spezifikation">
+			<column name="id">101</column>
+			<column name="TYPE">PROJEKTIL_WAFFE</column>
+			<column name="preis">100</column>
+			<column name="name">Standard Bogen</column>
+			<column name="verfuegbarkeit">3/36St</column>
+			<column name="starssenIndex">1</column>
+			<column name="legalitaet">5-D</column>
+			<column name="jahr">2050</column>
+			<column name="beschreibung"></column>
+			<column name="tarnstufe">2</column>
+			<column name="schaden">(STUFE+2)M</column>
+			<column name="gewicht">1</column>
+			<column name="minStaerke">1</column>
+			<column name="preis_multiplikator">STUFE</column>
+		</insert>
+		<insert tableName="Ausruestung_Spezifikation">
+			<column name="id">102</column>
+			<column name="TYPE">PROJEKTIL_WAFFE</column>
+			<column name="preis">300</column>
+			<column name="name">Leichte Armbrust</column>
+			<column name="verfuegbarkeit">4/36St</column>
+			<column name="starssenIndex">1</column>
+			<column name="legalitaet">6-D</column>
+			<column name="jahr">2050</column>
+			<column name="beschreibung"></column>
+			<column name="tarnstufe">2</column>
+			<column name="schaden">6L</column>
+			<column name="gewicht">2</column>
+			<column name="minStaerke">3</column>
+			<column name="preis_multiplikator">EINS</column>
+		</insert>
+		<insert tableName="Ausruestung_Spezifikation">
+			<column name="id">103</column>
+			<column name="TYPE">PROJEKTIL_WAFFE</column>
+			<column name="preis">500</column>
+			<column name="name">Mittlere Armbrust</column>
+			<column name="verfuegbarkeit">5/36St</column>
+			<column name="starssenIndex">1</column>
+			<column name="legalitaet">6-D</column>
+			<column name="jahr">2050</column>
+			<column name="beschreibung"></column>
+			<column name="tarnstufe">2</column>
+			<column name="schaden">6M</column>
+			<column name="gewicht">3</column>
+			<column name="minStaerke">4</column>
+			<column name="preis_multiplikator">EINS</column>
+		</insert>
+		<insert tableName="Ausruestung_Spezifikation">
+			<column name="id">104</column>
+			<column name="TYPE">PROJEKTIL_WAFFE</column>
+			<column name="preis">750</column>
+			<column name="name">Schwere Armbrust</column>
+			<column name="verfuegbarkeit">6/36St</column>
+			<column name="starssenIndex">1</column>
+			<column name="legalitaet"></column>
+			<column name="jahr">2050</column>
+			<column name="beschreibung"></column>
+			<column name="tarnstufe">-1</column>
+			<column name="schaden">8S</column>
+			<column name="gewicht">4</column>
+			<column name="minStaerke">5</column>
+			<column name="preis_multiplikator">EINS</column>
+		</insert>
+		<insert tableName="Ausruestung_Spezifikation">
+			<column name="id">105</column>
+			<column name="TYPE">PROJEKTIL_WAFFE</column>
+			<column name="preis">20</column>
+			<column name="name">Wurfmesser</column>
+			<column name="verfuegbarkeit">2/24St</column>
+			<column name="starssenIndex">1</column>
+			<column name="legalitaet">8-D</column>
+			<column name="jahr">2050</column>
+			<column name="beschreibung"></column>
+			<column name="tarnstufe">9</column>
+			<column name="schaden">(STR)L</column>
+			<column name="gewicht">0,25</column>
+			<column name="minStaerke"></column>
+			<column name="preis_multiplikator">EINS</column>
+		</insert>
+		<insert tableName="Ausruestung_Spezifikation">
+			<column name="id">106</column>
+			<column name="TYPE">PROJEKTIL_WAFFE</column>
+			<column name="preis">30</column>
+			<column name="name">Shuriken</column>
+			<column name="verfuegbarkeit">2/24St</column>
+			<column name="starssenIndex">2</column>
+			<column name="legalitaet">6-D</column>
+			<column name="jahr">2050</column>
+			<column name="beschreibung"></column>
+			<column name="tarnstufe">8</column>
+			<column name="schaden">(STR)L</column>
+			<column name="gewicht">0,25</column>
+			<column name="minStaerke"></column>
+			<column name="preis_multiplikator">EINS</column>
+		</insert>
+	</changeSet>
+
+</databaseChangeLog>

@@ -1,4 +1,4 @@
-package de.rpg.character;
+package de.rpg.character.ausruestung.spezifikation;
 
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;

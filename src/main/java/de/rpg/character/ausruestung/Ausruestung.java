@@ -1,4 +1,4 @@
-package de.rpg.character;
+package de.rpg.character.ausruestung;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;

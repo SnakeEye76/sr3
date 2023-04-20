@@ -1,4 +1,4 @@
-package de.rpg.character;
+package de.rpg.character.ausruestung.spezifikation;
 
 import java.math.BigDecimal;
 

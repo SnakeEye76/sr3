@@ -21,17 +21,47 @@
 			<column name="SPEZIFIKATION_ID" type="BigInt"></column>
 		</createTable>
 		
+		<createTable tableName="Ausruestung_Spezifikation">
+			<column name="id" type="BigInt" autoIncrement="true"> </column>
+			<column name="TYPE" type="VARCHAR2"></column>
+			<column name="preis" type="INT"></column>
+			<column name="name" type="VARCHAR2"></column>
+			<column name="verfuegbarkeit" type="VARCHAR2"></column>
+			<column name="starssenIndex" type="NUMBER(4,2)"></column>
+			<column name="legalitaet" type="VARCHAR2"></column>
+			<column name="jahr" type="INT"></column>
+			<column name="beschreibung" type="VARCHAR2"></column>
+			<column name="tarnstufe" type="INT"></column>
+			<column name="schaden" type="VARCHAR2"></column>
+			<column name="gewicht" type="NUMBER(4,2)"></column>
+			<column name="reichweite" type="INT"></column>
+			<column name="minStaerke" type="INT"></column>
+			<column name="preis_multiplikator" type="VARCHAR2"></column>
+			<column name="feuerwaffen_typ" type="VARCHAR2"></column>
+			<column name="muni" type="VARCHAR2"></column>
+			<column name="modi" type="VARCHAR2"></column>
+			<column name="rueckstossKomp" type="VARCHAR2"></column>
+		</createTable>
+		
+		<createTable tableName="WAFFEN_MODS">
+			<column name="id" type="BigInt" autoIncrement="true"> </column>
+			<column name="waffenSpekId" type="BigInt"></column>
+			<column name="mod" type="VARCHAR2"></column>
+		</createTable>
+		
 		<createTable tableName="CYBERWARE_SPEZIFIKATION">
 			<column name="id" type="BigInt" autoIncrement="true"> </column>
 			<column name="kategorie" type="VARCHAR2"></column>
 			<column name="name" type="VARCHAR2"></column>
 			<column name="essenz" type="NUMBER(4,2)"></column>
 			<column name="preis" type="INT"></column>
-			<column name="preisMultiplikator" type="VARCHAR2"></column>
-			<column name="maximalStufe" type="INT"></column>
+			<column name="preis_multiplikator" type="VARCHAR2"></column>
+			<column name="maximal_stufe" type="INT"></column>
 			<column name="verfuegbarkeit" type="VARCHAR2"></column>
-			<column name="starssenIndex" type="NUMBER(4,2)"></column>
+			<column name="starssen_index" type="NUMBER(4,2)"></column>
 			<column name="legalitaet" type="VARCHAR2"></column>
+			<column name="min_staerke" type="INT"></column>
+			<column name="preis_multiplikator" type="VARCHAR2"></column>
 		</createTable>
 	</changeSet>
 

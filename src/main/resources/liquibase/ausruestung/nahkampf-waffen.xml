@@ -1,0 +1,155 @@
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+    <changeSet id="1" author="KB">
+		<insert tableName="Ausruestung_Spezifikation">
+			<column name="id">1</column>
+			<column name="TYPE">NAHKAMPF_WAFFE</column>
+			<column name="preis">1000</column>
+			<column name="name">Katana</column>
+			<column name="verfuegbarkeit">4/48St</column>
+			<column name="starssenIndex">2</column>
+			<column name="legalitaet">5-B</column>
+			<column name="jahr">2050</column>
+			<column name="beschreibung"></column>
+			<column name="tarnstufe">3</column>
+			<column name="schaden">(STR+3)M</column>
+			<column name="gewicht">1</column>
+			<column name="reichweite">1</column>
+		</insert>
+		<insert tableName="Ausruestung_Spezifikation">
+			<column name="id">2</column>
+			<column name="TYPE">NAHKAMPF_WAFFE</column>
+			<column name="preis">30</column>
+			<column name="name">Messer</column>
+			<column name="verfuegbarkeit">2/4St</column>
+			<column name="starssenIndex">0.75</column>
+			<column name="legalitaet">8-A</column>
+			<column name="jahr">2050</column>
+			<column name="beschreibung"></column>
+			<column name="tarnstufe">8</column>
+			<column name="schaden">(STR)L</column>
+			<column name="gewicht">0.5</column>
+			<column name="reichweite">0</column>
+		</insert>
+		<insert tableName="Ausruestung_Spezifikation">
+			<column name="id">3</column>
+			<column name="TYPE">NAHKAMPF_WAFFE</column>
+			<column name="preis">500</column>
+			<column name="name">Schwert</column>
+			<column name="verfuegbarkeit">3/24St</column>
+			<column name="starssenIndex">1</column>
+			<column name="legalitaet">4-B</column>
+			<column name="jahr">2050</column>
+			<column name="beschreibung"></column>
+			<column name="tarnstufe">4</column>
+			<column name="schaden">(STR+2)M</column>
+			<column name="gewicht">1</column>
+			<column name="reichweite">1</column>
+		</insert>
+		<insert tableName="Ausruestung_Spezifikation">
+			<column name="id">4</column>
+			<column name="TYPE">NAHKAMPF_WAFFE</column>
+			<column name="preis">500</column>
+			<column name="name">Stangenwaffe</column>
+			<column name="verfuegbarkeit">4/48St</column>
+			<column name="starssenIndex">2</column>
+			<column name="legalitaet">3-B</column>
+			<column name="jahr">2050</column>
+			<column name="beschreibung"></column>
+			<column name="tarnstufe">2</column>
+			<column name="schaden">(STR)S</column>
+			<column name="gewicht">4</column>
+			<column name="reichweite">2</column>
+		</insert>
+		<insert tableName="Ausruestung_Spezifikation">
+			<column name="id">5</column>
+			<column name="TYPE">NAHKAMPF_WAFFE</column>
+			<column name="preis">50</column>
+			<column name="name">Stab</column>
+			<column name="verfuegbarkeit">3/24St</column>
+			<column name="starssenIndex">1</column>
+			<column name="legalitaet">8-C</column>
+			<column name="jahr">2050</column>
+			<column name="beschreibung"></column>
+			<column name="tarnstufe">2</column>
+			<column name="schaden">(STR+2)M bet</column>
+			<column name="gewicht">2</column>
+			<column name="reichweite">2</column>
+		</insert>
+		<insert tableName="Ausruestung_Spezifikation">
+			<column name="id">6</column>
+			<column name="TYPE">NAHKAMPF_WAFFE</column>
+			<column name="preis">10</column>
+			<column name="name">Knüppel</column>
+			<column name="verfuegbarkeit">2/6St</column>
+			<column name="starssenIndex">1</column>
+			<column name="legalitaet">6-C</column>
+			<column name="jahr">2050</column>
+			<column name="beschreibung"></column>
+			<column name="tarnstufe">5</column>
+			<column name="schaden">(STR+1)M bet</column>
+			<column name="gewicht">1</column>
+			<column name="reichweite">1</column>
+		</insert>
+		<insert tableName="Ausruestung_Spezifikation">
+			<column name="id">7</column>
+			<column name="TYPE">NAHKAMPF_WAFFE</column>
+			<column name="preis">10</column>
+			<column name="name">Prügel</column>
+			<column name="verfuegbarkeit">2/6St</column>
+			<column name="starssenIndex">1</column>
+			<column name="legalitaet">5-C</column>
+			<column name="jahr">2050</column>
+			<column name="beschreibung"></column>
+			<column name="tarnstufe">8</column>
+			<column name="schaden">(STR+2)M bet</column>
+			<column name="gewicht">0</column>
+			<column name="reichweite">0</column>
+		</insert>
+		<insert tableName="Ausruestung_Spezifikation">
+			<column name="id">8</column>
+			<column name="TYPE">NAHKAMPF_WAFFE</column>
+			<column name="preis">750</column>
+			<column name="name">Betäubungsschlagstock</column>
+			<column name="verfuegbarkeit">3/36St</column>
+			<column name="starssenIndex">1</column>
+			<column name="legalitaet">5-C</column>
+			<column name="jahr">2050</column>
+			<column name="beschreibung"></column>
+			<column name="tarnstufe">4</column>
+			<column name="schaden">6S bet</column>
+			<column name="gewicht">1</column>
+			<column name="reichweite">1</column>
+		</insert>
+		<insert tableName="Ausruestung_Spezifikation">
+			<column name="id">9</column>
+			<column name="TYPE">NAHKAMPF_WAFFE</column>
+			<column name="preis">3000</column>
+			<column name="name">Monofilamentpeitsche</column>
+			<column name="verfuegbarkeit">24/14T</column>
+			<column name="starssenIndex">3</column>
+			<column name="legalitaet">1-J</column>
+			<column name="jahr">2050</column>
+			<column name="beschreibung"></column>
+			<column name="tarnstufe">10</column>
+			<column name="schaden">10S</column>
+			<column name="gewicht">0</column>
+			<column name="reichweite">2</column>
+		</insert>
+		<insert tableName="Ausruestung_Spezifikation">
+			<column name="id">10</column>
+			<column name="TYPE">NAHKAMPF_WAFFE</column>
+			<column name="preis">0</column>
+			<column name="name">Unbewaffnet</column>
+			<column name="verfuegbarkeit">Immer</column>
+			<column name="starssenIndex">0</column>
+			<column name="legalitaet"></column>
+			<column name="jahr">2050</column>
+			<column name="beschreibung"></column>
+			<column name="tarnstufe"></column>
+			<column name="schaden">(STR)M bet</column>
+			<column name="gewicht">0</column>
+			<column name="reichweite">0</column>
+		</insert>
+	</changeSet>
+
+</databaseChangeLog>
