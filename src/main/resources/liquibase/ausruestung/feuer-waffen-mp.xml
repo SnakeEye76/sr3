@@ -1,0 +1,77 @@
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+    <changeSet id="1" author="KB">
+		<insert tableName="Ausruestung_Spezifikation">
+			<column name="id">301</column>
+			<column name="TYPE">FEUER_WAFFE</column>
+			<column name="preis">800</column>
+			<column name="name">AK-97 MP / Karabiner</column>
+			<column name="verfuegbarkeit">5/3T</column>
+			<column name="starssenIndex">1</column>
+			<column name="legalitaet">4-G</column>
+			<column name="jahr">2050</column>
+			<column name="beschreibung"></column>
+			<column name="tarnstufe">4</column>
+			<column name="schaden">6M</column>
+			<column name="gewicht">4</column>
+			<column name="feuerwaffen_typ">MP</column>
+			<column name="muni">30(s)</column>
+			<column name="modi">HM/SM/AM</column>
+			<column name="rueckstossKomp">(1)</column>
+		</insert>
+		<insert tableName="Ausruestung_Spezifikation">
+			<column name="id">302</column>
+			<column name="TYPE">FEUER_WAFFE</column>
+			<column name="preis">1500</column>
+			<column name="name">Heckler &amp; Koch HK227</column>
+			<column name="verfuegbarkeit">4/24St</column>
+			<column name="starssenIndex">0.75</column>
+			<column name="legalitaet">4-G</column>
+			<column name="jahr">2050</column>
+			<column name="beschreibung"></column>
+			<column name="tarnstufe">4</column>
+			<column name="schaden">7M</column>
+			<column name="gewicht">4</column>
+			<column name="feuerwaffen_typ">MP</column>
+			<column name="muni">28(s)</column>
+			<column name="modi">HM/SM/AM</column>
+			<column name="rueckstossKomp">2(3)</column>
+		</insert>
+		<insert tableName="Ausruestung_Spezifikation">
+			<column name="id">303</column>
+			<column name="TYPE">FEUER_WAFFE</column>
+			<column name="preis">1200</column>
+			<column name="name">HK227-S</column>
+			<column name="verfuegbarkeit">10/7T</column>
+			<column name="starssenIndex">2</column>
+			<column name="legalitaet">3-G</column>
+			<column name="jahr">2050</column>
+			<column name="beschreibung"></column>
+			<column name="tarnstufe">5</column>
+			<column name="schaden">7M</column>
+			<column name="gewicht">3</column>
+			<column name="feuerwaffen_typ">MP</column>
+			<column name="muni">28(s)</column>
+			<column name="modi">HM/SM</column>
+			<column name="rueckstossKomp">(1)</column>
+		</insert>
+		<insert tableName="Ausruestung_Spezifikation">
+			<column name="id">304</column>
+			<column name="TYPE">FEUER_WAFFE</column>
+			<column name="preis">600</column>
+			<column name="name">Uzi III</column>
+			<column name="verfuegbarkeit">4/24St</column>
+			<column name="starssenIndex">0.75</column>
+			<column name="legalitaet">4-G</column>
+			<column name="jahr">2050</column>
+			<column name="beschreibung"></column>
+			<column name="tarnstufe">5</column>
+			<column name="schaden">6M</column>
+			<column name="gewicht">2</column>
+			<column name="feuerwaffen_typ">MP</column>
+			<column name="muni">24(s)</column>
+			<column name="modi">SM</column>
+			<column name="rueckstossKomp">(1)</column>
+		</insert>
+	</changeSet>
+
+</databaseChangeLog>

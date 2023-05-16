@@ -1,0 +1,41 @@
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+    <changeSet id="1" author="KB">
+		<insert tableName="Ausruestung_Spezifikation">
+			<column name="id">1201</column>
+			<column name="TYPE">KOMMUNIKATION</column>
+			<column name="preis">2500</column>
+			<column name="name">Micro-Camcorder</column>
+			<column name="verfuegbarkeit">6/48St</column>
+			<column name="starssenIndex">2</column>
+			<column name="legalitaet">8L-U</column>
+			<column name="jahr">2050</column>
+			<column name="beschreibung"></column>
+			<column name="tarnstufe">8</column>
+		</insert>
+		<insert tableName="Ausruestung_Spezifikation">
+			<column name="id">1202</column>
+			<column name="TYPE">KOMMUNIKATION</column>
+			<column name="preis">1000</column>
+			<column name="name">Micro-Recorder</column>
+			<column name="verfuegbarkeit">6/48St</column>
+			<column name="starssenIndex">2</column>
+			<column name="legalitaet">8L-U</column>
+			<column name="jahr">2050</column>
+			<column name="beschreibung"></column>
+			<column name="tarnstufe">9</column>
+		</insert>
+		<insert tableName="Ausruestung_Spezifikation">
+			<column name="id">1203</column>
+			<column name="TYPE">KOMMUNIKATION</column>
+			<column name="preis">2500</column>
+			<column name="name">Micro-Transceiver</column>
+			<column name="verfuegbarkeit">6/48St</column>
+			<column name="starssenIndex">2</column>
+			<column name="legalitaet">8L-U</column>
+			<column name="jahr">2050</column>
+			<column name="beschreibung"></column>
+			<column name="tarnstufe">18</column>
+		</insert>
+	</changeSet>
+
+</databaseChangeLog>

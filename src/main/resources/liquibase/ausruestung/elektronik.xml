@@ -1,0 +1,200 @@
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+    <changeSet id="1" author="KB">
+		<insert tableName="Ausruestung_Spezifikation">
+			<column name="id">1901</column>
+			<column name="TYPE">ELEKTRONIK</column>
+			<column name="preis">MEMORY_COSTx1.5</column>
+			<column name="name">Telekom</column>
+			<column name="verfuegbarkeit">IMMER</column>
+			<column name="starssenIndex">1</column>
+			<column name="legalitaet">LEGAL</column>
+			<column name="jahr">2050</column>
+			<column name="beschreibung"></column>
+			<column name="tarnstufe"></column>
+			<column name="gewicht">15</column>
+		</insert>
+		<insert tableName="Ausruestung_Spezifikation">
+			<column name="id">1902</column>
+			<column name="TYPE">ELEKTRONIK</column>
+			<column name="preis">1000</column>
+			<column name="name">Handgelenk Telekom</column>
+			<column name="verfuegbarkeit">IMMER</column>
+			<column name="starssenIndex">0.75</column>
+			<column name="legalitaet">LEGAL</column>
+			<column name="jahr">2050</column>
+			<column name="beschreibung"></column>
+			<column name="tarnstufe">4</column>
+			<column name="gewicht">0</column>
+		</insert>
+		<insert tableName="Ausruestung_Spezifikation">
+			<column name="id">1903</column>
+			<column name="TYPE">ELEKTRONIK</column>
+			<column name="preis">1500</column>
+			<column name="name">Handgelenk Telekom mit Bildschirm</column>
+			<column name="verfuegbarkeit">IMMER</column>
+			<column name="starssenIndex">1</column>
+			<column name="legalitaet">LEGAL</column>
+			<column name="jahr">2050</column>
+			<column name="beschreibung"></column>
+			<column name="tarnstufe">0</column>
+			<column name="gewicht">0</column>
+		</insert>
+		<insert tableName="Ausruestung_Spezifikation">
+			<column name="id">1904</column>
+			<column name="TYPE">ELEKTRONIK</column>
+			<column name="preis">500</column>
+			<column name="name">Handy</column>
+			<column name="verfuegbarkeit">IMMER</column>
+			<column name="starssenIndex">0.75</column>
+			<column name="legalitaet">LEGAL</column>
+			<column name="jahr">2050</column>
+			<column name="beschreibung"></column>
+			<column name="tarnstufe">3</column>
+			<column name="gewicht">1</column>
+		</insert>
+		<insert tableName="Ausruestung_Spezifikation">
+			<column name="id">1905</column>
+			<column name="TYPE">ELEKTRONIK</column>
+			<column name="preis">1000</column>
+			<column name="name">Ohrhörer Telekom</column>
+			<column name="verfuegbarkeit">IMMER</column>
+			<column name="starssenIndex">1.5</column>
+			<column name="legalitaet">LEGAL</column>
+			<column name="jahr">2050</column>
+			<column name="beschreibung"></column>
+			<column name="tarnstufe">8</column>
+			<column name="gewicht">0</column>
+		</insert>
+		<insert tableName="Ausruestung_Spezifikation">
+			<column name="id">1906</column>
+			<column name="TYPE">ELEKTRONIK</column>
+			<column name="preis">500</column>
+			<column name="name">Booster Pack</column>
+			<column name="verfuegbarkeit">IMMER</column>
+			<column name="starssenIndex">1</column>
+			<column name="legalitaet">LEGAL</column>
+			<column name="jahr">2050</column>
+			<column name="beschreibung"></column>
+			<column name="tarnstufe">3</column>
+			<column name="gewicht">2</column>
+		</insert>
+		<insert tableName="Ausruestung_Spezifikation">
+			<column name="id">1907</column>
+			<column name="TYPE">ELEKTRONIK</column>
+			<column name="preis">3000</column>
+			<column name="name">Taschensekretär</column>
+			<column name="verfuegbarkeit">IMMER</column>
+			<column name="starssenIndex">1</column>
+			<column name="legalitaet">LEGAL</column>
+			<column name="jahr">2050</column>
+			<column name="beschreibung"></column>
+			<column name="tarnstufe">3</column>
+			<column name="gewicht">0.5</column>
+		</insert>
+		<insert tableName="Ausruestung_Spezifikation">
+			<column name="id">1908</column>
+			<column name="TYPE">ELEKTRONIK</column>
+			<column name="preis">MEMORY_COST</column>
+			<column name="name">Desktop PC</column>
+			<column name="verfuegbarkeit">IMMER</column>
+			<column name="starssenIndex">0.75</column>
+			<column name="legalitaet">LEGAL</column>
+			<column name="jahr">2050</column>
+			<column name="beschreibung"></column>
+			<column name="tarnstufe"></column>
+			<column name="gewicht">10</column>
+		</insert>
+		<insert tableName="Ausruestung_Spezifikation">
+			<column name="id">1909</column>
+			<column name="TYPE">ELEKTRONIK</column>
+			<column name="preis">MEMORY_COSTx5</column>
+			<column name="name">Taschen PC</column>
+			<column name="verfuegbarkeit">IMMER</column>
+			<column name="starssenIndex">1</column>
+			<column name="legalitaet">LEGAL</column>
+			<column name="jahr">2050</column>
+			<column name="beschreibung"></column>
+			<column name="tarnstufe">3</column>
+			<column name="gewicht">1</column>
+		</insert>
+		<insert tableName="Ausruestung_Spezifikation">
+			<column name="id">1910</column>
+			<column name="TYPE">ELEKTRONIK</column>
+			<column name="preis">MEMORY_COSTx20</column>
+			<column name="name">Handgelenk PC</column>
+			<column name="verfuegbarkeit">IMMER</column>
+			<column name="starssenIndex">1.5</column>
+			<column name="legalitaet">LEGAL</column>
+			<column name="jahr">2050</column>
+			<column name="beschreibung"></column>
+			<column name="tarnstufe">4</column>
+			<column name="gewicht">0</column>
+		</insert>
+		<insert tableName="Ausruestung_Spezifikation">
+			<column name="id">1911</column>
+			<column name="TYPE">ELEKTRONIK</column>
+			<column name="preis">100</column>
+			<column name="name">Drucker</column>
+			<column name="verfuegbarkeit">IMMER</column>
+			<column name="starssenIndex">1</column>
+			<column name="legalitaet">LEGAL</column>
+			<column name="jahr">2050</column>
+			<column name="beschreibung"></column>
+			<column name="tarnstufe"></column>
+			<column name="gewicht">10</column>
+		</insert>
+		<insert tableName="Ausruestung_Spezifikation">
+			<column name="id">1912</column>
+			<column name="TYPE">ELEKTRONIK</column>
+			<column name="preis">STUFEx20</column>
+			<column name="name">Computerspeicher (nicht Cyber)</column>
+			<column name="verfuegbarkeit">IMMER</column>
+			<column name="starssenIndex">0.75</column>
+			<column name="legalitaet">LEGAL</column>
+			<column name="jahr">2050</column>
+			<column name="beschreibung"></column>
+			<column name="tarnstufe"></column>
+			<column name="gewicht"></column>
+		</insert>
+		<insert tableName="Ausruestung_Spezifikation">
+			<column name="id">1913</column>
+			<column name="TYPE">ELEKTRONIK</column>
+			<column name="preis">MEMORY_COSTx1</column>
+			<column name="name">Datensichtgerät(max 1000Mp)</column>
+			<column name="verfuegbarkeit">IMMER</column>
+			<column name="starssenIndex">1</column>
+			<column name="legalitaet">LEGAL</column>
+			<column name="jahr">2050</column>
+			<column name="beschreibung"></column>
+			<column name="tarnstufe">3</column>
+			<column name="gewicht">2</column>
+		</insert>
+		<insert tableName="Ausruestung_Spezifikation">
+			<column name="id">1914</column>
+			<column name="TYPE">ELEKTRONIK</column>
+			<column name="preis">MEMORY_COSTx2</column>
+			<column name="name">Headset Datensichtgerät(max 500Mp)</column>
+			<column name="verfuegbarkeit">IMMER</column>
+			<column name="starssenIndex">1.5</column>
+			<column name="legalitaet">LEGAL</column>
+			<column name="jahr">2050</column>
+			<column name="beschreibung"></column>
+			<column name="tarnstufe">4</column>
+			<column name="gewicht">1</column>
+		</insert>
+		<insert tableName="Ausruestung_Spezifikation">
+			<column name="id">1915</column>
+			<column name="TYPE">ELEKTRONIK</column>
+			<column name="preis">MEMORY_COSTx10</column>
+			<column name="name">Head-Up_Display Datensichtgerät(max 200Mp)</column>
+			<column name="verfuegbarkeit">6/7T</column>
+			<column name="starssenIndex">3</column>
+			<column name="legalitaet">LEGAL</column>
+			<column name="jahr">2050</column>
+			<column name="beschreibung"></column>
+			<column name="tarnstufe"></column>
+			<column name="gewicht">1</column>
+		</insert>
+	</changeSet>
+
+</databaseChangeLog>

@@ -1,26 +1,25 @@
 package de.rpg.character.ausruestung.spezifikation;
 
-import java.math.BigDecimal;
 import java.util.List;
 
 import de.rpg.character.PreisMultiplikator;
 import jakarta.persistence.DiscriminatorValue;
-import jakarta.persistence.ElementCollection;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
+import jakarta.persistence.OneToMany;
 import lombok.Getter;
 
 @Entity
-@DiscriminatorValue("CYBERWARE")
+@DiscriminatorValue("FEUER_WAFFE_ZUBEHOER")
 @Getter
-public class CyberwareSpezifikation extends BaseAusruestungSpezifikation{
+public class FeuerwaffenZubehoerSpezifikation extends BaseAusruestungSpezifikation{
 
+	private int tarnstufe;
 	@Enumerated(EnumType.STRING)
-	private CyberwareKategorie kategorie;
-	private BigDecimal essenz;
+	private Halterung halterung;
+	@OneToMany(mappedBy = "ausruestungs_id")
+	private List<AusruestungsMod> mods;
 	@Enumerated(EnumType.STRING)
 	private PreisMultiplikator preisMultiplikator;
-	@ElementCollection
-	private List<AusruestungsMod> mods;
 }

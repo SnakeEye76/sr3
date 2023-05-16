@@ -1,0 +1,89 @@
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+    <changeSet id="1" author="KB">
+		<insert tableName="Ausruestung_Spezifikation">
+			<column name="id">1401</column>
+			<column name="TYPE">ANTI_UEBERWACHUNGSSYSTEME</column>
+			<column name="preis">500</column>
+			<column name="name">Wanzenscanner</column>
+			<column name="verfuegbarkeit">STUFE/48St</column>
+			<column name="starssenIndex">1.5</column>
+			<column name="legalitaet">5L-V</column>
+			<column name="jahr">2050</column>
+			<column name="beschreibung"></column>
+			<column name="tarnstufe">3</column>
+			<column name="gewicht">1</column>
+			<column name="preis_multiplikator">STUFE</column>
+		</insert>
+		<insert tableName="Ausruestung_Spezifikation">
+			<column name="id">1402</column>
+			<column name="TYPE">ANTI_UEBERWACHUNGSSYSTEME</column>
+			<column name="preis">1000</column>
+			<column name="name">Datencodierungssystem</column>
+			<column name="verfuegbarkeit">STUFE/14T</column>
+			<column name="starssenIndex">2</column>
+			<column name="legalitaet">4L-V</column>
+			<column name="jahr">2050</column>
+			<column name="beschreibung"></column>
+			<column name="tarnstufe">2</column>
+			<column name="gewicht">6</column>
+			<column name="preis_multiplikator">STUFE</column>
+		</insert>
+		<insert tableName="Ausruestung_Spezifikation">
+			<column name="id">1403</column>
+			<column name="TYPE">ANTI_UEBERWACHUNGSSYSTEME</column>
+			<column name="preis">100</column>
+			<column name="name">Datenleitungsscanner</column>
+			<column name="verfuegbarkeit">STUFE/14T</column>
+			<column name="starssenIndex">2</column>
+			<column name="legalitaet">4L-U</column>
+			<column name="jahr">2050</column>
+			<column name="beschreibung"></column>
+			<column name="tarnstufe">2</column>
+			<column name="gewicht">6</column>
+			<column name="preis_multiplikator">STUFE</column>
+		</insert>
+		<insert tableName="Ausruestung_Spezifikation">
+			<column name="id">1404</column>
+			<column name="TYPE">ANTI_UEBERWACHUNGSSYSTEME</column>
+			<column name="preis">1000</column>
+			<column name="name">Störsender</column>
+			<column name="verfuegbarkeit">STUFE/72St</column>
+			<column name="starssenIndex">1.5</column>
+			<column name="legalitaet">3L-U</column>
+			<column name="jahr">2050</column>
+			<column name="beschreibung"></column>
+			<column name="tarnstufe">2</column>
+			<column name="gewicht">5</column>
+			<column name="preis_multiplikator">STUFE</column>
+		</insert>
+		<insert tableName="Ausruestung_Spezifikation">
+			<column name="id">1405</column>
+			<column name="TYPE">ANTI_UEBERWACHUNGSSYSTEME</column>
+			<column name="preis">3000</column>
+			<column name="name">Stimmenverzerrer</column>
+			<column name="verfuegbarkeit">STUFE/72St</column>
+			<column name="starssenIndex">1.5</column>
+			<column name="legalitaet">5L-U</column>
+			<column name="jahr">2050</column>
+			<column name="beschreibung"></column>
+			<column name="tarnstufe">6</column>
+			<column name="gewicht">0</column>
+			<column name="preis_multiplikator">STUFE</column>
+		</insert>
+		<insert tableName="Ausruestung_Spezifikation">
+			<column name="id">1406</column>
+			<column name="TYPE">ANTI_UEBERWACHUNGSSYSTEME</column>
+			<column name="preis">1500</column>
+			<column name="name">White Noise Generator</column>
+			<column name="verfuegbarkeit">STUFE/72St</column>
+			<column name="starssenIndex">1.5</column>
+			<column name="legalitaet">8L-U</column>
+			<column name="jahr">2050</column>
+			<column name="beschreibung"></column>
+			<column name="tarnstufe">3</column>
+			<column name="gewicht">1</column>
+			<column name="preis_multiplikator">STUFE</column>
+		</insert>
+	</changeSet>
+
+</databaseChangeLog>

@@ -1,0 +1,135 @@
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+    <changeSet id="1" author="KB">
+		<insert tableName="Ausruestung_Spezifikation">
+			<column name="id">1801</column>
+			<column name="TYPE">UNTERHALTUNG</column>
+			<column name="preis">20</column>
+			<column name="name">Musik Disk/Chip</column>
+			<column name="verfuegbarkeit">IMMER</column>
+			<column name="starssenIndex">0.75</column>
+			<column name="legalitaet">LEGAL</column>
+			<column name="jahr">2050</column>
+			<column name="beschreibung"></column>
+			<column name="tarnstufe">8</column>
+			<column name="gewicht">0</column>
+		</insert>
+		<insert tableName="Ausruestung_Spezifikation">
+			<column name="id">1802</column>
+			<column name="TYPE">UNTERHALTUNG</column>
+			<column name="preis">200</column>
+			<column name="name">Wiedergabeeinheit</column>
+			<column name="verfuegbarkeit">IMMER</column>
+			<column name="starssenIndex">0.75</column>
+			<column name="legalitaet">LEGAL</column>
+			<column name="jahr">2050</column>
+			<column name="beschreibung"></column>
+			<column name="tarnstufe">3</column>
+			<column name="gewicht">2</column>
+		</insert>
+		<insert tableName="Ausruestung_Spezifikation">
+			<column name="id">1803</column>
+			<column name="TYPE">UNTERHALTUNG</column>
+			<column name="preis">100</column>
+			<column name="name">Quadroboxen</column>
+			<column name="verfuegbarkeit">IMMER</column>
+			<column name="starssenIndex">0.75</column>
+			<column name="legalitaet">LEGAL</column>
+			<column name="jahr">2050</column>
+			<column name="beschreibung"></column>
+			<column name="tarnstufe">0</column>
+			<column name="gewicht">0</column>
+		</insert>
+		<insert tableName="Ausruestung_Spezifikation">
+			<column name="id">1804</column>
+			<column name="TYPE">UNTERHALTUNG</column>
+			<column name="preis">20</column>
+			<column name="name">Video Disk/Chip</column>
+			<column name="verfuegbarkeit">IMMER</column>
+			<column name="starssenIndex">0.75</column>
+			<column name="legalitaet">LEGAL</column>
+			<column name="jahr">2050</column>
+			<column name="beschreibung"></column>
+			<column name="tarnstufe">8</column>
+			<column name="gewicht">0</column>
+		</insert>
+		<insert tableName="Ausruestung_Spezifikation">
+			<column name="id">1805</column>
+			<column name="TYPE">UNTERHALTUNG</column>
+			<column name="preis">1000</column>
+			<column name="name">Video Recorder</column>
+			<column name="verfuegbarkeit">6/48St</column>
+			<column name="starssenIndex">1.5</column>
+			<column name="legalitaet">LEGAL</column>
+			<column name="jahr">2050</column>
+			<column name="beschreibung"></column>
+			<column name="tarnstufe">2</column>
+			<column name="gewicht">2</column>
+		</insert>
+		<insert tableName="Ausruestung_Spezifikation">
+			<column name="id">1806</column>
+			<column name="TYPE">UNTERHALTUNG</column>
+			<column name="preis">150</column>
+			<column name="name">Bildschirm</column>
+			<column name="verfuegbarkeit">IMMER</column>
+			<column name="starssenIndex">0.75</column>
+			<column name="legalitaet">LEGAL</column>
+			<column name="jahr">2050</column>
+			<column name="beschreibung"></column>
+			<column name="tarnstufe">0</column>
+			<column name="gewicht">3</column>
+		</insert>
+		<insert tableName="Ausruestung_Spezifikation">
+			<column name="id">1807</column>
+			<column name="TYPE">UNTERHALTUNG</column>
+			<column name="preis">4000</column>
+			<column name="name">Video Übertragungsgerät</column>
+			<column name="verfuegbarkeit">8/7T</column>
+			<column name="starssenIndex">2</column>
+			<column name="legalitaet">LEGAL</column>
+			<column name="jahr">2050</column>
+			<column name="beschreibung"></column>
+			<column name="tarnstufe"></column>
+			<column name="gewicht">5</column>
+		</insert>
+		<insert tableName="Ausruestung_Spezifikation">
+			<column name="id">1808</column>
+			<column name="TYPE">UNTERHALTUNG</column>
+			<column name="preis">350</column>
+			<column name="name">Simmsinn Player</column>
+			<column name="verfuegbarkeit">IMMER</column>
+			<column name="starssenIndex">0.75</column>
+			<column name="legalitaet">LEGAL</column>
+			<column name="jahr">2050</column>
+			<column name="beschreibung"></column>
+			<column name="tarnstufe">3</column>
+			<column name="gewicht">3</column>
+		</insert>
+		<insert tableName="Ausruestung_Spezifikation">
+			<column name="id">1809</column>
+			<column name="TYPE">UNTERHALTUNG</column>
+			<column name="preis">50</column>
+			<column name="name">Simmsinn Chip</column>
+			<column name="verfuegbarkeit">IMMER</column>
+			<column name="starssenIndex">0.75</column>
+			<column name="legalitaet">LEGAL</column>
+			<column name="jahr">2050</column>
+			<column name="beschreibung"></column>
+			<column name="tarnstufe">8</column>
+			<column name="gewicht">0</column>
+		</insert>
+		<insert tableName="Ausruestung_Spezifikation">
+			<column name="id">1810</column>
+			<column name="TYPE">UNTERHALTUNG</column>
+			<column name="preis">50000</column>
+			<column name="name">Simmsinn Recorder Portabel</column>
+			<column name="verfuegbarkeit">7/7T</column>
+			<column name="starssenIndex">2</column>
+			<column name="legalitaet">LEGAL</column>
+			<column name="jahr">2050</column>
+			<column name="beschreibung"></column>
+			<column name="tarnstufe"></column>
+			<column name="gewicht">5</column>
+		</insert>
+	</changeSet>
+
+</databaseChangeLog>

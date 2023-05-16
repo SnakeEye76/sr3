@@ -1,0 +1,113 @@
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+    <changeSet id="1" author="KB">
+		<insert tableName="Ausruestung_Spezifikation">
+			<column name="id">501</column>
+			<column name="TYPE">FEUER_WAFFE</column>
+			<column name="preis">1700</column>
+			<column name="name">Ares Antioch</column>
+			<column name="verfuegbarkeit">8/4T</column>
+			<column name="starssenIndex">3</column>
+			<column name="legalitaet">1-K</column>
+			<column name="jahr">2050</column>
+			<column name="beschreibung"></column>
+			<column name="tarnstufe">6(-3)</column>
+			<column name="schaden">Granate</column>
+			<column name="gewicht">2</column>
+			<column name="feuerwaffen_typ">GRW</column>
+			<column name="muni">6(m)</column>
+			<column name="modi">EM</column>
+			<column name="rueckstossKomp">0</column>
+		</insert>
+		<insert tableName="Ausruestung_Spezifikation">
+			<column name="id">502</column>
+			<column name="TYPE">FEUER_WAFFE</column>
+			<column name="preis">1500</column>
+			<column name="name">Ingram Valiant</column>
+			<column name="verfuegbarkeit">6/5T</column>
+			<column name="starssenIndex">2</column>
+			<column name="legalitaet">1-H</column>
+			<column name="jahr">2050</column>
+			<column name="beschreibung"></column>
+			<column name="tarnstufe">0</column>
+			<column name="schaden">7S</column>
+			<column name="gewicht">9</column>
+			<column name="feuerwaffen_typ">LMG</column>
+			<column name="muni">50(s)/Gurt</column>
+			<column name="modi">SM/AM</column>
+			<column name="rueckstossKomp">3</column>
+		</insert>
+		<insert tableName="Ausruestung_Spezifikation">
+			<column name="id">503</column>
+			<column name="TYPE">FEUER_WAFFE</column>
+			<column name="preis">6500</column>
+			<column name="name">Sturmkanone</column>
+			<column name="verfuegbarkeit">16/14T</column>
+			<column name="starssenIndex">2</column>
+			<column name="legalitaet">2-H</column>
+			<column name="jahr">2050</column>
+			<column name="beschreibung"></column>
+			<column name="tarnstufe">0</column>
+			<column name="schaden">18T</column>
+			<column name="gewicht">20</column>
+			<column name="feuerwaffen_typ">STK</column>
+			<column name="muni">20(s)</column>
+			<column name="modi">EM</column>
+			<column name="rueckstossKomp">0</column>
+		</insert>
+		<insert tableName="Ausruestung_Spezifikation">
+			<column name="id">504</column>
+			<column name="TYPE">FEUER_WAFFE</column>
+			<column name="preis">2500</column>
+			<column name="name">Ultimax MMG</column>
+			<column name="verfuegbarkeit">14/14T</column>
+			<column name="starssenIndex">2</column>
+			<column name="legalitaet">2-H</column>
+			<column name="jahr">2050</column>
+			<column name="beschreibung"></column>
+			<column name="tarnstufe">0</column>
+			<column name="schaden">9S</column>
+			<column name="gewicht">12</column>
+			<column name="feuerwaffen_typ">MMG</column>
+			<column name="muni">40(s)/Gurt</column>
+			<column name="modi">AM</column>
+			<column name="rueckstossKomp">(6)</column>
+		</insert>
+		<insert tableName="Ausruestung_Spezifikation">
+			<column name="id">505</column>
+			<column name="TYPE">FEUER_WAFFE</column>
+			<column name="preis">4000</column>
+			<column name="name">RPK SMG</column>
+			<column name="verfuegbarkeit">18/14T</column>
+			<column name="starssenIndex">2</column>
+			<column name="legalitaet">2-H</column>
+			<column name="jahr">2050</column>
+			<column name="beschreibung"></column>
+			<column name="tarnstufe">0</column>
+			<column name="schaden">10S</column>
+			<column name="gewicht">15</column>
+			<column name="feuerwaffen_typ">SMG</column>
+			<column name="muni">40(s)/Gurt</column>
+			<column name="modi">AM</column>
+			<column name="rueckstossKomp">(6)</column>
+		</insert>
+		<insert tableName="Ausruestung_Spezifikation">
+			<column name="id">506</column>
+			<column name="TYPE">FEUER_WAFFE</column>
+			<column name="preis">8000</column>
+			<column name="name">IWS Multi-Launcher</column>
+			<column name="verfuegbarkeit">12/14T</column>
+			<column name="starssenIndex">2</column>
+			<column name="legalitaet">1-K</column>
+			<column name="jahr">2050</column>
+			<column name="beschreibung"></column>
+			<column name="tarnstufe">0</column>
+			<column name="schaden">Rakete</column>
+			<column name="gewicht">8</column>
+			<column name="feuerwaffen_typ">RAW</column>
+			<column name="muni">4(k)</column>
+			<column name="modi">EM</column>
+			<column name="rueckstossKomp">0</column>
+		</insert>
+	</changeSet>
+
+</databaseChangeLog>

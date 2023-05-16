@@ -1,0 +1,632 @@
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+    <changeSet id="1" author="KB">
+		<insert tableName="Ausruestung_Spezifikation">
+			<column name="id">701</column>
+			<column name="TYPE">FEUER_WAFFE_ZUBEHOER</column>
+			<column name="preis">400</column>
+			<column name="name">Zweibein</column>
+			<column name="verfuegbarkeit">6/12St</column>
+			<column name="starssenIndex">1</column>
+			<column name="legalitaet">Legal</column>
+			<column name="jahr">2050</column>
+			<column name="beschreibung"></column>
+			<column name="halterung">UNTERLAUF</column>
+		</insert>
+		<insert tableName="AUSRUESTUNGS_MOD">
+			<column name="id">1</column>
+			<column name="ausruestungs_id">701</column>
+			<column name="ausruestungsTyp">FEUER_WAFFE</column>
+			<column name="modTyp">RUECKSTOSS</column>
+			<column name="wert">2</column>
+		</insert>
+		<insert tableName="AUSRUESTUNGS_MOD">
+			<column name="id">2</column>
+			<column name="ausruestungs_id">701</column>
+			<column name="ausruestungsTyp">FEUER_WAFFE</column>
+			<column name="modTyp">GEWICHT</column>
+			<column name="wert">2</column>
+		</insert>
+		<insert tableName="Ausruestung_Spezifikation">
+			<column name="id">702</column>
+			<column name="TYPE">FEUER_WAFFE_ZUBEHOER</column>
+			<column name="preis">100</column>
+			<column name="name">Tarnhalfter</column>
+			<column name="verfuegbarkeit">2/24St</column>
+			<column name="starssenIndex">0.75</column>
+			<column name="legalitaet">Legal</column>
+			<column name="jahr">2050</column>
+			<column name="beschreibung"></column>
+			<column name="halterung"></column>
+		</insert>
+		<insert tableName="AUSRUESTUNGS_MOD">
+			<column name="id">3</column>
+			<column name="ausruestungs_id">702</column>
+			<column name="ausruestungsTyp">FEUER_WAFFE</column>
+			<column name="modTyp">TARNSTUFE</column>
+			<column name="wert">2</column>
+		</insert>
+		<insert tableName="AUSRUESTUNGS_MOD">
+			<column name="id">4</column>
+			<column name="ausruestungs_id">701</column>
+			<column name="ausruestungsTyp">FEUER_WAFFE</column>
+			<column name="modTyp">GEWICHT</column>
+			<column name="wert">0.1</column>
+		</insert>
+		<insert tableName="Ausruestung_Spezifikation">
+			<column name="id">703</column>
+			<column name="TYPE">FEUER_WAFFE_ZUBEHOER</column>
+			<column name="preis">500</column>
+			<column name="name">Schalldaempfer</column>
+			<column name="verfuegbarkeit">4/48St</column>
+			<column name="starssenIndex">2</column>
+			<column name="legalitaet">WAFFE</column>
+			<column name="jahr">2050</column>
+			<column name="beschreibung"></column>
+			<column name="halterung">LAUF</column>
+		</insert>
+		<insert tableName="AUSRUESTUNGS_MOD">
+			<column name="id">5</column>
+			<column name="ausruestungs_id">703</column>
+			<column name="ausruestungsTyp">FEUER_WAFFE</column>
+			<column name="modTyp">ENTDECKUNGSPROBE</column>
+			<column name="wert">4</column>
+		</insert>
+		<insert tableName="AUSRUESTUNGS_MOD">
+			<column name="id">5</column>
+			<column name="ausruestungs_id">703</column>
+			<column name="ausruestungsTyp">FEUER_WAFFE</column>
+			<column name="modTyp">TARNSTUFE</column>
+			<column name="wert">-2</column>
+		</insert>
+		<insert tableName="AUSRUESTUNGS_MOD">
+			<column name="id">6</column>
+			<column name="ausruestungs_id">703</column>
+			<column name="ausruestungsTyp">FEUER_WAFFE</column>
+			<column name="modTyp">GEWICHT</column>
+			<column name="wert">0.2</column>
+		</insert>
+		<insert tableName="Ausruestung_Spezifikation">
+			<column name="id">704</column>
+			<column name="TYPE">FEUER_WAFFE_ZUBEHOER</column>
+			<column name="preis">450</column>
+			<column name="name">Gas Ventil II</column>
+			<column name="verfuegbarkeit">2/24St</column>
+			<column name="starssenIndex">0.8</column>
+			<column name="legalitaet">Legal</column>
+			<column name="jahr">2050</column>
+			<column name="beschreibung"></column>
+			<column name="halterung">LAUF</column>
+		</insert>
+		<insert tableName="AUSRUESTUNGS_MOD">
+			<column name="id">7</column>
+			<column name="ausruestungs_id">704</column>
+			<column name="ausruestungsTyp">FEUER_WAFFE</column>
+			<column name="modTyp">RUECKSTOSS</column>
+			<column name="wert">2</column>
+		</insert>
+		<insert tableName="AUSRUESTUNGS_MOD">
+			<column name="id">7</column>
+			<column name="ausruestungs_id">704</column>
+			<column name="ausruestungsTyp">FEUER_WAFFE</column>
+			<column name="modTyp">TARNSTUFE</column>
+			<column name="wert">-1</column>
+		</insert>
+		<insert tableName="AUSRUESTUNGS_MOD">
+			<column name="id">8</column>
+			<column name="ausruestungs_id">704</column>
+			<column name="ausruestungsTyp">FEUER_WAFFE</column>
+			<column name="modTyp">GEWICHT</column>
+			<column name="wert">0.5</column>
+		</insert>
+		<insert tableName="Ausruestung_Spezifikation">
+			<column name="id">705</column>
+			<column name="TYPE">FEUER_WAFFE_ZUBEHOER</column>
+			<column name="preis">700</column>
+			<column name="name">Gas Ventil III</column>
+			<column name="verfuegbarkeit">2/24St</column>
+			<column name="starssenIndex">1</column>
+			<column name="legalitaet">Legal</column>
+			<column name="jahr">2050</column>
+			<column name="beschreibung"></column>
+			<column name="halterung">LAUF</column>
+		</insert>
+		<insert tableName="AUSRUESTUNGS_MOD">
+			<column name="id">8</column>
+			<column name="ausruestungs_id">705</column>
+			<column name="ausruestungsTyp">FEUER_WAFFE</column>
+			<column name="modTyp">RUECKSTOSS</column>
+			<column name="wert">3</column>
+		</insert>
+		<insert tableName="AUSRUESTUNGS_MOD">
+			<column name="id">9</column>
+			<column name="ausruestungs_id">705</column>
+			<column name="ausruestungsTyp">FEUER_WAFFE</column>
+			<column name="modTyp">TARNSTUFE</column>
+			<column name="wert">-2</column>
+		</insert>
+		<insert tableName="AUSRUESTUNGS_MOD">
+			<column name="id">10</column>
+			<column name="ausruestungs_id">705</column>
+			<column name="ausruestungsTyp">FEUER_WAFFE</column>
+			<column name="modTyp">GEWICHT</column>
+			<column name="wert">0.75</column>
+		</insert>
+		<insert tableName="Ausruestung_Spezifikation">
+			<column name="id">706</column>
+			<column name="TYPE">FEUER_WAFFE_ZUBEHOER</column>
+			<column name="preis">2500</column>
+			<column name="name">Gyrohalterung Standard</column>
+			<column name="verfuegbarkeit">4/48St</column>
+			<column name="starssenIndex">1</column>
+			<column name="legalitaet">Legal</column>
+			<column name="jahr">2050</column>
+			<column name="beschreibung"></column>
+			<column name="halterung">UNTERLAUF</column>
+		</insert>
+		<insert tableName="AUSRUESTUNGS_MOD">
+			<column name="id">11</column>
+			<column name="ausruestungs_id">706</column>
+			<column name="ausruestungsTyp">FEUER_WAFFE</column>
+			<column name="modTyp">RUECKSTOSS</column>
+			<column name="wert">5</column>
+		</insert>
+		<insert tableName="AUSRUESTUNGS_MOD">
+			<column name="id">12</column>
+			<column name="ausruestungs_id">706</column>
+			<column name="ausruestungsTyp">FEUER_WAFFE</column>
+			<column name="modTyp">TARNSTUFE</column>
+			<column name="wert">-5</column>
+		</insert>
+		<insert tableName="AUSRUESTUNGS_MOD">
+			<column name="id">13</column>
+			<column name="ausruestungs_id">706</column>
+			<column name="ausruestungsTyp">FEUER_WAFFE</column>
+			<column name="modTyp">GEWICHT</column>
+			<column name="wert">6</column>
+		</insert>
+		<insert tableName="Ausruestung_Spezifikation">
+			<column name="id">707</column>
+			<column name="TYPE">FEUER_WAFFE_ZUBEHOER</column>
+			<column name="preis">6000</column>
+			<column name="name">Gyrohalterung Deluxe</column>
+			<column name="verfuegbarkeit">4/48St</column>
+			<column name="starssenIndex">1</column>
+			<column name="legalitaet">Legal</column>
+			<column name="jahr">2050</column>
+			<column name="beschreibung"></column>
+			<column name="halterung">UNTERLAUF</column>
+		</insert>
+		<insert tableName="AUSRUESTUNGS_MOD">
+			<column name="id">14</column>
+			<column name="ausruestungs_id">707</column>
+			<column name="ausruestungsTyp">FEUER_WAFFE</column>
+			<column name="modTyp">RUECKSTOSS</column>
+			<column name="wert">6</column>
+		</insert>
+		<insert tableName="AUSRUESTUNGS_MOD">
+			<column name="id">15</column>
+			<column name="ausruestungs_id">707</column>
+			<column name="ausruestungsTyp">FEUER_WAFFE</column>
+			<column name="modTyp">TARNSTUFE</column>
+			<column name="wert">-6</column>
+		</insert>
+		<insert tableName="AUSRUESTUNGS_MOD">
+			<column name="id">16</column>
+			<column name="ausruestungs_id">707</column>
+			<column name="ausruestungsTyp">FEUER_WAFFE</column>
+			<column name="modTyp">GEWICHT</column>
+			<column name="wert">8</column>
+		</insert>
+		<insert tableName="Ausruestung_Spezifikation">
+			<column name="id">708</column>
+			<column name="TYPE">FEUER_WAFFE_ZUBEHOER</column>
+			<column name="preis">500</column>
+			<column name="name">Zielfernrohr Vergrößerung I</column>
+			<column name="verfuegbarkeit">3/36St</column>
+			<column name="starssenIndex">0.8</column>
+			<column name="legalitaet">Legal</column>
+			<column name="jahr">2050</column>
+			<column name="beschreibung"></column>
+			<column name="halterung">AUFMONTIERT</column>
+		</insert>
+		<insert tableName="AUSRUESTUNGS_MOD">
+			<column name="id">17</column>
+			<column name="ausruestungs_id">708</column>
+			<column name="ausruestungsTyp">FEUER_WAFFE</column>
+			<column name="modTyp">VERGROESSERUNG</column>
+			<column name="wert">1</column>
+		</insert>
+		<insert tableName="AUSRUESTUNGS_MOD">
+			<column name="id">18</column>
+			<column name="ausruestungs_id">708</column>
+			<column name="ausruestungsTyp">FEUER_WAFFE</column>
+			<column name="modTyp">TARNSTUFE</column>
+			<column name="wert">-1</column>
+		</insert>
+		<insert tableName="AUSRUESTUNGS_MOD">
+			<column name="id">19</column>
+			<column name="ausruestungs_id">708</column>
+			<column name="ausruestungsTyp">FEUER_WAFFE</column>
+			<column name="modTyp">GEWICHT</column>
+			<column name="wert">0.25</column>
+		</insert>
+		<insert tableName="Ausruestung_Spezifikation">
+			<column name="id">709</column>
+			<column name="TYPE">FEUER_WAFFE_ZUBEHOER</column>
+			<column name="preis">800</column>
+			<column name="name">Zielfernrohr Vergrößerung II</column>
+			<column name="verfuegbarkeit">3/36St</column>
+			<column name="starssenIndex">0.9</column>
+			<column name="legalitaet">Legal</column>
+			<column name="jahr">2050</column>
+			<column name="beschreibung"></column>
+			<column name="halterung">AUFMONTIERT</column>
+		</insert>
+		<insert tableName="AUSRUESTUNGS_MOD">
+			<column name="id">20</column>
+			<column name="ausruestungs_id">709</column>
+			<column name="ausruestungsTyp">FEUER_WAFFE</column>
+			<column name="modTyp">VERGROESSERUNG</column>
+			<column name="wert">2</column>
+		</insert>
+		<insert tableName="AUSRUESTUNGS_MOD">
+			<column name="id">21</column>
+			<column name="ausruestungs_id">709</column>
+			<column name="ausruestungsTyp">FEUER_WAFFE</column>
+			<column name="modTyp">TARNSTUFE</column>
+			<column name="wert">-1</column>
+		</insert>
+		<insert tableName="AUSRUESTUNGS_MOD">
+			<column name="id">22</column>
+			<column name="ausruestungs_id">709</column>
+			<column name="ausruestungsTyp">FEUER_WAFFE</column>
+			<column name="modTyp">GEWICHT</column>
+			<column name="wert">0.25</column>
+		</insert>
+		<insert tableName="Ausruestung_Spezifikation">
+			<column name="id">710</column>
+			<column name="TYPE">FEUER_WAFFE_ZUBEHOER</column>
+			<column name="preis">1200</column>
+			<column name="name">Zielfernrohr Vergrößerung III</column>
+			<column name="verfuegbarkeit">3/36St</column>
+			<column name="starssenIndex">1</column>
+			<column name="legalitaet">Legal</column>
+			<column name="jahr">2050</column>
+			<column name="beschreibung"></column>
+			<column name="halterung">AUFMONTIERT</column>
+		</insert>
+		<insert tableName="AUSRUESTUNGS_MOD">
+			<column name="id">23</column>
+			<column name="ausruestungs_id">710</column>
+			<column name="ausruestungsTyp">FEUER_WAFFE</column>
+			<column name="modTyp">VERGROESSERUNG</column>
+			<column name="wert">3</column>
+		</insert>
+		<insert tableName="AUSRUESTUNGS_MOD">
+			<column name="id">24</column>
+			<column name="ausruestungs_id">710</column>
+			<column name="ausruestungsTyp">FEUER_WAFFE</column>
+			<column name="modTyp">TARNSTUFE</column>
+			<column name="wert">-1</column>
+		</insert>
+		<insert tableName="AUSRUESTUNGS_MOD">
+			<column name="id">25</column>
+			<column name="ausruestungs_id">710</column>
+			<column name="ausruestungsTyp">FEUER_WAFFE</column>
+			<column name="modTyp">GEWICHT</column>
+			<column name="wert">0.25</column>
+		</insert>
+		<insert tableName="Ausruestung_Spezifikation">
+			<column name="id">711</column>
+			<column name="TYPE">FEUER_WAFFE_ZUBEHOER</column>
+			<column name="preis">1500</column>
+			<column name="name">Restlichtverstärkung</column>
+			<column name="verfuegbarkeit">3/36St</column>
+			<column name="starssenIndex">0.8</column>
+			<column name="legalitaet">Legal</column>
+			<column name="jahr">2050</column>
+			<column name="beschreibung"></column>
+			<column name="halterung">AUFMONTIERT</column>
+		</insert>
+		<insert tableName="AUSRUESTUNGS_MOD">
+			<column name="id">26</column>
+			<column name="ausruestungs_id">711</column>
+			<column name="ausruestungsTyp">FEUER_WAFFE</column>
+			<column name="modTyp">SICHT_RV</column>
+			<column name="wert">1</column>
+		</insert>
+		<insert tableName="AUSRUESTUNGS_MOD">
+			<column name="id">27</column>
+			<column name="ausruestungs_id">711</column>
+			<column name="ausruestungsTyp">FEUER_WAFFE</column>
+			<column name="modTyp">TARNSTUFE</column>
+			<column name="wert">-2</column>
+		</insert>
+		<insert tableName="AUSRUESTUNGS_MOD">
+			<column name="id">28</column>
+			<column name="ausruestungs_id">711</column>
+			<column name="ausruestungsTyp">FEUER_WAFFE</column>
+			<column name="modTyp">GEWICHT</column>
+			<column name="wert">0.25</column>
+		</insert>
+		<insert tableName="Ausruestung_Spezifikation">
+			<column name="id">712</column>
+			<column name="TYPE">FEUER_WAFFE_ZUBEHOER</column>
+			<column name="preis">1500</column>
+			<column name="name">Infrarotsicht</column>
+			<column name="verfuegbarkeit">3/36St</column>
+			<column name="starssenIndex">0.8</column>
+			<column name="legalitaet">Legal</column>
+			<column name="jahr">2050</column>
+			<column name="beschreibung"></column>
+			<column name="halterung">AUFMONTIERT</column>
+		</insert>
+		<insert tableName="AUSRUESTUNGS_MOD">
+			<column name="id">29</column>
+			<column name="ausruestungs_id">712</column>
+			<column name="ausruestungsTyp">FEUER_WAFFE</column>
+			<column name="modTyp">SICHT_IR</column>
+			<column name="wert">1</column>
+		</insert>
+		<insert tableName="AUSRUESTUNGS_MOD">
+			<column name="id">30</column>
+			<column name="ausruestungs_id">712</column>
+			<column name="ausruestungsTyp">FEUER_WAFFE</column>
+			<column name="modTyp">TARNSTUFE</column>
+			<column name="wert">-2</column>
+		</insert>
+		<insert tableName="AUSRUESTUNGS_MOD">
+			<column name="id">31</column>
+			<column name="ausruestungs_id">712</column>
+			<column name="ausruestungsTyp">FEUER_WAFFE</column>
+			<column name="modTyp">GEWICHT</column>
+			<column name="wert">0.25</column>
+		</insert>
+		<insert tableName="Ausruestung_Spezifikation">
+			<column name="id">713</column>
+			<column name="TYPE">FEUER_WAFFE_ZUBEHOER</column>
+			<column name="preis">500</column>
+			<column name="name">Lasermarkierer</column>
+			<column name="verfuegbarkeit">6/36St</column>
+			<column name="starssenIndex">0.75</column>
+			<column name="legalitaet">Legal</column>
+			<column name="jahr">2050</column>
+			<column name="beschreibung"></column>
+			<column name="halterung">AUFMONTIERT</column>
+		</insert>
+		<insert tableName="AUSRUESTUNGS_MOD">
+			<column name="id">32</column>
+			<column name="ausruestungs_id">713</column>
+			<column name="ausruestungsTyp">FEUER_WAFFE</column>
+			<column name="modTyp">MINDESTWURF</column>
+			<column name="wert">-1</column>
+		</insert>
+		<insert tableName="AUSRUESTUNGS_MOD">
+			<column name="id">33</column>
+			<column name="ausruestungs_id">713</column>
+			<column name="ausruestungsTyp">FEUER_WAFFE</column>
+			<column name="modTyp">TARNSTUFE</column>
+			<column name="wert">-1</column>
+		</insert>
+		<insert tableName="AUSRUESTUNGS_MOD">
+			<column name="id">34</column>
+			<column name="ausruestungs_id">713</column>
+			<column name="ausruestungsTyp">FEUER_WAFFE</column>
+			<column name="modTyp">GEWICHT</column>
+			<column name="wert">0.25</column>
+		</insert>
+		<insert tableName="Ausruestung_Spezifikation">
+			<column name="id">714</column>
+			<column name="TYPE">FEUER_WAFFE_ZUBEHOER</column>
+			<column name="preis">200</column>
+			<column name="name">Schockpolster</column>
+			<column name="verfuegbarkeit">2/24St</column>
+			<column name="starssenIndex">0.75</column>
+			<column name="legalitaet">Legal</column>
+			<column name="jahr">2050</column>
+			<column name="beschreibung"></column>
+			<column name="halterung">AUFMONTIERT</column>
+		</insert>
+		<insert tableName="AUSRUESTUNGS_MOD">
+			<column name="id">35</column>
+			<column name="ausruestungs_id">714</column>
+			<column name="ausruestungsTyp">FEUER_WAFFE</column>
+			<column name="modTyp">RUECKSTOSS</column>
+			<column name="wert">1</column>
+		</insert>
+		<insert tableName="AUSRUESTUNGS_MOD">
+			<column name="id">36</column>
+			<column name="ausruestungs_id">714</column>
+			<column name="ausruestungsTyp">FEUER_WAFFE</column>
+			<column name="modTyp">GEWICHT</column>
+			<column name="wert">0.25</column>
+		</insert>
+		<insert tableName="Ausruestung_Spezifikation">
+			<column name="id">715</column>
+			<column name="TYPE">FEUER_WAFFE_ZUBEHOER</column>
+			<column name="preis">3000</column>
+			<column name="name">Smartbrille</column>
+			<column name="verfuegbarkeit">3/36St</column>
+			<column name="starssenIndex">1</column>
+			<column name="legalitaet">4L-N</column>
+			<column name="jahr">2050</column>
+			<column name="beschreibung"></column>
+			<column name="halterung"></column>
+		</insert>
+		<insert tableName="Ausruestung_Spezifikation">
+			<column name="id">716</column>
+			<column name="TYPE">FEUER_WAFFE_ZUBEHOER</column>
+			<column name="preis">4000</column>
+			<column name="name">Smartbrille mit IR</column>
+			<column name="verfuegbarkeit">3/36St</column>
+			<column name="starssenIndex">1</column>
+			<column name="legalitaet">4L-N</column>
+			<column name="jahr">2050</column>
+			<column name="beschreibung"></column>
+			<column name="halterung"></column>
+		</insert>
+		<insert tableName="Ausruestung_Spezifikation">
+			<column name="id">717</column>
+			<column name="TYPE">FEUER_WAFFE_ZUBEHOER</column>
+			<column name="preis">4000</column>
+			<column name="name">Smartbrille mit RV</column>
+			<column name="verfuegbarkeit">3/36St</column>
+			<column name="starssenIndex">1</column>
+			<column name="legalitaet">4L-N</column>
+			<column name="jahr">2050</column>
+			<column name="beschreibung"></column>
+			<column name="halterung"></column>
+		</insert>
+		<insert tableName="Ausruestung_Spezifikation">
+			<column name="id">718</column>
+			<column name="TYPE">FEUER_WAFFE_ZUBEHOER</column>
+			<column name="preis">5000</column>
+			<column name="name">Smartbrille mit RV &amp; IR</column>
+			<column name="verfuegbarkeit">3/36St</column>
+			<column name="starssenIndex">1</column>
+			<column name="legalitaet">4L-N</column>
+			<column name="jahr">2050</column>
+			<column name="beschreibung"></column>
+			<column name="halterung"></column>
+		</insert>
+		<insert tableName="Ausruestung_Spezifikation">
+			<column name="id">719</column>
+			<column name="TYPE">FEUER_WAFFE_ZUBEHOER</column>
+			<column name="preis">600</column>
+			<column name="name">Smartgun, extern</column>
+			<column name="verfuegbarkeit">4/48St</column>
+			<column name="starssenIndex">1</column>
+			<column name="legalitaet">4L-N</column>
+			<column name="jahr">2050</column>
+			<column name="beschreibung"></column>
+			<column name="halterung"></column>
+		</insert>
+		<insert tableName="AUSRUESTUNGS_MOD">
+			<column name="id">37</column>
+			<column name="ausruestungs_id">719</column>
+			<column name="ausruestungsTyp">FEUER_WAFFE</column>
+			<column name="modTyp">GEWICHT</column>
+			<column name="wert">1</column>
+		</insert>
+		<insert tableName="AUSRUESTUNGS_MOD">
+			<column name="id">38</column>
+			<column name="ausruestungs_id">719</column>
+			<column name="ausruestungsTyp">FEUER_WAFFE</column>
+			<column name="modTyp">MINDESTWURF</column>
+			<column name="wert">-2</column>
+		</insert>
+		<insert tableName="AUSRUESTUNGS_MOD">
+			<column name="id">39</column>
+			<column name="ausruestungs_id">719</column>
+			<column name="ausruestungsTyp">FEUER_WAFFE</column>
+			<column name="modTyp">TARNSTUFE</column>
+			<column name="wert">-2</column>
+		</insert>
+		<insert tableName="Ausruestung_Spezifikation">
+			<column name="id">720</column>
+			<column name="TYPE">FEUER_WAFFE_ZUBEHOER</column>
+			<column name="preis"></column>
+			<column name="name">Smartgun, intern</column>
+			<column name="verfuegbarkeit">4/48St</column>
+			<column name="starssenIndex">1</column>
+			<column name="legalitaet">4L-N</column>
+			<column name="jahr">2050</column>
+			<column name="beschreibung"></column>
+			<column name="halterung"></column>
+			<column name="preis_multiplikator">ZWEI</column>
+		</insert>
+		<insert tableName="AUSRUESTUNGS_MOD">
+			<column name="id">40</column>
+			<column name="ausruestungs_id">720</column>
+			<column name="ausruestungsTyp">FEUER_WAFFE</column>
+			<column name="modTyp">GEWICHT</column>
+			<column name="wert">0.5</column>
+		</insert>
+		<insert tableName="AUSRUESTUNGS_MOD">
+			<column name="id">41</column>
+			<column name="ausruestungs_id">720</column>
+			<column name="ausruestungsTyp">FEUER_WAFFE</column>
+			<column name="modTyp">MINDESTWURF</column>
+			<column name="wert">-2</column>
+		</insert>
+		<insert tableName="Ausruestung_Spezifikation">
+			<column name="id">721</column>
+			<column name="TYPE">FEUER_WAFFE_ZUBEHOER</column>
+			<column name="preis">750</column>
+			<column name="name">Schallunterdrücker</column>
+			<column name="verfuegbarkeit">6/48St</column>
+			<column name="starssenIndex">2</column>
+			<column name="legalitaet">WAFFE</column>
+			<column name="jahr">2050</column>
+			<column name="beschreibung"></column>
+			<column name="halterung">LAUF</column>
+		</insert>
+		<insert tableName="AUSRUESTUNGS_MOD">
+			<column name="id">42</column>
+			<column name="ausruestungs_id">721</column>
+			<column name="ausruestungsTyp">FEUER_WAFFE</column>
+			<column name="modTyp">GEWICHT</column>
+			<column name="wert">0.5</column>
+		</insert>
+		<insert tableName="AUSRUESTUNGS_MOD">
+			<column name="id">43</column>
+			<column name="ausruestungs_id">721</column>
+			<column name="ausruestungsTyp">FEUER_WAFFE</column>
+			<column name="modTyp">TARNSTUFE</column>
+			<column name="wert">-2</column>
+		</insert>
+		<insert tableName="AUSRUESTUNGS_MOD">
+			<column name="id">5</column>
+			<column name="ausruestungs_id">703</column>
+			<column name="ausruestungsTyp">FEUER_WAFFE</column>
+			<column name="modTyp">ENTDECKUNGSPROBE</column>
+			<column name="wert">2</column>
+		</insert>
+		<insert tableName="Ausruestung_Spezifikation">
+			<column name="id">722</column>
+			<column name="TYPE">FEUER_WAFFE_ZUBEHOER</column>
+			<column name="preis">600</column>
+			<column name="name">Dreibein</column>
+			<column name="verfuegbarkeit">10/12St</column>
+			<column name="starssenIndex">1</column>
+			<column name="legalitaet">Legal</column>
+			<column name="jahr">2050</column>
+			<column name="beschreibung"></column>
+			<column name="halterung">UNTERLAUF</column>
+		</insert>
+		<insert tableName="AUSRUESTUNGS_MOD">
+			<column name="id">44</column>
+			<column name="ausruestungs_id">722</column>
+			<column name="ausruestungsTyp">FEUER_WAFFE</column>
+			<column name="modTyp">RUECKSTOSS</column>
+			<column name="wert">6</column>
+		</insert>
+		<insert tableName="AUSRUESTUNGS_MOD">
+			<column name="id">45</column>
+			<column name="ausruestungs_id">722</column>
+			<column name="ausruestungsTyp">FEUER_WAFFE</column>
+			<column name="modTyp">GEWICHT</column>
+			<column name="wert">8</column>
+		</insert>
+		<insert tableName="Ausruestung_Spezifikation">
+			<column name="id">723</column>
+			<column name="TYPE">FEUER_WAFFE_ZUBEHOER</column>
+			<column name="preis">5</column>
+			<column name="name">Extraladestreifen</column>
+			<column name="verfuegbarkeit">2/24St</column>
+			<column name="starssenIndex">0.75</column>
+			<column name="legalitaet">Legal</column>
+			<column name="jahr">2050</column>
+			<column name="beschreibung"></column>
+			<column name="halterung">UNTERLAUF</column>
+		</insert>
+		<insert tableName="AUSRUESTUNGS_MOD">
+			<column name="id">46</column>
+			<column name="ausruestungs_id">723</column>
+			<column name="ausruestungsTyp">FEUER_WAFFE</column>
+			<column name="modTyp">GEWICHT</column>
+			<column name="wert">0.75</column>
+		</insert>
+	</changeSet>
+
+</databaseChangeLog>

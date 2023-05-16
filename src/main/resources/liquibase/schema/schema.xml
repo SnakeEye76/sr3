@@ -41,12 +41,21 @@
 			<column name="muni" type="VARCHAR2"></column>
 			<column name="modi" type="VARCHAR2"></column>
 			<column name="rueckstossKomp" type="VARCHAR2"></column>
+			<column name="intelligenz" type="INT"></column>
+			<column name="sprengwirkung" type="VARCHAR2"></column>
+			<column name="halterung" type="VARCHAR2"></column>
+			<column name="stufe" type="INT"></column>
+			<column name="balistisch" type="INT"></column>
+			<column name="stoss" type="INT"></column>
+			<column name="vergroesserung" type="INT"></column>
 		</createTable>
 		
-		<createTable tableName="WAFFEN_MODS">
+		<createTable tableName="AUSRUESTUNGS_MOD">
 			<column name="id" type="BigInt" autoIncrement="true"> </column>
-			<column name="waffenSpekId" type="BigInt"></column>
-			<column name="mod" type="VARCHAR2"></column>
+			<column name="ausruestungs_id" type="BigInt"></column>
+			<column name="ausruestungsTyp" type="VARCHAR2"></column>
+			<column name="modTyp" type="VARCHAR2"></column>
+			<column name="wert" type="BigInt"></column>
 		</createTable>
 		
 		<createTable tableName="CYBERWARE_SPEZIFIKATION">

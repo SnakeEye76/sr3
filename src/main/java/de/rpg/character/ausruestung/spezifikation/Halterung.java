@@ -5,8 +5,8 @@ import lombok.RequiredArgsConstructor;
 
 @Getter
 @RequiredArgsConstructor
-public enum CyberwareKategorie {
-	HEADWARE("Headware"),
-	BODYWARE("Bodyware");
+public enum Halterung {
+	LAUF("Lauf"), UNTERLAUF("Unterlauf"), AUFMONTIERT("Aufmontiert");
+	
 	private final String label;
 }

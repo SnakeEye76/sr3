@@ -1,0 +1,131 @@
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+    <changeSet id="1" author="KB">
+		<insert tableName="Ausruestung_Spezifikation">
+			<column name="id">1501</column>
+			<column name="TYPE">SICHERHEITSTECHNIK</column>
+			<column name="preis">200</column>
+			<column name="name">Daumenabdrucksscanner</column>
+			<column name="verfuegbarkeit">STUFE/72St</column>
+			<column name="starssenIndex">1</column>
+			<column name="legalitaet">LEGAL</column>
+			<column name="jahr">2050</column>
+			<column name="beschreibung"></column>
+			<column name="tarnstufe">0</column>
+			<column name="gewicht">0</column>
+			<column name="preis_multiplikator">STUFE</column>
+		</insert>
+		<insert tableName="Ausruestung_Spezifikation">
+			<column name="id">1502</column>
+			<column name="TYPE">SICHERHEITSTECHNIK</column>
+			<column name="preis">300</column>
+			<column name="name">Handabdrucksscanner</column>
+			<column name="verfuegbarkeit">(STUFE+1)/72St</column>
+			<column name="starssenIndex">2</column>
+			<column name="legalitaet">LEGAL</column>
+			<column name="jahr">2050</column>
+			<column name="beschreibung"></column>
+			<column name="tarnstufe">0</column>
+			<column name="gewicht">0</column>
+			<column name="preis_multiplikator">STUFE</column>
+		</insert>
+		<insert tableName="Ausruestung_Spezifikation">
+			<column name="id">1503</column>
+			<column name="TYPE">SICHERHEITSTECHNIK</column>
+			<column name="preis">1000</column>
+			<column name="name">Retinascanner</column>
+			<column name="verfuegbarkeit">(STUFE+2)/72St</column>
+			<column name="starssenIndex">3</column>
+			<column name="legalitaet">LEGAL</column>
+			<column name="jahr">2050</column>
+			<column name="beschreibung"></column>
+			<column name="tarnstufe">0</column>
+			<column name="gewicht">0</column>
+			<column name="preis_multiplikator">STUFE</column>
+		</insert>
+		<insert tableName="Ausruestung_Spezifikation">
+			<column name="id">1504</column>
+			<column name="TYPE">SICHERHEITSTECHNIK</column>
+			<column name="preis">100</column>
+			<column name="name">Magschloss</column>
+			<column name="verfuegbarkeit">STUFE/72St</column>
+			<column name="starssenIndex">1</column>
+			<column name="legalitaet">LEGAL</column>
+			<column name="jahr">2050</column>
+			<column name="beschreibung"></column>
+			<column name="tarnstufe">0</column>
+			<column name="gewicht">0</column>
+			<column name="preis_multiplikator">STUFE</column>
+		</insert>
+		<insert tableName="Ausruestung_Spezifikation">
+			<column name="id">1505</column>
+			<column name="TYPE">SICHERHEITSTECHNIK</column>
+			<column name="preis">1000</column>
+			<column name="name">PANICBUTTON-Verbindung</column>
+			<column name="verfuegbarkeit">IMMER</column>
+			<column name="starssenIndex">1</column>
+			<column name="legalitaet">LEGAL</column>
+			<column name="jahr">2050</column>
+			<column name="beschreibung"></column>
+			<column name="tarnstufe">0</column>
+			<column name="gewicht">0</column>
+			<column name="preis_multiplikator">EINS</column>
+		</insert>
+		<insert tableName="Ausruestung_Spezifikation">
+			<column name="id">1506</column>
+			<column name="TYPE">SICHERHEITSTECHNIK</column>
+			<column name="preis">10000</column>
+			<column name="name">Magschlossknacker</column>
+			<column name="verfuegbarkeit">(STUFEx2)/10T</column>
+			<column name="starssenIndex">3</column>
+			<column name="legalitaet">4L-V</column>
+			<column name="jahr">2050</column>
+			<column name="beschreibung"></column>
+			<column name="tarnstufe">0</column>
+			<column name="gewicht">1</column>
+			<column name="preis_multiplikator">STUFE</column>
+		</insert>
+		<insert tableName="Ausruestung_Spezifikation">
+			<column name="id">1507</column>
+			<column name="TYPE">SICHERHEITSTECHNIK</column>
+			<column name="preis">50</column>
+			<column name="name">Metal Handschellen</column>
+			<column name="verfuegbarkeit">4/48St</column>
+			<column name="starssenIndex">1</column>
+			<column name="legalitaet">6L-U</column>
+			<column name="jahr">2050</column>
+			<column name="beschreibung"></column>
+			<column name="tarnstufe">3</column>
+			<column name="gewicht">0.5</column>
+			<column name="preis_multiplikator">EINS</column>
+		</insert>
+		<insert tableName="Ausruestung_Spezifikation">
+			<column name="id">1508</column>
+			<column name="TYPE">SICHERHEITSTECHNIK</column>
+			<column name="preis">20</column>
+			<column name="name">Plastik Handschellen</column>
+			<column name="verfuegbarkeit">4/48St</column>
+			<column name="starssenIndex">1</column>
+			<column name="legalitaet">9L-U</column>
+			<column name="jahr">2050</column>
+			<column name="beschreibung"></column>
+			<column name="tarnstufe">3</column>
+			<column name="gewicht">0</column>
+			<column name="preis_multiplikator">EINS</column>
+		</insert>
+		<insert tableName="Ausruestung_Spezifikation">
+			<column name="id">1509</column>
+			<column name="TYPE">SICHERHEITSTECHNIK</column>
+			<column name="preis">100</column>
+			<column name="name">Heulboje</column>
+			<column name="verfuegbarkeit">6/72St</column>
+			<column name="starssenIndex">2</column>
+			<column name="legalitaet">LEGAL</column>
+			<column name="jahr">2050</column>
+			<column name="beschreibung"></column>
+			<column name="tarnstufe">4</column>
+			<column name="gewicht">0</column>
+			<column name="preis_multiplikator">EINS</column>
+		</insert>
+	</changeSet>
+
+</databaseChangeLog>

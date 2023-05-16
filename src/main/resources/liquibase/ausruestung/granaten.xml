@@ -1,0 +1,95 @@
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+    <changeSet id="1" author="KB">
+		<insert tableName="Ausruestung_Spezifikation">
+			<column name="id">801</column>
+			<column name="TYPE">GRANATE</column>
+			<column name="preis">30</column>
+			<column name="name">Defensiv</column>
+			<column name="verfuegbarkeit">4/4T</column>
+			<column name="starssenIndex">2</column>
+			<column name="legalitaet">3-J</column>
+			<column name="jahr">2050</column>
+			<column name="beschreibung"></column>
+			<column name="tarnstufe">6</column>
+			<column name="schaden">10S</column>
+			<column name="gewicht">0.25</column>
+			<column name="sprengwirkung">-1/0.5m</column>
+		</insert>
+		<insert tableName="Ausruestung_Spezifikation">
+			<column name="id">802</column>
+			<column name="TYPE">GRANATE</column>
+			<column name="preis">30</column>
+			<column name="name">Betäubung</column>
+			<column name="verfuegbarkeit">5/4T</column>
+			<column name="starssenIndex">2</column>
+			<column name="legalitaet">3-J</column>
+			<column name="jahr">2050</column>
+			<column name="beschreibung"></column>
+			<column name="tarnstufe">6</column>
+			<column name="schaden">12M bet</column>
+			<column name="gewicht">0.25</column>
+			<column name="sprengwirkung">-1/m</column>
+		</insert>
+		<insert tableName="Ausruestung_Spezifikation">
+			<column name="id">803</column>
+			<column name="TYPE">GRANATE</column>
+			<column name="preis">30</column>
+			<column name="name">Offensiv</column>
+			<column name="verfuegbarkeit">4/4T</column>
+			<column name="starssenIndex">2</column>
+			<column name="legalitaet">3-J</column>
+			<column name="jahr">2050</column>
+			<column name="beschreibung"></column>
+			<column name="tarnstufe">6</column>
+			<column name="schaden">10S</column>
+			<column name="gewicht">0.25</column>
+			<column name="sprengwirkung">-1/m</column>
+		</insert>
+		<insert tableName="Ausruestung_Spezifikation">
+			<column name="id">804</column>
+			<column name="TYPE">GRANATE</column>
+			<column name="preis">50</column>
+			<column name="name">mini Defensiv</column>
+			<column name="verfuegbarkeit">4/4T</column>
+			<column name="starssenIndex">2</column>
+			<column name="legalitaet">3-J</column>
+			<column name="jahr">2050</column>
+			<column name="beschreibung"></column>
+			<column name="tarnstufe">8</column>
+			<column name="schaden">10S</column>
+			<column name="gewicht">0.1</column>
+			<column name="sprengwirkung">-1/0.5m</column>
+		</insert>
+		<insert tableName="Ausruestung_Spezifikation">
+			<column name="id">805</column>
+			<column name="TYPE">GRANATE</column>
+			<column name="preis">50</column>
+			<column name="name">mini Betäubung</column>
+			<column name="verfuegbarkeit">5/4T</column>
+			<column name="starssenIndex">2</column>
+			<column name="legalitaet">3-J</column>
+			<column name="jahr">2050</column>
+			<column name="beschreibung"></column>
+			<column name="tarnstufe">8</column>
+			<column name="schaden">12M bet</column>
+			<column name="gewicht">0.1</column>
+			<column name="sprengwirkung">-1/m</column>
+		</insert>
+		<insert tableName="Ausruestung_Spezifikation">
+			<column name="id">806</column>
+			<column name="TYPE">GRANATE</column>
+			<column name="preis">50</column>
+			<column name="name">mini Offensiv</column>
+			<column name="verfuegbarkeit">4/4T</column>
+			<column name="starssenIndex">2</column>
+			<column name="legalitaet">3-J</column>
+			<column name="jahr">2050</column>
+			<column name="beschreibung"></column>
+			<column name="tarnstufe">8</column>
+			<column name="schaden">10S</column>
+			<column name="gewicht">0.1</column>
+			<column name="sprengwirkung">-1/m</column>
+		</insert>
+	</changeSet>
+
+</databaseChangeLog>

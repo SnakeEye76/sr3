@@ -1,5 +1,6 @@
 package de.rpg.character.ausruestung.spezifikation;
 import static org.apache.commons.lang3.Range.between;
+
 import org.apache.commons.lang3.Range;
 
 import lombok.Getter;

@@ -1,0 +1,161 @@
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+    <changeSet id="1" author="KB">
+		<insert tableName="Ausruestung_Spezifikation">
+			<column name="id">1701</column>
+			<column name="TYPE">WERKZEUG</column>
+			<column name="preis">500</column>
+			<column name="name">Kiste</column>
+			<column name="verfuegbarkeit">5/48St</column>
+			<column name="starssenIndex">2</column>
+			<column name="legalitaet">LEGAL</column>
+			<column name="jahr">2050</column>
+			<column name="beschreibung"></column>
+			<column name="tarnstufe">3</column>
+			<column name="gewicht">5</column>
+		</insert>
+		<insert tableName="Ausruestung_Spezifikation">
+			<column name="id">1702</column>
+			<column name="TYPE">WERKZEUG</column>
+			<column name="preis">1000</column>
+			<column name="name">Fahrzeug-Kiste</column>
+			<column name="verfuegbarkeit">5/48St</column>
+			<column name="starssenIndex">2</column>
+			<column name="legalitaet">LEGAL</column>
+			<column name="jahr">2050</column>
+			<column name="beschreibung"></column>
+			<column name="tarnstufe">3</column>
+			<column name="gewicht">5</column>
+		</insert>
+		<insert tableName="Ausruestung_Spezifikation">
+			<column name="id">1703</column>
+			<column name="TYPE">WERKZEUG</column>
+			<column name="preis">1500</column>
+			<column name="name">Elektronik-Kiste</column>
+			<column name="verfuegbarkeit">5/48St</column>
+			<column name="starssenIndex">2</column>
+			<column name="legalitaet">LEGAL</column>
+			<column name="jahr">2050</column>
+			<column name="beschreibung"></column>
+			<column name="tarnstufe">3</column>
+			<column name="gewicht">5</column>
+		</insert>
+		<insert tableName="Ausruestung_Spezifikation">
+			<column name="id">1704</column>
+			<column name="TYPE">WERKZEUG</column>
+			<column name="preis">1500</column>
+			<column name="name">Cyberware-Kiste</column>
+			<column name="verfuegbarkeit">5/48St</column>
+			<column name="starssenIndex">2</column>
+			<column name="legalitaet">LEGAL</column>
+			<column name="jahr">2050</column>
+			<column name="beschreibung"></column>
+			<column name="tarnstufe">3</column>
+			<column name="gewicht">5</column>
+		</insert>
+		<insert tableName="Ausruestung_Spezifikation">
+			<column name="id">1705</column>
+			<column name="TYPE">WERKZEUG</column>
+			<column name="preis">5000</column>
+			<column name="name">Laden</column>
+			<column name="verfuegbarkeit">8/72St</column>
+			<column name="starssenIndex">3</column>
+			<column name="legalitaet">LEGAL</column>
+			<column name="jahr">2050</column>
+			<column name="beschreibung"></column>
+			<column name="tarnstufe"></column>
+			<column name="gewicht"></column>
+		</insert>
+		<insert tableName="Ausruestung_Spezifikation">
+			<column name="id">1706</column>
+			<column name="TYPE">WERKZEUG</column>
+			<column name="preis">10000</column>
+			<column name="name">Fahrzeug-Laden</column>
+			<column name="verfuegbarkeit">8/72St</column>
+			<column name="starssenIndex">3</column>
+			<column name="legalitaet">LEGAL</column>
+			<column name="jahr">2050</column>
+			<column name="beschreibung"></column>
+			<column name="tarnstufe"></column>
+			<column name="gewicht"></column>
+		</insert>
+		<insert tableName="Ausruestung_Spezifikation">
+			<column name="id">1707</column>
+			<column name="TYPE">WERKZEUG</column>
+			<column name="preis">15000</column>
+			<column name="name">Elektronik-Laden</column>
+			<column name="verfuegbarkeit">8/72St</column>
+			<column name="starssenIndex">3</column>
+			<column name="legalitaet">LEGAL</column>
+			<column name="jahr">2050</column>
+			<column name="beschreibung"></column>
+			<column name="tarnstufe"></column>
+			<column name="gewicht"></column>
+		</insert>
+		<insert tableName="Ausruestung_Spezifikation">
+			<column name="id">1708</column>
+			<column name="TYPE">WERKZEUG</column>
+			<column name="preis">15000</column>
+			<column name="name">Cyberware-Laden</column>
+			<column name="verfuegbarkeit">8/72St</column>
+			<column name="starssenIndex">3</column>
+			<column name="legalitaet">LEGAL</column>
+			<column name="jahr">2050</column>
+			<column name="beschreibung"></column>
+			<column name="tarnstufe"></column>
+			<column name="gewicht"></column>
+		</insert>
+		<insert tableName="Ausruestung_Spezifikation">
+			<column name="id">1709</column>
+			<column name="TYPE">WERKZEUG</column>
+			<column name="preis">100000</column>
+			<column name="name">Werkstadt</column>
+			<column name="verfuegbarkeit">14/7T</column>
+			<column name="starssenIndex">4</column>
+			<column name="legalitaet">LEGAL</column>
+			<column name="jahr">2050</column>
+			<column name="beschreibung"></column>
+			<column name="tarnstufe"></column>
+			<column name="gewicht"></column>
+		</insert>
+		<insert tableName="Ausruestung_Spezifikation">
+			<column name="id">1710</column>
+			<column name="TYPE">WERKZEUG</column>
+			<column name="preis">200000</column>
+			<column name="name">Fahrzeug-Werkstadt</column>
+			<column name="verfuegbarkeit">14/7T</column>
+			<column name="starssenIndex">4</column>
+			<column name="legalitaet">LEGAL</column>
+			<column name="jahr">2050</column>
+			<column name="beschreibung"></column>
+			<column name="tarnstufe"></column>
+			<column name="gewicht"></column>
+		</insert>
+		<insert tableName="Ausruestung_Spezifikation">
+			<column name="id">1711</column>
+			<column name="TYPE">WERKZEUG</column>
+			<column name="preis">300000</column>
+			<column name="name">Elektronik-Werkstadt</column>
+			<column name="verfuegbarkeit">14/7T</column>
+			<column name="starssenIndex">4</column>
+			<column name="legalitaet">LEGAL</column>
+			<column name="jahr">2050</column>
+			<column name="beschreibung"></column>
+			<column name="tarnstufe"></column>
+			<column name="gewicht"></column>
+		</insert>
+		<insert tableName="Ausruestung_Spezifikation">
+			<column name="id">1712</column>
+			<column name="TYPE">WERKZEUG</column>
+			<column name="preis">300000</column>
+			<column name="name">Cyberware-Laden</column>
+			<column name="verfuegbarkeit">14/7T</column>
+			<column name="starssenIndex">4</column>
+			<column name="legalitaet">LEGAL</column>
+			<column name="jahr">2050</column>
+			<column name="beschreibung"></column>
+			<column name="tarnstufe"></column>
+			<column name="gewicht"></column>
+		</insert>
+	</changeSet>
+
+</databaseChangeLog>

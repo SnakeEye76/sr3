@@ -1,0 +1,193 @@
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+    <changeSet id="1" author="KB">
+		<insert tableName="Ausruestung_Spezifikation">
+			<column name="id">601</column>
+			<column name="TYPE">RAKETE</column>
+			<column name="preis">1000</column>
+			<column name="name">Anti-Person Rakete</column>
+			<column name="verfuegbarkeit">8/14T</column>
+			<column name="starssenIndex">2</column>
+			<column name="legalitaet">1-K</column>
+			<column name="jahr">2050</column>
+			<column name="beschreibung"></column>
+			<column name="schaden">16T</column>
+			<column name="gewicht">2</column>
+			<column name="intelligenz">0</column>
+			<column name="sprengwirkung">-1/0.5m</column>
+		</insert>
+		<insert tableName="Ausruestung_Spezifikation">
+			<column name="id">602</column>
+			<column name="TYPE">RAKETE</column>
+			<column name="preis">2000</column>
+			<column name="name">Anti-Fahrzeug Rakete</column>
+			<column name="verfuegbarkeit">8/14T</column>
+			<column name="starssenIndex">2</column>
+			<column name="legalitaet">1-K</column>
+			<column name="jahr">2050</column>
+			<column name="beschreibung"></column>
+			<column name="schaden">16T</column>
+			<column name="gewicht">3</column>
+			<column name="intelligenz">0</column>
+			<column name="sprengwirkung">-8/1m</column>
+		</insert>
+		<insert tableName="Ausruestung_Spezifikation">
+			<column name="id">603</column>
+			<column name="TYPE">RAKETE</column>
+			<column name="preis">1500</column>
+			<column name="name">Hochexplosiv  Rakete</column>
+			<column name="verfuegbarkeit">8/14T</column>
+			<column name="starssenIndex">2</column>
+			<column name="legalitaet">1-K</column>
+			<column name="jahr">2050</column>
+			<column name="beschreibung"></column>
+			<column name="schaden">16T</column>
+			<column name="gewicht">2</column>
+			<column name="intelligenz">0</column>
+			<column name="sprengwirkung">-1/1m</column>
+		</insert>
+		<insert tableName="Ausruestung_Spezifikation">
+			<column name="id">604</column>
+			<column name="TYPE">RAKETE</column>
+			<column name="preis">2500</column>
+			<column name="name">Anti-Personen Lenkwaffe</column>
+			<column name="verfuegbarkeit">12/14T</column>
+			<column name="starssenIndex">3</column>
+			<column name="legalitaet">1-K</column>
+			<column name="jahr">2050</column>
+			<column name="beschreibung"></column>
+			<column name="schaden">16T</column>
+			<column name="gewicht">2.25</column>
+			<column name="intelligenz">3</column>
+			<column name="sprengwirkung">-1/0.5m</column>
+		</insert>
+		<insert tableName="Ausruestung_Spezifikation">
+			<column name="id">605</column>
+			<column name="TYPE">RAKETE</column>
+			<column name="preis">5000</column>
+			<column name="name">Anti-Fahrzeug Lenkwaffe</column>
+			<column name="verfuegbarkeit">12/14T</column>
+			<column name="starssenIndex">3</column>
+			<column name="legalitaet">1-K</column>
+			<column name="jahr">2050</column>
+			<column name="beschreibung"></column>
+			<column name="schaden">16T</column>
+			<column name="gewicht">3.25</column>
+			<column name="intelligenz">4</column>
+			<column name="sprengwirkung">-8/1m</column>
+		</insert>
+		<insert tableName="Ausruestung_Spezifikation">
+			<column name="id">606</column>
+			<column name="TYPE">RAKETE</column>
+			<column name="preis">3750</column>
+			<column name="name">Hochexplosiv Lenkwaffe</column>
+			<column name="verfuegbarkeit">12/14T</column>
+			<column name="starssenIndex">3</column>
+			<column name="legalitaet">1-K</column>
+			<column name="jahr">2050</column>
+			<column name="beschreibung"></column>
+			<column name="schaden">16T</column>
+			<column name="gewicht">2.25</column>
+			<column name="intelligenz">3</column>
+			<column name="sprengwirkung">-1/1m</column>
+		</insert>
+		<insert tableName="Ausruestung_Spezifikation">
+			<column name="id">607</column>
+			<column name="TYPE">FEUERWAFFEN_MUNITION</column>
+			<column name="preis">450</column>
+			<column name="name">Sturmkanone</column>
+			<column name="verfuegbarkeit">5/3T</column>
+			<column name="starssenIndex">2</column>
+			<column name="legalitaet">Waffe</column>
+			<column name="jahr">2050</column>
+			<column name="beschreibung"></column>
+			<column name="tarnstufe">3</column>
+			<column name="schaden"></column>
+			<column name="gewicht">1.25</column>
+		</insert>
+		<insert tableName="Ausruestung_Spezifikation">
+			<column name="id">608</column>
+			<column name="TYPE">FEUERWAFFEN_MUNITION</column>
+			<column name="preis">4250</column>
+			<column name="name">Sturmkanone 100er Gurt</column>
+			<column name="verfuegbarkeit">6/3T</column>
+			<column name="starssenIndex">2</column>
+			<column name="legalitaet">Waffe</column>
+			<column name="jahr">2050</column>
+			<column name="beschreibung"></column>
+			<column name="tarnstufe">Nee, klar</column>
+			<column name="schaden"></column>
+			<column name="gewicht">12.5</column>
+		</insert>
+		<insert tableName="Ausruestung_Spezifikation">
+			<column name="id">609</column>
+			<column name="TYPE">FEUERWAFFEN_MUNITION</column>
+			<column name="preis">50</column>
+			<column name="name">Explosiv</column>
+			<column name="verfuegbarkeit">3/36St</column>
+			<column name="starssenIndex">0.8</column>
+			<column name="legalitaet">Waffe</column>
+			<column name="jahr">2050</column>
+			<column name="beschreibung"></column>
+			<column name="tarnstufe">8</column>
+			<column name="schaden">+1</column>
+			<column name="gewicht">0.75</column>
+		</insert>
+		<insert tableName="Ausruestung_Spezifikation">
+			<column name="id">610</column>
+			<column name="TYPE">FEUERWAFFEN_MUNITION</column>
+			<column name="preis">100</column>
+			<column name="name">Flechette</column>
+			<column name="verfuegbarkeit">3/36St</column>
+			<column name="starssenIndex">0.8</column>
+			<column name="legalitaet">Waffe</column>
+			<column name="jahr">2050</column>
+			<column name="beschreibung"></column>
+			<column name="tarnstufe">8</column>
+			<column name="schaden">+1SN(f)</column>
+			<column name="gewicht">0.5</column>
+		</insert>
+		<insert tableName="Ausruestung_Spezifikation">
+			<column name="id">611</column>
+			<column name="TYPE">FEUERWAFFEN_MUNITION</column>
+			<column name="preis">30</column>
+			<column name="name">Gel</column>
+			<column name="verfuegbarkeit">4/48St</column>
+			<column name="starssenIndex">1</column>
+			<column name="legalitaet">Waffe</column>
+			<column name="jahr">2050</column>
+			<column name="beschreibung"></column>
+			<column name="tarnstufe">8</column>
+			<column name="schaden">-2 bet</column>
+			<column name="gewicht">0.25</column>
+		</insert>
+		<insert tableName="Ausruestung_Spezifikation">
+			<column name="id">612</column>
+			<column name="TYPE">FEUERWAFFEN_MUNITION</column>
+			<column name="preis">20</column>
+			<column name="name">Standard</column>
+			<column name="verfuegbarkeit">2/24St</column>
+			<column name="starssenIndex">0.75</column>
+			<column name="legalitaet">Waffe</column>
+			<column name="jahr">2050</column>
+			<column name="beschreibung"></column>
+			<column name="tarnstufe">8</column>
+			<column name="schaden"></column>
+			<column name="gewicht">0.5</column>
+		</insert>
+		<insert tableName="Ausruestung_Spezifikation">
+			<column name="id">613</column>
+			<column name="TYPE">FEUERWAFFEN_MUNITION</column>
+			<column name="preis">50</column>
+			<column name="name">Taserpfeil</column>
+			<column name="verfuegbarkeit">6/36St</column>
+			<column name="starssenIndex">1.5</column>
+			<column name="legalitaet">Waffe</column>
+			<column name="jahr">2050</column>
+			<column name="beschreibung"></column>
+			<column name="tarnstufe">3</column>
+			<column name="schaden"></column>
+			<column name="gewicht">0.5</column>
+		</insert>
+	</changeSet>
+
+</databaseChangeLog>

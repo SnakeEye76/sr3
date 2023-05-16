@@ -1,0 +1,73 @@
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+    <changeSet id="1" author="KB">
+		<insert tableName="Ausruestung_Spezifikation">
+			<column name="id">901</column>
+			<column name="TYPE">SPRENGSTOFF</column>
+			<column name="preis">60</column>
+			<column name="name">Kommerziell</column>
+			<column name="verfuegbarkeit">6/48St</column>
+			<column name="starssenIndex">1</column>
+			<column name="legalitaet">4L-J</column>
+			<column name="jahr">2050</column>
+			<column name="beschreibung"></column>
+			<column name="tarnstufe">6</column>
+			<column name="gewicht">1</column>
+			<column name="stufe">3</column>
+		</insert>
+		<insert tableName="Ausruestung_Spezifikation">
+			<column name="id">902</column>
+			<column name="TYPE">SPRENGSTOFF</column>
+			<column name="preis">80</column>
+			<column name="name">Plastik C4</column>
+			<column name="verfuegbarkeit">8/48St</column>
+			<column name="starssenIndex">1</column>
+			<column name="legalitaet">4-J</column>
+			<column name="jahr">2050</column>
+			<column name="beschreibung"></column>
+			<column name="tarnstufe">6</column>
+			<column name="gewicht">1</column>
+			<column name="stufe">6</column>
+		</insert>
+		<insert tableName="Ausruestung_Spezifikation">
+			<column name="id">903</column>
+			<column name="TYPE">SPRENGSTOFF</column>
+			<column name="preis">200</column>
+			<column name="name">Plastik C12</column>
+			<column name="verfuegbarkeit">10/48St</column>
+			<column name="starssenIndex">2</column>
+			<column name="legalitaet">3-J</column>
+			<column name="jahr">2050</column>
+			<column name="beschreibung"></column>
+			<column name="tarnstufe">6</column>
+			<column name="gewicht">1</column>
+			<column name="stufe">12</column>
+		</insert>
+		<insert tableName="Ausruestung_Spezifikation">
+			<column name="id">904</column>
+			<column name="TYPE">SPRENGSTOFF</column>
+			<column name="preis">250</column>
+			<column name="name">Funkzünder</column>
+			<column name="verfuegbarkeit">4/48St</column>
+			<column name="starssenIndex">2</column>
+			<column name="legalitaet">6-J</column>
+			<column name="jahr">2050</column>
+			<column name="beschreibung"></column>
+			<column name="tarnstufe">8</column>
+			<column name="gewicht">0.25</column>
+		</insert>
+		<insert tableName="Ausruestung_Spezifikation">
+			<column name="id">905</column>
+			<column name="TYPE">SPRENGSTOFF</column>
+			<column name="preis">100</column>
+			<column name="name">Zeitzünder</column>
+			<column name="verfuegbarkeit">4/48St</column>
+			<column name="starssenIndex">2</column>
+			<column name="legalitaet">6-J</column>
+			<column name="jahr">2050</column>
+			<column name="beschreibung"></column>
+			<column name="tarnstufe">6</column>
+			<column name="gewicht">0.5</column>
+		</insert>
+	</changeSet>
+
+</databaseChangeLog>

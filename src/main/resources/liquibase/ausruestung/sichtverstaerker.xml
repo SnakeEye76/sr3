@@ -1,0 +1,165 @@
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+    <changeSet id="1" author="KB">
+		<insert tableName="Ausruestung_Spezifikation">
+			<column name="id">1101</column>
+			<column name="TYPE">SICHT_VERSTAERKER</column>
+			<column name="preis">100</column>
+			<column name="name">Fernglas</column>
+			<column name="verfuegbarkeit">Immer</column>
+			<column name="starssenIndex">0.8</column>
+			<column name="legalitaet">Legal</column>
+			<column name="jahr">2050</column>
+			<column name="beschreibung"></column>
+			<column name="vergroesserung">50</column>
+			<column name="gewicht">1</column>
+		</insert>
+		<insert tableName="Ausruestung_Spezifikation">
+			<column name="id">1102</column>
+			<column name="TYPE">SICHT_VERSTAERKER</column>
+			<column name="preis">300</column>
+			<column name="name">Fernglas mit Restlichtverstärkung</column>
+			<column name="verfuegbarkeit">4/48St</column>
+			<column name="starssenIndex">1.25</column>
+			<column name="legalitaet">Legal</column>
+			<column name="jahr">2050</column>
+			<column name="beschreibung"></column>
+			<column name="vergroesserung">50</column>
+			<column name="gewicht">1</column>
+		</insert>
+		<insert tableName="AUSRUESTUNGS_MOD">
+			<column name="id">1151</column>
+			<column name="ausruestungs_id">1102</column>
+			<column name="ausruestungsTyp">SICHT_VERSTAERKER</column>
+			<column name="modTyp">SICHT_RV</column>
+			<column name="wert">1</column>
+		</insert>
+		<insert tableName="Ausruestung_Spezifikation">
+			<column name="id">1103</column>
+			<column name="TYPE">SICHT_VERSTAERKER</column>
+			<column name="preis">350</column>
+			<column name="name">Fernglas mit Infrarot</column>
+			<column name="verfuegbarkeit">4/48St</column>
+			<column name="starssenIndex">1.25</column>
+			<column name="legalitaet">Legal</column>
+			<column name="jahr">2050</column>
+			<column name="beschreibung"></column>
+			<column name="vergroesserung">50</column>
+			<column name="gewicht">1</column>
+		</insert>
+		<insert tableName="AUSRUESTUNGS_MOD">
+			<column name="id">1152</column>
+			<column name="ausruestungs_id">1103</column>
+			<column name="ausruestungsTyp">SICHT_VERSTAERKER</column>
+			<column name="modTyp">SICHT_IR</column>
+			<column name="wert">1</column>
+		</insert>
+		<insert tableName="Ausruestung_Spezifikation">
+			<column name="id">1104</column>
+			<column name="TYPE">SICHT_VERSTAERKER</column>
+			<column name="preis">550</column>
+			<column name="name">Fernglas mit Infrarot und Restlichtverstärkung</column>
+			<column name="verfuegbarkeit">4/48St</column>
+			<column name="starssenIndex">1.25</column>
+			<column name="legalitaet">Legal</column>
+			<column name="jahr">2050</column>
+			<column name="beschreibung"></column>
+			<column name="vergroesserung">50</column>
+			<column name="gewicht">1</column>
+		</insert>
+		<insert tableName="AUSRUESTUNGS_MOD">
+			<column name="id">1153</column>
+			<column name="ausruestungs_id">1104</column>
+			<column name="ausruestungsTyp">SICHT_VERSTAERKER</column>
+			<column name="modTyp">SICHT_IR</column>
+			<column name="wert">1</column>
+		</insert>
+		<insert tableName="AUSRUESTUNGS_MOD">
+			<column name="id">1154</column>
+			<column name="ausruestungs_id">1104</column>
+			<column name="ausruestungsTyp">SICHT_VERSTAERKER</column>
+			<column name="modTyp">SICHT_RV</column>
+			<column name="wert">1</column>
+		</insert>
+		<insert tableName="Ausruestung_Spezifikation">
+			<column name="id">1105</column>
+			<column name="TYPE">SICHT_VERSTAERKER</column>
+			<column name="preis">1500</column>
+			<column name="name">Verstärkerbrille</column>
+			<column name="verfuegbarkeit">4/48St</column>
+			<column name="starssenIndex">1.5</column>
+			<column name="legalitaet">Legal</column>
+			<column name="jahr">2050</column>
+			<column name="beschreibung"></column>
+			<column name="vergroesserung">20</column>
+			<column name="gewicht">1</column>
+		</insert>
+		<insert tableName="Ausruestung_Spezifikation">
+			<column name="id">1106</column>
+			<column name="TYPE">SICHT_VERSTAERKER</column>
+			<column name="preis">2000</column>
+			<column name="name">Verstärkerbrille mit Restlichtverstärkung</column>
+			<column name="verfuegbarkeit">6/48St</column>
+			<column name="starssenIndex">2</column>
+			<column name="legalitaet">Legal</column>
+			<column name="jahr">2050</column>
+			<column name="beschreibung"></column>
+			<column name="vergroesserung">20</column>
+			<column name="gewicht">1</column>
+		</insert>
+		<insert tableName="AUSRUESTUNGS_MOD">
+			<column name="id">1155</column>
+			<column name="ausruestungs_id">1106</column>
+			<column name="ausruestungsTyp">SICHT_VERSTAERKER</column>
+			<column name="modTyp">SICHT_RV</column>
+			<column name="wert">1</column>
+		</insert>
+		<insert tableName="Ausruestung_Spezifikation">
+			<column name="id">1107</column>
+			<column name="TYPE">SICHT_VERSTAERKER</column>
+			<column name="preis">2200</column>
+			<column name="name">Verstärkerbrille mit Infrarot</column>
+			<column name="verfuegbarkeit">6/48St</column>
+			<column name="starssenIndex">2</column>
+			<column name="legalitaet">Legal</column>
+			<column name="jahr">2050</column>
+			<column name="beschreibung"></column>
+			<column name="vergroesserung">20</column>
+			<column name="gewicht">1</column>
+		</insert>
+		<insert tableName="AUSRUESTUNGS_MOD">
+			<column name="id">1156</column>
+			<column name="ausruestungs_id">1107</column>
+			<column name="ausruestungsTyp">SICHT_VERSTAERKER</column>
+			<column name="modTyp">SICHT_IR</column>
+			<column name="wert">1</column>
+		</insert>
+		<insert tableName="Ausruestung_Spezifikation">
+			<column name="id">1108</column>
+			<column name="TYPE">SICHT_VERSTAERKER</column>
+			<column name="preis">2700</column>
+			<column name="name">Verstärkerbrille mit Infrarot und Restlichtverstärkung</column>
+			<column name="verfuegbarkeit">6/48St</column>
+			<column name="starssenIndex">2</column>
+			<column name="legalitaet">Legal</column>
+			<column name="jahr">2050</column>
+			<column name="beschreibung"></column>
+			<column name="vergroesserung">20</column>
+			<column name="gewicht">1</column>
+		</insert>
+		<insert tableName="AUSRUESTUNGS_MOD">
+			<column name="id">1157</column>
+			<column name="ausruestungs_id">1108</column>
+			<column name="ausruestungsTyp">SICHT_VERSTAERKER</column>
+			<column name="modTyp">SICHT_IR</column>
+			<column name="wert">1</column>
+		</insert>
+		<insert tableName="AUSRUESTUNGS_MOD">
+			<column name="id">1158</column>
+			<column name="ausruestungs_id">1108</column>
+			<column name="ausruestungsTyp">SICHT_VERSTAERKER</column>
+			<column name="modTyp">SICHT_RV</column>
+			<column name="wert">1</column>
+		</insert>
+	</changeSet>
+
+</databaseChangeLog>

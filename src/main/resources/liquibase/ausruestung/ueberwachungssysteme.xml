@@ -1,0 +1,103 @@
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+    <changeSet id="1" author="KB">
+		<insert tableName="Ausruestung_Spezifikation">
+			<column name="id">1301</column>
+			<column name="TYPE">UEBERWACHUNGSSYSTEME</column>
+			<column name="preis">10000</column>
+			<column name="name">Daten Decoder</column>
+			<column name="verfuegbarkeit">STUFE/10T</column>
+			<column name="starssenIndex">1.5</column>
+			<column name="legalitaet">4L-V</column>
+			<column name="jahr">2050</column>
+			<column name="beschreibung"></column>
+			<column name="tarnstufe">2</column>
+			<column name="gewicht">5</column>
+			<column name="preis_multiplikator">STUFE</column>
+		</insert>
+		<insert tableName="Ausruestung_Spezifikation">
+			<column name="id">1302</column>
+			<column name="TYPE">UEBERWACHUNGSSYSTEME</column>
+			<column name="preis">5000</column>
+			<column name="name">Datenwanze</column>
+			<column name="verfuegbarkeit">STUFE/8T</column>
+			<column name="starssenIndex">1.5</column>
+			<column name="legalitaet">4L-V</column>
+			<column name="jahr">2050</column>
+			<column name="beschreibung"></column>
+			<column name="tarnstufe">12</column>
+			<column name="gewicht">0</column>
+			<column name="preis_multiplikator">STUFE</column>
+		</insert>
+		<insert tableName="Ausruestung_Spezifikation">
+			<column name="id">1303</column>
+			<column name="TYPE">UEBERWACHUNGSSYSTEME</column>
+			<column name="preis">1500</column>
+			<column name="name">Lasermikrofon</column>
+			<column name="verfuegbarkeit">STUFE/48St</column>
+			<column name="starssenIndex">1.5</column>
+			<column name="legalitaet">4L-U</column>
+			<column name="jahr">2050</column>
+			<column name="beschreibung"></column>
+			<column name="tarnstufe">5</column>
+			<column name="gewicht">1</column>
+			<column name="preis_multiplikator">STUFE</column>
+		</insert>
+		<insert tableName="Ausruestung_Spezifikation">
+			<column name="id">1304</column>
+			<column name="TYPE">UEBERWACHUNGSSYSTEME</column>
+			<column name="preis">1000</column>
+			<column name="name">Pistolenmikrofon</column>
+			<column name="verfuegbarkeit">STUFE/36St</column>
+			<column name="starssenIndex">1</column>
+			<column name="legalitaet">6L-U</column>
+			<column name="jahr">2050</column>
+			<column name="beschreibung"></column>
+			<column name="tarnstufe">5</column>
+			<column name="gewicht">1</column>
+			<column name="preis_multiplikator">STUFE</column>
+		</insert>
+		<insert tableName="Ausruestung_Spezifikation">
+			<column name="id">1305</column>
+			<column name="TYPE">UEBERWACHUNGSSYSTEME</column>
+			<column name="preis">1000</column>
+			<column name="name">Signalorter</column>
+			<column name="verfuegbarkeit">STUFE/48St</column>
+			<column name="starssenIndex">1.5</column>
+			<column name="legalitaet">8L-U</column>
+			<column name="jahr">2050</column>
+			<column name="beschreibung"></column>
+			<column name="tarnstufe">3</column>
+			<column name="gewicht">2</column>
+			<column name="preis_multiplikator">STUFE</column>
+		</insert>
+		<insert tableName="Ausruestung_Spezifikation">
+			<column name="id">1306</column>
+			<column name="TYPE">UEBERWACHUNGSSYSTEME</column>
+			<column name="preis">100</column>
+			<column name="name">Leitsignal</column>
+			<column name="verfuegbarkeit">STUFE/72St</column>
+			<column name="starssenIndex">2</column>
+			<column name="legalitaet">8L-U</column>
+			<column name="jahr">2050</column>
+			<column name="beschreibung"></column>
+			<column name="tarnstufe">3</column>
+			<column name="gewicht">0</column>
+			<column name="preis_multiplikator">STUFE</column>
+		</insert>
+		<insert tableName="Ausruestung_Spezifikation">
+			<column name="id">1307</column>
+			<column name="TYPE">UEBERWACHUNGSSYSTEME</column>
+			<column name="preis">2000</column>
+			<column name="name">Stimmen-Identifikator</column>
+			<column name="verfuegbarkeit">STUFE/72St</column>
+			<column name="starssenIndex">2</column>
+			<column name="legalitaet">5L-U</column>
+			<column name="jahr">2050</column>
+			<column name="beschreibung"></column>
+			<column name="tarnstufe">2</column>
+			<column name="gewicht">5</column>
+			<column name="preis_multiplikator">STUFE</column>
+		</insert>
+	</changeSet>
+
+</databaseChangeLog>

@@ -1,0 +1,75 @@
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+    <changeSet id="1" author="KB">
+		<insert tableName="Ausruestung_Spezifikation">
+			<column name="id">1601</column>
+			<column name="TYPE">UEBERLEBENSAUSRUESTUNG</column>
+			<column name="preis">200</column>
+			<column name="name">Chemoanzug</column>
+			<column name="verfuegbarkeit">STUFE/(Stufe)T</column>
+			<column name="starssenIndex">1</column>
+			<column name="legalitaet">LEGAL</column>
+			<column name="jahr">2050</column>
+			<column name="beschreibung"></column>
+			<column name="tarnstufe">0</column>
+			<column name="gewicht">1</column>
+			<column name="preis_multiplikator">STUFE</column>
+		</insert>
+		<insert tableName="Ausruestung_Spezifikation">
+			<column name="id">1602</column>
+			<column name="TYPE">UEBERLEBENSAUSRUESTUNG</column>
+			<column name="preis">250</column>
+			<column name="name">Druckluftregulator</column>
+			<column name="verfuegbarkeit">6/48St</column>
+			<column name="starssenIndex">2</column>
+			<column name="legalitaet">LEGAL</column>
+			<column name="jahr">2050</column>
+			<column name="beschreibung"></column>
+			<column name="tarnstufe">0</column>
+			<column name="gewicht">0.5</column>
+			<column name="preis_multiplikator">EINS</column>
+		</insert>
+		<insert tableName="Ausruestung_Spezifikation">
+			<column name="id">1603</column>
+			<column name="TYPE">UEBERLEBENSAUSRUESTUNG</column>
+			<column name="preis">30</column>
+			<column name="name">Rationsriegel (10 Tage)</column>
+			<column name="verfuegbarkeit">2/48St</column>
+			<column name="starssenIndex">1</column>
+			<column name="legalitaet">LEGAL</column>
+			<column name="jahr">2050</column>
+			<column name="beschreibung"></column>
+			<column name="tarnstufe">0</column>
+			<column name="gewicht">1</column>
+			<column name="preis_multiplikator">EINS</column>
+		</insert>
+		<insert tableName="Ausruestung_Spezifikation">
+			<column name="id">1604</column>
+			<column name="TYPE">UEBERLEBENSAUSRUESTUNG</column>
+			<column name="preis">500</column>
+			<column name="name">Atemgerät</column>
+			<column name="verfuegbarkeit">4/48St</column>
+			<column name="starssenIndex">2</column>
+			<column name="legalitaet">LEGAL</column>
+			<column name="jahr">2050</column>
+			<column name="beschreibung"></column>
+			<column name="tarnstufe">0</column>
+			<column name="gewicht">1</column>
+			<column name="preis_multiplikator">EINS</column>
+		</insert>
+		<insert tableName="Ausruestung_Spezifikation">
+			<column name="id">1605</column>
+			<column name="TYPE">UEBERLEBENSAUSRUESTUNG</column>
+			<column name="preis">100</column>
+			<column name="name">Survivalkit</column>
+			<column name="verfuegbarkeit">2/48St</column>
+			<column name="starssenIndex">1</column>
+			<column name="legalitaet">LEGAL</column>
+			<column name="jahr">2050</column>
+			<column name="beschreibung"></column>
+			<column name="tarnstufe">0</column>
+			<column name="gewicht">2</column>
+			<column name="preis_multiplikator">EINS</column>
+		</insert>
+	</changeSet>
+
+</databaseChangeLog>

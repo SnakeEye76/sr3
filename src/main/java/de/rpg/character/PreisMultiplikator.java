@@ -1,5 +1,5 @@
 package de.rpg.character;
 
 public enum PreisMultiplikator {
-	EINS, STUFE;
+	EINS, STUFE, ZWEI, MEMORY_COST;
 }
