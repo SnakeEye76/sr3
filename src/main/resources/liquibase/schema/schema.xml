@@ -48,6 +48,7 @@
 			<column name="balistisch" type="INT"></column>
 			<column name="stoss" type="INT"></column>
 			<column name="vergroesserung" type="INT"></column>
+			<column name="gehoert_zu" type="BigInt"></column>
 		</createTable>
 		
 		<createTable tableName="AUSRUESTUNGS_MOD">
@@ -56,6 +57,7 @@
 			<column name="ausruestungsTyp" type="VARCHAR2"></column>
 			<column name="modTyp" type="VARCHAR2"></column>
 			<column name="wert" type="BigInt"></column>
+			<column name="wertString" type="VARCHAR2"></column>
 		</createTable>
 		
 		<createTable tableName="CYBERWARE_SPEZIFIKATION">

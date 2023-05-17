@@ -28,7 +28,7 @@ import de.rpg.view.ChangeRequest;
 @Controller
 @SessionAttributes(CharacterErstellungsRestController.CHARACTER_ATR_NAME)
 public class CharacterErstellungsRestController {
-	private static final String CHARACTER_ATR_NAME = "character";
+	protected static final String CHARACTER_ATR_NAME = "character";
 	private static final Logger LOG = LoggerFactory.getLogger(CharacterErstellungsRestController.class);
 	
 	private final HauptEventProzessor eventProzessor;

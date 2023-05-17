@@ -33,8 +33,8 @@ import jakarta.websocket.server.PathParam;
 @Controller
 @SessionAttributes({CharacterErstellungsController.CHARACTER_ATR_NAME, CharacterErstellungsController.SELECTED_KATEGORIEN_NAME })
 public class CharacterErstellungsController {
-	private static final String CHARACTER_ATR_NAME = "character";
-	private static final String SELECTED_KATEGORIEN_NAME = "selectedKategorien";
+	protected static final String CHARACTER_ATR_NAME = "character";
+	protected static final String SELECTED_KATEGORIEN_NAME = "selectedKategorien";
 	private static final String RASS_PRIOS_NAME = "rassPrios";
 	private static final String MAG_PRIOS_NAME = "magPrios";
 	private static final String ATTR_PRIOS_NAME = "attrPrios";

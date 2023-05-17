@@ -384,13 +384,20 @@
 			<column name="TYPE">CYBERWARE</column>
 			<column name="kategorie">BODYWARE</column>
 			<column name="preis">4500</column>
-			<column name="name">Handklingen</column>
+			<column name="name">Nagelmesser</column>
 			<column name="verfuegbarkeit">3/72St</column>
 			<column name="starssenIndex">1</column>
 			<column name="legalitaet">4L-R</column>
 			<column name="jahr">2050</column>
 			<column name="beschreibung"></column>
 			<column name="essenz">0.1</column>
+		</insert>
+		<insert tableName="AUSRUESTUNGS_MOD">
+			<column name="id">2105</column>
+			<column name="ausruestungs_id">2028</column>
+			<column name="ausruestungsTyp">CYBERWARE</column>
+			<column name="modTyp">NAH_WAFFE</column>
+			<column name="wertString">(STR)L</column>
 		</insert>
 		<insert tableName="Ausruestung_Spezifikation">
 			<column name="id">2029</column>
@@ -406,14 +413,14 @@
 			<column name="essenz">1</column>
 		</insert>
 		<insert tableName="AUSRUESTUNGS_MOD">
-			<column name="id">2105</column>
+			<column name="id">2106</column>
 			<column name="ausruestungs_id">2029</column>
 			<column name="ausruestungsTyp">CYBERWARE</column>
 			<column name="modTyp">ST</column>
 			<column name="wert">1</column>
 		</insert>
 		<insert tableName="AUSRUESTUNGS_MOD">
-			<column name="id">2106</column>
+			<column name="id">2107</column>
 			<column name="ausruestungs_id">2029</column>
 			<column name="ausruestungsTyp">CYBERWARE</column>
 			<column name="modTyp">SCH</column>
@@ -433,14 +440,14 @@
 			<column name="essenz">2</column>
 		</insert>
 		<insert tableName="AUSRUESTUNGS_MOD">
-			<column name="id">2107</column>
+			<column name="id">2108</column>
 			<column name="ausruestungs_id">2030</column>
 			<column name="ausruestungsTyp">CYBERWARE</column>
 			<column name="modTyp">ST</column>
 			<column name="wert">2</column>
 		</insert>
 		<insert tableName="AUSRUESTUNGS_MOD">
-			<column name="id">2108</column>
+			<column name="id">2109</column>
 			<column name="ausruestungs_id">2030</column>
 			<column name="ausruestungsTyp">CYBERWARE</column>
 			<column name="modTyp">SCH</column>
@@ -460,14 +467,14 @@
 			<column name="essenz">3</column>
 		</insert>
 		<insert tableName="AUSRUESTUNGS_MOD">
-			<column name="id">2109</column>
+			<column name="id">2110</column>
 			<column name="ausruestungs_id">2031</column>
 			<column name="ausruestungsTyp">CYBERWARE</column>
 			<column name="modTyp">ST</column>
 			<column name="wert">3</column>
 		</insert>
 		<insert tableName="AUSRUESTUNGS_MOD">
-			<column name="id">2110</column>
+			<column name="id">2111</column>
 			<column name="ausruestungs_id">2031</column>
 			<column name="ausruestungsTyp">CYBERWARE</column>
 			<column name="modTyp">SCH</column>
@@ -487,18 +494,283 @@
 			<column name="essenz">4</column>
 		</insert>
 		<insert tableName="AUSRUESTUNGS_MOD">
-			<column name="id">2111</column>
+			<column name="id">2112</column>
 			<column name="ausruestungs_id">2032</column>
 			<column name="ausruestungsTyp">CYBERWARE</column>
 			<column name="modTyp">ST</column>
 			<column name="wert">4</column>
 		</insert>
 		<insert tableName="AUSRUESTUNGS_MOD">
-			<column name="id">2112</column>
+			<column name="id">2113</column>
 			<column name="ausruestungs_id">2032</column>
 			<column name="ausruestungsTyp">CYBERWARE</column>
 			<column name="modTyp">SCH</column>
 			<column name="wert">4</column>
+		</insert>
+		<insert tableName="Ausruestung_Spezifikation">
+			<column name="id">2033</column>
+			<column name="TYPE">CYBERWARE</column>
+			<column name="kategorie">BODYWARE</column>
+			<column name="preis">9000</column>
+			<column name="name">Nagelmesser einziehbar</column>
+			<column name="verfuegbarkeit">5/72St</column>
+			<column name="starssenIndex">1</column>
+			<column name="legalitaet">3L-R</column>
+			<column name="jahr">2050</column>
+			<column name="beschreibung"></column>
+			<column name="essenz">0.2</column>
+		</insert>
+		<insert tableName="AUSRUESTUNGS_MOD">
+			<column name="id">2114</column>
+			<column name="ausruestungs_id">2033</column>
+			<column name="ausruestungsTyp">CYBERWARE</column>
+			<column name="modTyp">NAH_WAFFE</column>
+			<column name="wertString">(STR)L</column>
+		</insert>
+		<insert tableName="Ausruestung_Spezifikation">
+			<column name="id">2034</column>
+			<column name="TYPE">CYBERWARE</column>
+			<column name="kategorie">BODYWARE</column>
+			<column name="preis">7000</column>
+			<column name="name">Sporn</column>
+			<column name="verfuegbarkeit">3/72St</column>
+			<column name="starssenIndex">1</column>
+			<column name="legalitaet">3L-N</column>
+			<column name="jahr">2050</column>
+			<column name="beschreibung"></column>
+			<column name="essenz">0.1</column>
+		</insert>
+		<insert tableName="AUSRUESTUNGS_MOD">
+			<column name="id">2115</column>
+			<column name="ausruestungs_id">2034</column>
+			<column name="ausruestungsTyp">CYBERWARE</column>
+			<column name="modTyp">NAH_WAFFE</column>
+			<column name="wertString">(STR+3)L</column>
+		</insert>
+		<insert tableName="Ausruestung_Spezifikation">
+			<column name="id">2035</column>
+			<column name="TYPE">CYBERWARE</column>
+			<column name="kategorie">BODYWARE</column>
+			<column name="preis">11500</column>
+			<column name="name">Sporn einziehbar</column>
+			<column name="verfuegbarkeit">5/72St</column>
+			<column name="starssenIndex">1</column>
+			<column name="legalitaet">3L-N</column>
+			<column name="jahr">2050</column>
+			<column name="beschreibung"></column>
+			<column name="essenz">0.3</column>
+		</insert>
+		<insert tableName="AUSRUESTUNGS_MOD">
+			<column name="id">2116</column>
+			<column name="ausruestungs_id">2035</column>
+			<column name="ausruestungsTyp">CYBERWARE</column>
+			<column name="modTyp">NAH_WAFFE</column>
+			<column name="wertString">(STR+3)L</column>
+		</insert>
+		<insert tableName="Ausruestung_Spezifikation">
+			<column name="id">2036</column>
+			<column name="TYPE">CYBERWARE</column>
+			<column name="kategorie">BODYWARE</column>
+			<column name="preis">2500</column>
+			<column name="name">Smartgunverbindung</column>
+			<column name="verfuegbarkeit">3/36St</column>
+			<column name="starssenIndex">1</column>
+			<column name="legalitaet">5L-N</column>
+			<column name="jahr">2050</column>
+			<column name="beschreibung"></column>
+			<column name="essenz">0.5</column>
+		</insert>
+		<insert tableName="AUSRUESTUNGS_MOD">
+			<column name="id">2117</column>
+			<column name="ausruestungs_id">2036</column>
+			<column name="ausruestungsTyp">CYBERWARE</column>
+			<column name="modTyp">MINDESTWURF</column>
+			<column name="wertString">SMART</column>
+			<column name="wert">-2</column>
+		</insert>
+		<insert tableName="Ausruestung_Spezifikation">
+			<column name="id">2037</column>
+			<column name="TYPE">CYBERWARE</column>
+			<column name="kategorie">BODYWARE</column>
+			<column name="preis">45000</column>
+			<column name="name">Stimmodulatoren</column>
+			<column name="verfuegbarkeit">2/24St</column>
+			<column name="starssenIndex">1</column>
+			<column name="legalitaet">LEGAL</column>
+			<column name="jahr">2050</column>
+			<column name="beschreibung"></column>
+			<column name="essenz">0.2</column>
+		</insert>
+		<insert tableName="Ausruestung_Spezifikation">
+			<column name="id">2038</column>
+			<column name="TYPE">CYBERWARE</column>
+			<column name="kategorie">BODYWARE</column>
+			<column name="preis">10000</column>
+			<column name="name">Stimmkraftverstärkung</column>
+			<column name="verfuegbarkeit">2/24St</column>
+			<column name="starssenIndex">1</column>
+			<column name="legalitaet">LEGAL</column>
+			<column name="jahr">2050</column>
+			<column name="beschreibung"></column>
+			<column name="essenz">0</column>
+			<column name="gehoert_zu">2037</column>
+		</insert>
+		<insert tableName="Ausruestung_Spezifikation">
+			<column name="id">2039</column>
+			<column name="TYPE">CYBERWARE</column>
+			<column name="kategorie">BODYWARE</column>
+			<column name="preis">40000</column>
+			<column name="name">Playback</column>
+			<column name="verfuegbarkeit">4/48St</column>
+			<column name="starssenIndex">1</column>
+			<column name="legalitaet">LEGAL</column>
+			<column name="jahr">2050</column>
+			<column name="beschreibung"></column>
+			<column name="essenz">0.2</column>
+			<column name="gehoert_zu">2037</column>
+		</insert>
+		<insert tableName="Ausruestung_Spezifikation">
+			<column name="id">2040</column>
+			<column name="TYPE">CYBERWARE</column>
+			<column name="kategorie">BODYWARE</column>
+			<column name="preis">30000+(20000xSTUFE)</column>
+			<column name="name">Playback</column>
+			<column name="verfuegbarkeit">6/7T</column>
+			<column name="starssenIndex">2</column>
+			<column name="legalitaet">3-Q</column>
+			<column name="jahr">2050</column>
+			<column name="beschreibung"></column>
+			<column name="essenz">0</column>
+			<column name="gehoert_zu">2037</column>
+		</insert>
+		<insert tableName="Ausruestung_Spezifikation">
+			<column name="id">2041</column>
+			<column name="TYPE">CYBERWARE</column>
+			<column name="kategorie">BODYWARE</column>
+			<column name="preis">25000</column>
+			<column name="name">Tonale Veränderung</column>
+			<column name="verfuegbarkeit">2/24St</column>
+			<column name="starssenIndex">1</column>
+			<column name="legalitaet">LEGAL</column>
+			<column name="jahr">2050</column>
+			<column name="beschreibung"></column>
+			<column name="essenz">0</column>
+			<column name="gehoert_zu">2037</column>
+		</insert>
+		<insert tableName="Ausruestung_Spezifikation">
+			<column name="id">2042</column>
+			<column name="TYPE">CYBERWARE</column>
+			<column name="kategorie">BODYWARE</column>
+			<column name="preis">15000</column>
+			<column name="name">Verstärkte Reflexe I</column>
+			<column name="verfuegbarkeit">3/24St</column>
+			<column name="starssenIndex">1</column>
+			<column name="legalitaet">8L-Q</column>
+			<column name="jahr">2050</column>
+			<column name="beschreibung"></column>
+			<column name="essenz">0.5</column>
+		</insert>
+		<insert tableName="AUSRUESTUNGS_MOD">
+			<column name="id">2118</column>
+			<column name="ausruestungs_id">2042</column>
+			<column name="ausruestungsTyp">CYBERWARE</column>
+			<column name="modTyp">INI</column>
+			<column name="wertString">1W6</column>
+		</insert>
+		<insert tableName="AUSRUESTUNGS_MOD">
+			<column name="id">2119</column>
+			<column name="ausruestungs_id">2042</column>
+			<column name="ausruestungsTyp">CYBERWARE</column>
+			<column name="modTyp">AUSSCHLUSS</column>
+			<column name="wert">TODO:</column>
+		</insert>
+		<insert tableName="Ausruestung_Spezifikation">
+			<column name="id">2043</column>
+			<column name="TYPE">CYBERWARE</column>
+			<column name="kategorie">BODYWARE</column>
+			<column name="preis">40000</column>
+			<column name="name">Verstärkte Reflexe II</column>
+			<column name="verfuegbarkeit">3/24St</column>
+			<column name="starssenIndex">1.25</column>
+			<column name="legalitaet">6L-Q</column>
+			<column name="jahr">2050</column>
+			<column name="beschreibung"></column>
+			<column name="essenz">1.25</column>
+		</insert>
+		<insert tableName="AUSRUESTUNGS_MOD">
+			<column name="id">2120</column>
+			<column name="ausruestungs_id">2043</column>
+			<column name="ausruestungsTyp">CYBERWARE</column>
+			<column name="modTyp">INI</column>
+			<column name="wertString">1W6</column>
+		</insert>
+		<insert tableName="AUSRUESTUNGS_MOD">
+			<column name="id">2121</column>
+			<column name="ausruestungs_id">2043</column>
+			<column name="ausruestungsTyp">CYBERWARE</column>
+			<column name="modTyp">REA</column>
+			<column name="wertString">1</column>
+		</insert>
+		<insert tableName="AUSRUESTUNGS_MOD">
+			<column name="id">2122</column>
+			<column name="ausruestungs_id">2043</column>
+			<column name="ausruestungsTyp">CYBERWARE</column>
+			<column name="modTyp">AUSSCHLUSS</column>
+			<column name="wert">TODO:</column>
+		</insert>
+		<insert tableName="Ausruestung_Spezifikation">
+			<column name="id">2044</column>
+			<column name="TYPE">CYBERWARE</column>
+			<column name="kategorie">BODYWARE</column>
+			<column name="preis">90000</column>
+			<column name="name">Verstärkte Reflexe III</column>
+			<column name="verfuegbarkeit">3/24St</column>
+			<column name="starssenIndex">1.5</column>
+			<column name="legalitaet">5L-Q</column>
+			<column name="jahr">2050</column>
+			<column name="beschreibung"></column>
+			<column name="essenz">2.8</column>
+		</insert>
+		<insert tableName="AUSRUESTUNGS_MOD">
+			<column name="id">2123</column>
+			<column name="ausruestungs_id">2044</column>
+			<column name="ausruestungsTyp">CYBERWARE</column>
+			<column name="modTyp">INI</column>
+			<column name="wertString">2W6</column>
+		</insert>
+		<insert tableName="AUSRUESTUNGS_MOD">
+			<column name="id">2124</column>
+			<column name="ausruestungs_id">2044</column>
+			<column name="ausruestungsTyp">CYBERWARE</column>
+			<column name="modTyp">REA</column>
+			<column name="wertString">2</column>
+		</insert>
+		<insert tableName="AUSRUESTUNGS_MOD">
+			<column name="id">2125</column>
+			<column name="ausruestungs_id">2044</column>
+			<column name="ausruestungsTyp">CYBERWARE</column>
+			<column name="modTyp">AUSSCHLUSS</column>
+			<column name="wert">TODO:</column>
+		</insert>
+		<insert tableName="Ausruestung_Spezifikation">
+			<column name="id">2045</column>
+			<column name="TYPE">CYBERWARE</column>
+			<column name="kategorie">BODYWARE</column>
+			<column name="preis">6000</column>
+			<column name="name">Dermalpanzerung I</column>
+			<column name="verfuegbarkeit">4/12T</column>
+			<column name="starssenIndex">1</column>
+			<column name="legalitaet">6L-N</column>
+			<column name="jahr">2050</column>
+			<column name="beschreibung"></column>
+			<column name="essenz">0.5</column>
+		</insert>
+		<insert tableName="AUSRUESTUNGS_MOD">
+			<column name="id">2126</column>
+			<column name="ausruestungs_id">2045</column>
+			<column name="ausruestungsTyp">CYBERWARE</column>
+			<column name="modTyp">KON_SOAK</column>
+			<column name="wert">1</column>
 		</insert>
 	</changeSet>
 </databaseChangeLog>
