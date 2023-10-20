@@ -18,7 +18,7 @@ public class FeuerwaffenZubehoerSpezifikation extends BaseAusruestungSpezifikati
 	private int tarnstufe;
 	@Enumerated(EnumType.STRING)
 	private Halterung halterung;
-	@OneToMany(mappedBy = "ausruestungs_id")
+	@OneToMany(mappedBy = "ausruestungsId")
 	private List<AusruestungsMod> mods;
 	@Enumerated(EnumType.STRING)
 	private PreisMultiplikator preisMultiplikator;

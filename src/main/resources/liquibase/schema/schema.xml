@@ -24,10 +24,10 @@
 		<createTable tableName="Ausruestung_Spezifikation">
 			<column name="id" type="BigInt" autoIncrement="true"> </column>
 			<column name="TYPE" type="VARCHAR2"></column>
-			<column name="preis" type="INT"></column>
+			<column name="preis" type="STRING"></column>
 			<column name="name" type="VARCHAR2"></column>
 			<column name="verfuegbarkeit" type="VARCHAR2"></column>
-			<column name="starssenIndex" type="NUMBER(4,2)"></column>
+			<column name="starssenIndex" type="VARCHAR2"></column>
 			<column name="legalitaet" type="VARCHAR2"></column>
 			<column name="jahr" type="INT"></column>
 			<column name="beschreibung" type="VARCHAR2"></column>
@@ -49,6 +49,21 @@
 			<column name="stoss" type="INT"></column>
 			<column name="vergroesserung" type="INT"></column>
 			<column name="gehoert_zu" type="BigInt"></column>
+			<column name="mpcp" type="INT"></column>
+			<column name="haerte" type="INT"></column>
+			<column name="aktiver_speicher" type="INT"></column>
+			<column name="speicher_bank" type="INT"></column>
+			<column name="io_geschwindigkeit" type="INT"></column>
+			<column name="load" type="INT"></column>
+			<column name="mp" type="STRING"></column>
+			<column name="max_stufe" type="INT"></column>
+			<column name="handling" type="INT"></column>
+			<column name="geschwindigkeit" type="VARCHAR2"></column>
+			<column name="rumpf" type="INT"></column>
+			<column name="panzerung" type="INT"></column>
+			<column name="signatur" type="INT"></column>
+			<column name="pilot" type="INT"></column>
+			
 		</createTable>
 		
 		<createTable tableName="AUSRUESTUNGS_MOD">

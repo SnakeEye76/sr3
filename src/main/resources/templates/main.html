@@ -21,6 +21,23 @@
 			  	color: white;
 			  }
 		  </style>
+		<script th:src:"@{/stomp.min.js}"></script>
+		<script th:inline="javascript" type = "text/javascript" language = "javascript">
+			var url = /*[[@{/websocket}]]*/
+			url = url.replace("http://", "ws://");
+			url = url.replace("https://", "ws://"); 
+			const stompClient = new StompJs.Client({
+   	 				brokerURL: url
+				});
+			stompClient.onWebSocketError = (error) => {
+    				console.error('Error with websocket', error);
+				};
+			stompClient.onStompError = (frame) => {
+    				console.error('Broker reported error: ' + frame.headers['message']);
+    				console.error('Additional details: ' + frame.body);
+				};
+			stompClient.activate();
+		</script>
    	</head>
    	<body>
 		<header class="navbar navbar-expand-lg bd-navbar sticky-top">

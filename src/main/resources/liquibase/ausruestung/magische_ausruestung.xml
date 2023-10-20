@@ -1,0 +1,77 @@
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+    <changeSet id="1" author="KB">
+		<insert tableName="Ausruestung_Spezifikation">
+			<column name="id">2401</column>
+			<column name="TYPE">MAGISCHE_AUSRUESTUNG</column>
+			<column name="preis">45000</column>
+			<column name="name">Spezifischer Zauberfokus</column>
+			<column name="verfuegbarkeit">4/48St</column>
+			<column name="starssenIndex">2</column>
+			<column name="legalitaet">6L-T</column>
+			<column name="jahr">2050</column>
+			<column name="beschreibung"></column>
+			<column name="preis_multiplikator">STUFE</column>
+		</insert>
+		<insert tableName="Ausruestung_Spezifikation">
+			<column name="id">2402</column>
+			<column name="TYPE">MAGISCHE_AUSRUESTUNG</column>
+			<column name="preis">75000</column>
+			<column name="name">Kategorie Zauberfokus</column>
+			<column name="verfuegbarkeit">5/48St</column>
+			<column name="starssenIndex">2</column>
+			<column name="legalitaet">6L-T</column>
+			<column name="jahr">2050</column>
+			<column name="beschreibung"></column>
+			<column name="preis_multiplikator">STUFE</column>
+		</insert>
+		<insert tableName="Ausruestung_Spezifikation">
+			<column name="id">2403</column>
+			<column name="TYPE">MAGISCHE_AUSRUESTUNG</column>
+			<column name="preis">60000</column>
+			<column name="name">Geisterfokus</column>
+			<column name="verfuegbarkeit">4/48St</column>
+			<column name="starssenIndex">2</column>
+			<column name="legalitaet">6L-T</column>
+			<column name="jahr">2050</column>
+			<column name="beschreibung"></column>
+			<column name="preis_multiplikator">STUFE</column>
+		</insert>
+		<insert tableName="Ausruestung_Spezifikation">
+			<column name="id">2404</column>
+			<column name="TYPE">MAGISCHE_AUSRUESTUNG</column>
+			<column name="preis">105000</column>
+			<column name="name">Kraftfokus</column>
+			<column name="verfuegbarkeit">6/72St</column>
+			<column name="starssenIndex">2</column>
+			<column name="legalitaet">6L-T</column>
+			<column name="jahr">2050</column>
+			<column name="beschreibung"></column>
+			<column name="preis_multiplikator">STUFE</column>
+		</insert>
+		<insert tableName="Ausruestung_Spezifikation">
+			<column name="id">2405</column>
+			<column name="TYPE">MAGISCHE_AUSRUESTUNG</column>
+			<column name="preis">45000</column>
+			<column name="name">Zauberspeicher</column>
+			<column name="verfuegbarkeit">2/48St</column>
+			<column name="starssenIndex">2</column>
+			<column name="legalitaet">6L-T</column>
+			<column name="jahr">2050</column>
+			<column name="beschreibung"></column>
+			<column name="preis_multiplikator">STUFE</column>
+		</insert>
+		<insert tableName="Ausruestung_Spezifikation">
+			<column name="id">2406</column>
+			<column name="TYPE">MAGISCHE_AUSRUESTUNG</column>
+			<column name="preis">90000</column>
+			<column name="preis_berechnung">[(Reichweite+1) x 100000] + (STUFE x 90000)</column>
+			<column name="name">Waffenfokusfokus</column>
+			<column name="verfuegbarkeit">8/72St</column>
+			<column name="starssenIndex">2</column>
+			<column name="legalitaet">6L-T</column>
+			<column name="jahr">2050</column>
+			<column name="beschreibung"></column>
+			<column name="preis_multiplikator">WAFFENFOKUS</column>
+		</insert>
+	</changeSet>
+</databaseChangeLog>

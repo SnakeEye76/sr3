@@ -4,8 +4,8 @@ import org.apache.commons.lang3.StringUtils;
 
 public class CreationIds {
 
-	public static final String RASSE_PRIO_SELECT = "rass-prio-input-dhtml";
-	public static final String MAGIE_PRIO_SELECT = "mag-prio-input-dhtml";
+	public static final String RASSE_PRIO_SELECT = "rass-prio-input";
+	public static final String MAGIE_PRIO_SELECT = "mag-prio-input";
 	public static final String ATTRIBUTS_PRIO_SELECT = "attr-prio-input";
 	public static final String FERTIGKEITEN_PRIO_SELECT = "fert-prio-input";
 	public static final String RESSOURCEN_PRIO_SELECT = "res-prio-input";

@@ -1,0 +1,167 @@
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+    <changeSet id="1" author="KB">
+		<insert tableName="Ausruestung_Spezifikation">
+			<column name="id">2501</column>
+			<column name="TYPE">MAGISCHE_GUETER</column>
+			<column name="preis">1000</column>
+			<column name="name">Materialien zur Elementarbeschwörung</column>
+			<column name="verfuegbarkeit">STUFE/24St</column>
+			<column name="starssenIndex">1</column>
+			<column name="legalitaet">6L-T</column>
+			<column name="jahr">2050</column>
+			<column name="beschreibung"></column>
+			<column name="preis_multiplikator">STUFE</column>
+		</insert>
+		<insert tableName="Ausruestung_Spezifikation">
+			<column name="id">2402</column>
+			<column name="TYPE">MAGISCHE_GUETER</column>
+			<column name="preis">500</column>
+			<column name="name">Materialien für Medizinhütte</column>
+			<column name="verfuegbarkeit">STUFE/24St</column>
+			<column name="starssenIndex">1</column>
+			<column name="legalitaet">6L-T</column>
+			<column name="jahr">2050</column>
+			<column name="beschreibung"></column>
+			<column name="preis_multiplikator">STUFE</column>
+		</insert>
+		<insert tableName="Ausruestung_Spezifikation">
+			<column name="id">2403</column>
+			<column name="TYPE">MAGISCHE_GUETER</column>
+			<column name="preis">200</column>
+			<column name="name">Fetisch Kampf</column>
+			<column name="verfuegbarkeit">3/24St</column>
+			<column name="starssenIndex">1</column>
+			<column name="legalitaet">6L-T</column>
+			<column name="jahr">2050</column>
+			<column name="beschreibung"></column>
+		</insert>
+		<insert tableName="Ausruestung_Spezifikation">
+			<column name="id">2404</column>
+			<column name="TYPE">MAGISCHE_GUETER</column>
+			<column name="preis">50</column>
+			<column name="name">Fetisch Wahrnehmung</column>
+			<column name="verfuegbarkeit">3/24St</column>
+			<column name="starssenIndex">1</column>
+			<column name="legalitaet">6L-T</column>
+			<column name="jahr">2050</column>
+			<column name="beschreibung"></column>
+		</insert>
+		<insert tableName="Ausruestung_Spezifikation">
+			<column name="id">2405</column>
+			<column name="TYPE">MAGISCHE_GUETER</column>
+			<column name="preis">500</column>
+			<column name="name">Fetisch Heilung</column>
+			<column name="verfuegbarkeit">3/24St</column>
+			<column name="starssenIndex">1</column>
+			<column name="legalitaet">6L-T</column>
+			<column name="jahr">2050</column>
+			<column name="beschreibung"></column>
+		</insert>
+		<insert tableName="Ausruestung_Spezifikation">
+			<column name="id">2406</column>
+			<column name="TYPE">MAGISCHE_GUETER</column>
+			<column name="preis">100</column>
+			<column name="name">Fetisch Illusion</column>
+			<column name="verfuegbarkeit">3/24St</column>
+			<column name="starssenIndex">1</column>
+			<column name="legalitaet">6L-T</column>
+			<column name="jahr">2050</column>
+			<column name="beschreibung"></column>
+		</insert>
+		<insert tableName="Ausruestung_Spezifikation">
+			<column name="id">2407</column>
+			<column name="TYPE">MAGISCHE_GUETER</column>
+			<column name="preis">300</column>
+			<column name="name">Fetisch Manipulation</column>
+			<column name="verfuegbarkeit">3/24St</column>
+			<column name="starssenIndex">1</column>
+			<column name="legalitaet">6L-T</column>
+			<column name="jahr">2050</column>
+			<column name="beschreibung"></column>
+		</insert>
+		<insert tableName="Ausruestung_Spezifikation">
+			<column name="id">2408</column>
+			<column name="TYPE">MAGISCHE_GUETER</column>
+			<column name="preis">1000</column>
+			<column name="name">Hermetische Bibliothek Disk/CD</column>
+			<column name="verfuegbarkeit">STUFE/7T</column>
+			<column name="starssenIndex">2</column>
+			<column name="legalitaet">LEGAL</column>
+			<column name="jahr">2050</column>
+			<column name="beschreibung"></column>
+			<column name="preis_multiplikator">STUFE_X_STUFE</column>
+		</insert>
+		<insert tableName="Ausruestung_Spezifikation">
+			<column name="id">24079</column>
+			<column name="TYPE">MAGISCHE_GUETER</column>
+			<column name="preis">1200</column>
+			<column name="name">Hermetische Bibliothek Chip</column>
+			<column name="verfuegbarkeit">STUFE/7T</column>
+			<column name="starssenIndex">2</column>
+			<column name="legalitaet">LEGAL</column>
+			<column name="jahr">2050</column>
+			<column name="beschreibung"></column>
+			<column name="preis_multiplikator">STUFE_X_STUFE</column>
+		</insert>
+		<insert tableName="Ausruestung_Spezifikation">
+			<column name="id">2407</column>
+			<column name="TYPE">MAGISCHE_GUETER</column>
+			<column name="preis">300</column>
+			<column name="name">Hermetische Bibliothek Hardcopy</column>
+			<column name="verfuegbarkeit">STUFE/14T</column>
+			<column name="starssenIndex">3</column>
+			<column name="legalitaet">LEGAL</column>
+			<column name="jahr">2050</column>
+			<column name="beschreibung"></column>
+			<column name="preis_multiplikator">STUFE_X_STUFE</column>
+		</insert>
+		<insert tableName="Ausruestung_Spezifikation">
+			<column name="id">2408</column>
+			<column name="TYPE">MAGISCHE_GUETER</column>
+			<column name="preis">100</column>
+			<column name="name">Materialien für Rituelle Hexerei Wahrnehmung</column>
+			<column name="verfuegbarkeit">3/24St</column>
+			<column name="starssenIndex">1</column>
+			<column name="legalitaet">8L-T</column>
+			<column name="jahr">2050</column>
+			<column name="beschreibung"></column>
+			<column name="preis_multiplikator">STUFE</column>
+		</insert>
+		<insert tableName="Ausruestung_Spezifikation">
+			<column name="id">2408</column>
+			<column name="TYPE">MAGISCHE_GUETER</column>
+			<column name="preis">500</column>
+			<column name="name">Materialien für Rituelle Hexerei Heilung</column>
+			<column name="verfuegbarkeit">3/24St</column>
+			<column name="starssenIndex">1</column>
+			<column name="legalitaet">8L-T</column>
+			<column name="jahr">2050</column>
+			<column name="beschreibung"></column>
+			<column name="preis_multiplikator">STUFE</column>
+		</insert>
+		<insert tableName="Ausruestung_Spezifikation">
+			<column name="id">2408</column>
+			<column name="TYPE">MAGISCHE_GUETER</column>
+			<column name="preis">100</column>
+			<column name="name">Materialien für Rituelle Hexerei Illusion</column>
+			<column name="verfuegbarkeit">3/24St</column>
+			<column name="starssenIndex">1</column>
+			<column name="legalitaet">8L-T</column>
+			<column name="jahr">2050</column>
+			<column name="beschreibung"></column>
+			<column name="preis_multiplikator">STUFE</column>
+		</insert>
+		<insert tableName="Ausruestung_Spezifikation">
+			<column name="id">2408</column>
+			<column name="TYPE">MAGISCHE_GUETER</column>
+			<column name="preis">1000</column>
+			<column name="name">Materialien für Rituelle Hexerei Manipulation</column>
+			<column name="verfuegbarkeit">3/24St</column>
+			<column name="starssenIndex">1</column>
+			<column name="legalitaet">8L-T</column>
+			<column name="jahr">2050</column>
+			<column name="beschreibung"></column>
+			<column name="preis_multiplikator">STUFE</column>
+		</insert>
+	</changeSet>
+</databaseChangeLog>

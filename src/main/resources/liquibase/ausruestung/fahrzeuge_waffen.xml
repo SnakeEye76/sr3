@@ -1,0 +1,52 @@
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+    <changeSet id="1" author="KB">
+		<insert tableName="Ausruestung_Spezifikation">
+			<column name="id">2701</column>
+			<column name="TYPE">FAHRZEUG_WAFFE</column>
+			<column name="preis">12000</column>
+			<column name="name">Autokanone</column>
+			<column name="verfuegbarkeit">12/14T</column>
+			<column name="starssenIndex">2</column>
+			<column name="legalitaet">1-W</column>
+			<column name="jahr">2050</column>
+			<column name="beschreibung"></column>
+			<column name="schaden">12T</column>
+			<column name="gewicht"></column>
+			<column name="feuerwaffen_typ">KAN</column>
+			<column name="muni">10(s)</column>
+			<column name="modi">EM</column>
+		</insert>
+		<insert tableName="Ausruestung_Spezifikation">
+			<column name="id">2702</column>
+			<column name="TYPE">FAHRZEUG_WAFFE</column>
+			<column name="preis">15000</column>
+			<column name="name">Raketenwerfer</column>
+			<column name="verfuegbarkeit">15/14T</column>
+			<column name="starssenIndex">2</column>
+			<column name="legalitaet">1-W</column>
+			<column name="jahr">2050</column>
+			<column name="beschreibung"></column>
+			<column name="schaden"></column>
+			<column name="gewicht"></column>
+			<column name="feuerwaffen_typ">LAU</column>
+			<column name="muni">6(m)</column>
+			<column name="modi">EM</column>
+		</insert>
+		<insert tableName="Ausruestung_Spezifikation">
+			<column name="id">2703</column>
+			<column name="TYPE">FAHRZEUG_WAFFE</column>
+			<column name="preis">20000</column>
+			<column name="name">Wasserwerfer</column>
+			<column name="verfuegbarkeit">15/14T</column>
+			<column name="starssenIndex">2</column>
+			<column name="legalitaet">1-W</column>
+			<column name="jahr">2050</column>
+			<column name="beschreibung"></column>
+			<column name="schaden">6M bet</column>
+			<column name="gewicht"></column>
+			<column name="feuerwaffen_typ">WAS</column>
+			<column name="muni">20</column>
+			<column name="modi">EM</column>
+		</insert>
+	</changeSet>
+</databaseChangeLog>

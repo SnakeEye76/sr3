@@ -26,7 +26,7 @@ public class BaseAusruestungSpezifikation {
 	private int preis;
 	private String name;
 	private String verfuegbarkeit;
-	private BigDecimal strassenindex;
+	private String strassenindex;
 	private String legalitaet;
 	private int jahr;
 	private String beschreibung;

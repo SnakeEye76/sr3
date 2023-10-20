@@ -1,0 +1,40 @@
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+    <changeSet id="1" author="KB">
+		<insert tableName="Ausruestung_Spezifikation">
+			<column name="id">2801</column>
+			<column name="TYPE">FAHRZEUG_MOD</column>
+			<column name="preis">2500</column>
+			<column name="name">Fernsteuersystem</column>
+			<column name="verfuegbarkeit">4/72St</column>
+			<column name="starssenIndex">2</column>
+			<column name="legalitaet">LEGAL</column>
+			<column name="jahr">2050</column>
+			<column name="beschreibung"></column>
+			<column name="preis_multiplikator">RUMPF</column>
+		</insert>
+		<insert tableName="Ausruestung_Spezifikation">
+			<column name="id">2802</column>
+			<column name="TYPE">FAHRZEUG_MOD</column>
+			<column name="preis">2800</column>
+			<column name="name">Fahrzeugsteuersystem</column>
+			<column name="verfuegbarkeit">4/7T</column>
+			<column name="starssenIndex">2</column>
+			<column name="legalitaet">LEGAL</column>
+			<column name="jahr">2050</column>
+			<column name="beschreibung"></column>
+		</insert>
+		<insert tableName="Ausruestung_Spezifikation">
+			<column name="id">2803</column>
+			<column name="TYPE">FAHRZEUG_MOD</column>
+			<column name="preis">5000</column>
+			<column name="name">Fernsteuerdeck</column>
+			<column name="verfuegbarkeit">4/72St</column>
+			<column name="starssenIndex">2</column>
+			<column name="legalitaet">LEGAL</column>
+			<column name="jahr">2050</column>
+			<column name="beschreibung"></column>
+			<column name="preis_multiplikator">STUFE</column>
+			<column name="gewicht">STUFEx2</column>
+		</insert>
+	</changeSet>
+</databaseChangeLog>

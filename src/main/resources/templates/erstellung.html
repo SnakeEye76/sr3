@@ -7,19 +7,6 @@
       	<script th:src="@{/webjars/jquery/3.6.4/jquery.min.js}"></script>
       	<script th:inline="javascript" type = "text/javascript" language = "javascript">
 		/*<![CDATA[*/
-			function ajaxCallback(targetId, data, status) {
-				if(!Array.isArray(data)){
-					dhtml(targetId, data);
-				} else {
-					$.each(data, function(index, element) {
-						if(element.type == 'singleValue'){
-							setValue(element);
-						} else if(element.type == 'singleText'){
-							setText(element);
-						}
-					});
-				}
-			}
 			function setValue(element) {
 				var id = element.id;
 				$('#' + id).val(element.value);
@@ -28,15 +15,22 @@
 				var id = element.id;
 				$('#' + id).text(element.value);
 			}
-			function dhtml(targetId, element) {
-				//var context = $('#' + targetId);
-				var html = $.parseHTML(element, true);
-				$('#' + targetId).empty();
-				$('#' + targetId).append(html);
+			function dhtml(element) {
+				var html = $.parseHTML(element.view, true);
+				$('#' + element.targetId).empty();
+				$('#' + element.targetId).append(html);
 			}
 			function fertigkeitgewaehlt() {
 				var selected = $('#fertigkeitenSelect').val();
-				var url = /*[[@{/changedhtml}]]*/ 
+				var eventToSend = JSON.stringify({
+						    id: 'fertigkeitenSelect',
+						    value: selected});
+						stompClient.publish({
+        					destination: "/erstellung/change",
+        					body: eventToSend
+    					});
+    		}
+    		function fertigkeitgewaehlOold() {
 				$.post(url, JSON.stringify({
 					id : 'fertigkeitenSelect',
 				    value: selected
@@ -276,31 +270,17 @@
 			});
 			$(document).ready(function() {
 	            $('[id$=-input]').each(function(index, element){
+					var targetId = $(element).attr('targetId');
+					var sourceId = $(element).attr('id');
 					$(element).change(function(event) {
-						var targetId = $(element).attr('targetId');
-						var sourceId = $(element).attr('id');
-						var url = /*[[@{/change}]]*/ 
-						$.post(url, JSON.stringify({
+						var eventToSend = JSON.stringify({
 						    id: sourceId,
-						    value: $(element).val() == null ? "test" : $(element).val()
-						  }), function(data, status){
-							  	ajaxCallback(targetId, data, status);
-						});
-					});
-				});
-	         });
-			$(document).ready(function() {
-	            $('[id$=-input-dhtml]').each(function(index, element){
-					$(element).change(function(event) {
-						var targetId = $(element).attr('targetId');
-						var sourceId = $(element).attr('id');
-						var url = /*[[@{/changedhtml}]]*/ 
-						$.post(url, JSON.stringify({
-						    id: sourceId,
-						    value: $(element).val() == null ? "test" : $(element).val()
-						  }), function(data, status){
-							  	ajaxCallback(targetId, data, status);
-						});
+						    value: $(element).val() == null ? "empty" : $(element).val(),
+						    targetId: targetId});
+						stompClient.publish({
+        					destination: "/erstellung/change",
+        					body: eventToSend
+    					});
 					});
 				});
 	         });
@@ -325,6 +305,15 @@
 				 	$('#fertigkeitAuswahl').modal('show');
 				 });
 			 });
+			 stompClient.subscribe('/topic/view', (element) => {
+		        dhtml(JSON.parse(element));
+		    });
+		    stompClient.subscribe('/topic/text', (element) => {
+		        setText(JSON.parse(element));
+		    });
+		    stompClient.subscribe('/topic/value', (element) => {
+		        setValue(JSON.parse(element));
+		    });
 		/*]]>*/
 		</script>
    	</body>

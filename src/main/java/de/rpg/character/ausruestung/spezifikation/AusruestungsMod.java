@@ -2,6 +2,7 @@ package de.rpg.character.ausruestung.spezifikation;
 
 import java.math.BigDecimal;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
@@ -22,4 +23,6 @@ public class AusruestungsMod {
 	@Enumerated(EnumType.STRING)
 	private ModTyp modTyp;
 	private BigDecimal wert;
+	@Column(name = "ausruestungs_id")
+	private Long ausruestungsId;
 }

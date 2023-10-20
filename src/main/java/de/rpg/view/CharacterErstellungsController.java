@@ -2,7 +2,6 @@ package de.rpg.view;
 
 import java.util.Arrays;
 import java.util.Collections;
-import java.util.EnumSet;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -21,10 +20,9 @@ import org.springframework.web.servlet.ModelAndView;
 
 import de.rpg.business.CharacterService;
 import de.rpg.business.FertigkeitenService;
-import de.rpg.business.HauptEventProzessor;
-import de.rpg.character.Character;
 import de.rpg.character.Fertigkeit;
 import de.rpg.character.FertigkeitKategorie;
+import de.rpg.erschaffung.CharakterErschaffung;
 import de.rpg.erschaffung.FertigkeitSpezifikation;
 import de.rpg.erschaffung.priosystem.PrioTyp;
 import de.rpg.erschaffung.priosystem.Prioritaet;
@@ -42,14 +40,12 @@ public class CharacterErstellungsController {
 	private static final String RES_PRIOS_NAME = "resPrios";
 	private static final String FERTIGKEITEN_KATEGORIEN = "fertKategorien";
 	
-	private final HauptEventProzessor eventProzessor;
 	private final CharacterService characterServcie;
 	private final FertigkeitenService fertigkeitenServcie;
 	
-	public CharacterErstellungsController(HauptEventProzessor eventProzessor, CharacterService characterServcie,
+	public CharacterErstellungsController(CharacterService characterServcie,
 			FertigkeitenService fertigkeitenServcie) {
 		super();
-		this.eventProzessor = eventProzessor;
 		this.characterServcie = characterServcie;
 		this.fertigkeitenServcie= fertigkeitenServcie;
 	}
@@ -89,11 +85,11 @@ public class CharacterErstellungsController {
 	}
 	
 	@ModelAttribute(CHARACTER_ATR_NAME)
-	public Character character(@PathParam("characterId") Long characterId) {
+	public CharakterErschaffung character(@PathParam("characterId") Long characterId) {
 		if(ObjectUtils.isEmpty(characterId)) {
-			return new Character();
+			return new CharakterErschaffung();
 		} else {
-			return characterServcie.findById(characterId);
+			return null; //characterServcie.findById(characterId);
 		}
 	}
 	
@@ -113,7 +109,7 @@ public class CharacterErstellungsController {
 	}
 	
 	@PostMapping("/alleFertigkeiten")
-	public ModelAndView alleFertigkeiten(@SessionAttribute(CHARACTER_ATR_NAME) Character character, 
+	public ModelAndView alleFertigkeiten(@SessionAttribute(CHARACTER_ATR_NAME) CharakterErschaffung character, 
 			@SessionAttribute(SELECTED_KATEGORIEN_NAME) Set<FertigkeitKategorie> selectedKategorien,
 			@RequestBody(required = false) ChangeRequest request) {
 		if(request != null) {

@@ -1,0 +1,137 @@
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+    <changeSet id="1" author="KB">
+		<insert tableName="Ausruestung_Spezifikation">
+			<column name="id">2301</column>
+			<column name="TYPE">BIOTECH</column>
+			<column name="preis">200</column>
+			<column name="name">Medkit</column>
+			<column name="verfuegbarkeit">2/24St</column>
+			<column name="starssenIndex">1.5</column>
+			<column name="legalitaet">LEGAL</column>
+			<column name="jahr">2050</column>
+			<column name="beschreibung"></column>
+			<column name="stufe">3</column>
+			<column name="gewicht">3</column>
+		</insert>
+		<insert tableName="Ausruestung_Spezifikation">
+			<column name="id">2302</column>
+			<column name="TYPE">BIOTECH</column>
+			<column name="preis">50</column>
+			<column name="name">Medkit Nchfüllung</column>
+			<column name="verfuegbarkeit">2/24St</column>
+			<column name="starssenIndex">1.5</column>
+			<column name="legalitaet">LEGAL</column>
+			<column name="jahr">2050</column>
+			<column name="beschreibung"></column>
+		</insert>
+		<insert tableName="Ausruestung_Spezifikation">
+			<column name="id">2203</column>
+			<column name="TYPE">BIOTECH</column>
+			<column name="preis">10000</column>
+			<column name="name">Stabilisierungseinheit</column>
+			<column name="verfuegbarkeit">12/1M</column>
+			<column name="starssenIndex">3</column>
+			<column name="legalitaet">LEGAL</column>
+			<column name="jahr">2050</column>
+			<column name="beschreibung"></column>
+			<column name="gewicht">30</column>
+			<column name="stufe">2</column>
+		</insert>
+		<insert tableName="Ausruestung_Spezifikation">
+			<column name="id">2204</column>
+			<column name="TYPE">BIOTECH</column>
+			<column name="preis">20000</column>
+			<column name="name">Stabilisierungseinheit Deluxe</column>
+			<column name="verfuegbarkeit">16/1M</column>
+			<column name="starssenIndex">3</column>
+			<column name="legalitaet">LEGAL</column>
+			<column name="jahr">2050</column>
+			<column name="beschreibung"></column>
+			<column name="gewicht">35</column>
+			<column name="stufe">6</column>
+		</insert>
+		<insert tableName="Ausruestung_Spezifikation">
+			<column name="id">2205</column>
+			<column name="TYPE">BIOTECH</column>
+			<column name="preis">5000 proJahr</column>
+			<column name="name">DocWagon Grundservice</column>
+			<column name="verfuegbarkeit">SOFORT</column>
+			<column name="legalitaet">LEGAL</column>
+			<column name="jahr">2050</column>
+			<column name="beschreibung"></column>
+			<column name="preis_multiplikator">PRO_JAHR</column>
+		</insert>
+		<insert tableName="Ausruestung_Spezifikation">
+			<column name="id">2206</column>
+			<column name="TYPE">BIOTECH</column>
+			<column name="preis">25000 proJahr</column>
+			<column name="name">DocWagon Goldservice</column>
+			<column name="verfuegbarkeit">SOFORT</column>
+			<column name="legalitaet">LEGAL</column>
+			<column name="jahr">2050</column>
+			<column name="beschreibung"></column>
+			<column name="preis_multiplikator">PRO_JAHR</column>
+		</insert>
+		<insert tableName="Ausruestung_Spezifikation">
+			<column name="id">2206</column>
+			<column name="TYPE">BIOTECH</column>
+			<column name="preis">50000 proJahr</column>
+			<column name="name">DocWagon Platinservice</column>
+			<column name="verfuegbarkeit">SOFORT</column>
+			<column name="legalitaet">LEGAL</column>
+			<column name="jahr">2050</column>
+			<column name="beschreibung"></column>
+			<column name="preis_multiplikator">PRO_JAHR</column>
+		</insert>
+		<insert tableName="Ausruestung_Spezifikation">
+			<column name="id">2207</column>
+			<column name="TYPE">BIOTECH</column>
+			<column name="preis">50</column>
+			<column name="name">Antidotpatch</column>
+			<column name="verfuegbarkeit">6/72St</column>
+			<column name="starssenIndex">2</column>
+			<column name="legalitaet">LEGAL</column>
+			<column name="jahr">2050</column>
+			<column name="beschreibung"></column>
+			<column name="preis_multiplikator">STUFE</column>
+			<column name="max_stufe">8</column>
+		</insert>
+		<insert tableName="Ausruestung_Spezifikation">
+			<column name="id">2208</column>
+			<column name="TYPE">BIOTECH</column>
+			<column name="preis">25</column>
+			<column name="name">Stimulanzpatch</column>
+			<column name="verfuegbarkeit">2/24St</column>
+			<column name="starssenIndex">1</column>
+			<column name="legalitaet">LEGAL</column>
+			<column name="jahr">2050</column>
+			<column name="beschreibung"></column>
+			<column name="preis_multiplikator">STUFE</column>
+			<column name="max_stufe">6</column>
+		</insert>
+		<insert tableName="Ausruestung_Spezifikation">
+			<column name="id">2209</column>
+			<column name="TYPE">BIOTECH</column>
+			<column name="preis">20</column>
+			<column name="name">Tranqpatch</column>
+			<column name="verfuegbarkeit">4/48St</column>
+			<column name="starssenIndex">2</column>
+			<column name="legalitaet">LEGAL</column>
+			<column name="jahr">2050</column>
+			<column name="beschreibung"></column>
+			<column name="preis_multiplikator">STUFE</column>
+			<column name="max_stufe">10</column>
+		</insert>
+		<insert tableName="Ausruestung_Spezifikation">
+			<column name="id">2210</column>
+			<column name="TYPE">BIOTECH</column>
+			<column name="preis">500</column>
+			<column name="name">Traumapatch</column>
+			<column name="verfuegbarkeit">4/48St</column>
+			<column name="starssenIndex">4</column>
+			<column name="legalitaet">LEGAL</column>
+			<column name="jahr">2050</column>
+			<column name="beschreibung"></column>
+		</insert>
+	</changeSet>
+</databaseChangeLog>

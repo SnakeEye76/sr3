@@ -1,7 +1,6 @@
 package de.rpg.api.events;
 
-import de.rpg.business.EventProzessor;
-import de.rpg.character.Character;
+import de.rpg.erschaffung.CharakterErschaffung;
 import de.rpg.erschaffung.priosystem.PrioTyp;
 import de.rpg.erschaffung.priosystem.Prioritaet;
 import de.rpg.view.ChangeRequest;
@@ -10,16 +9,15 @@ import lombok.Builder;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 
-@RequiredArgsConstructor
 @Getter
-@Builder
-public class PrioSelectedEvent implements CreationEvent{
+public class PrioSelectedEvent extends CreationEvent{
 
 	private final PrioTyp typ;
 	private final Prioritaet prioritaet;
 	private final String id;
 	
-	public PrioSelectedEvent(ChangeRequest request) {
+	public PrioSelectedEvent(ChangeRequest request, CharakterErschaffung character) {
+		super(character);
 		switch(request.getId()) {
 			case CreationIds.RASSE_PRIO_SELECT:
 				typ = PrioTyp.RASSE;
@@ -42,11 +40,4 @@ public class PrioSelectedEvent implements CreationEvent{
 		id = request.getId();
 		prioritaet = Prioritaet.valueOf(request.getValue().substring(0, 1));
 	}
-
-	@Override
-	public <T extends EventProzessor> T accept(T prozessor, Character character) {
-		prozessor.prozessiere(this, character);
-		return prozessor;
-	}
-
 }
